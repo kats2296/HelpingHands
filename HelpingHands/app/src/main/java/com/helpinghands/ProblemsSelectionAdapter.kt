@@ -1,0 +1,48 @@
+package com.helpinghands
+
+import android.content.Context
+import android.support.v7.widget.RecyclerView
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.ImageView
+import kotlinx.android.synthetic.main.problem_item.view.*
+
+
+class ProblemsSelectionAdapterAdapter(private var context: Context,
+                      private var problemsList: ArrayList<Problem>):
+        RecyclerView.Adapter<ProblemsSelectionAdapterAdapter.problemsSelectionViewHolder>() {
+
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): problemsSelectionViewHolder {
+
+        val view = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.problem_item, parent, false)
+        return problemsSelectionViewHolder(view)
+    }
+
+    override fun onBindViewHolder(holder: problemsSelectionViewHolder, position: Int) {
+
+        if (position>=0) {
+            holder.bindProblems(problemsList[position])
+        }
+    }
+
+
+    override fun getItemCount(): Int {
+        return problemsList.size
+    }
+
+    inner class problemsSelectionViewHolder(val mView: View) : RecyclerView.ViewHolder(mView) {
+
+
+        private val thumbnail : ImageView = mView.imageViewProblem
+
+
+        fun bindProblems(problem: Problem) {
+
+            thumbnail.setImageResource(problem.image)
+
+        }
+    }
+}
