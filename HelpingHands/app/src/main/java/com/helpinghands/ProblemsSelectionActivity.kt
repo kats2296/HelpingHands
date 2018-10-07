@@ -11,10 +11,10 @@ class ProblemsSelectionActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_problems_selection)
 
-        val problemList = arrayListOf(Problem(R.drawable.zeroHunger, "Food"),
+        val problemList = arrayListOf(Problem(R.drawable.zero_hunger, "Food"),
                 Problem(R.drawable.poverty, "Clothing"),
                 Problem(R.drawable.poverty, "Donation"),
-                Problem(R.drawable.medicalAids, "Medical-Aids"),
+                Problem(R.drawable.medical_aids, "Medical-Aids"),
                 Problem(R.drawable.education, "Education"))
 
 

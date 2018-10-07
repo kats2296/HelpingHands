@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".OrganisationHomeActivity" />
-        <activity android:name=".ProblemsSelectionActivity"></activity>
+        <activity android:name=".ProblemsSelectionActivity" />
+        <activity android:name=".eventDetailsActivity"></activity>
     </application>
 
 </manifest>
