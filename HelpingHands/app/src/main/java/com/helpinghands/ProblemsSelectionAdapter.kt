@@ -1,6 +1,7 @@
 package com.helpinghands
 
 import android.content.Context
+import android.content.Intent
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -25,7 +26,15 @@ class ProblemsSelectionAdapterAdapter(private var context: Context,
 
         if (position>=0) {
             holder.bindProblems(problemsList[position])
+
+            holder.thumbnail.setOnClickListener {
+                openEventDetailsPage()
+            }
         }
+    }
+
+    private fun openEventDetailsPage() {
+        context.startActivity(Intent(context, EventDetailsActivity::class.java))
     }
 
 
@@ -36,7 +45,7 @@ class ProblemsSelectionAdapterAdapter(private var context: Context,
     inner class problemsSelectionViewHolder(val mView: View) : RecyclerView.ViewHolder(mView) {
 
 
-        private val thumbnail : ImageView = mView.imageViewProblem
+        val thumbnail : ImageView = mView.imageViewProblem
 
 
         fun bindProblems(problem: Problem) {

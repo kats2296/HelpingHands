@@ -11,11 +11,11 @@ class ProblemsSelectionActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_problems_selection)
 
-        val problemList = arrayListOf(Problem(R.drawable.zero_hunger, "Food"),
-                Problem(R.drawable.poverty, "Clothing"),
-                Problem(R.drawable.poverty, "Donation"),
-                Problem(R.drawable.medical_aids, "Medical-Aids"),
-                Problem(R.drawable.education, "Education"))
+        val problemList = arrayListOf(Problem(R.mipmap.zero_hunger, "Food"),
+                Problem(R.mipmap.poverty, "Clothing"),
+                Problem(R.mipmap.poverty, "Donation"),
+                Problem(R.mipmap.medical_aids, "Medical-Aids"),
+                Problem(R.mipmap.education, "Education"))
 
 
         recyclerViewProblems.layoutManager = LinearLayoutManager(this)

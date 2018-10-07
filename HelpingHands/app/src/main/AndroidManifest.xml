@@ -16,9 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".OrganisationHomeActivity" />
+        <activity android:name=".OrganisationHomeActivity"/>
         <activity android:name=".ProblemsSelectionActivity" />
-        <activity android:name=".eventDetailsActivity"></activity>
+        <activity android:name=".EventDetailsActivity"/>
     </application>
 
 </manifest>
