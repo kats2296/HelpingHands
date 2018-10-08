@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ChooseActivity">
+    
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:src="@drawable/wheel"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp20"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="as"
+        android:layout_marginTop="@dimen/dp30"
+        android:layout_gravity="center"
+        android:textColor="@color/colorBlack"
+        android:textSize="25sp"
+        android:textStyle="italic"
+        />
+
+    
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/dp10"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp20"
+            app:cardCornerRadius="@dimen/dp10"
+            >
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:text="AN ORGANIZATION"
+                android:textSize="30sp"
+                android:id="@+id/tv_org"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp10"
+                android:layout_gravity="center"
+                android:textColor="@color/colorBlack"
+                />
+            
+            
+        </android.support.v7.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="or"
+        android:layout_marginTop="@dimen/dp30"
+        android:layout_gravity="center"
+        android:textColor="@color/colorBlack"
+        android:textSize="25sp"
+        android:textStyle="italic"
+        />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/dp10"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginRight="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp30"
+        app:cardCornerRadius="@dimen/dp10"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A VOLUNTEER"
+            android:textSize="30sp"
+            android:id="@+id/tv_vol"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginBottom="@dimen/dp10"
+            android:layout_gravity="center"
+            android:textColor="@color/colorBlack"
+            />
+
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
