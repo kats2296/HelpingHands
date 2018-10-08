@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/homeScreenbackgroundColor"
+    tools:context=".OrganisationHomeActivity">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="1"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<android.support.v7.widget.CardView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_margin="25dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:elevation="0dp"-->
+        <!--app:cardCornerRadius="10dp"-->
+        <!--app:cardElevation="5dp">-->
+
+        <!--</android.support.v7.widget.CardView>-->
+
+        <!--<android.support.v7.widget.CardView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_margin="25dp"-->
+        <!--android:layout_weight="1"-->
+        <!--app:cardCornerRadius="10dp"-->
+        <!--app:cardElevation="5dp">-->
+
+        <!--</android.support.v7.widget.CardView>-->
+        <!--</LinearLayout>-->
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/cardViewMargin"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="@color/cardViewBackground"
+            app:cardCornerRadius="@dimen/cardViewRadius"
+            app:cardElevation="@dimen/cardViewElevation">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/constrLayoutOngoingEvent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="onClickOrgHome">
+
+                <TextView
+                    android:id="@+id/textViewOngoingEvent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="serif-monospace"
+                    android:text="@string/ongoing_events"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:onClick="onClickOrgHome"/>
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/cardViewMargin"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="@color/cardViewBackground"
+            app:cardCornerRadius="@dimen/cardViewRadius"
+            app:cardElevation="@dimen/cardViewElevation">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/constrLayoutCreateEvent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="onClickOrgHome">
+
+                <TextView
+                    android:id="@+id/textViewCreateEvent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="serif-monospace"
+                    android:text="@string/create_an_event"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:onClick="onClickOrgHome"/>
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/cardViewMargin"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/cardViewBackground"
+            app:cardCornerRadius="@dimen/cardViewRadius"
+            app:cardElevation="@dimen/cardViewElevation">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/constrLayoutPreviousEvent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="onClickOrgHome">
+
+                <TextView
+                    android:id="@+id/textViewPreviousEvent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="serif-monospace"
+                    android:text="@string/previous_events"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:onClick="onClickOrgHome"/>
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
