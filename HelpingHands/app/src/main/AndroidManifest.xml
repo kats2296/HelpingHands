@@ -38,6 +38,10 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".OrganisationHomeActivity"/>
+        <activity android:name=".ProblemsSelectionActivity" />
+        <activity android:name=".EventDetailsActivity"/>
+
     </application>
 
 </manifest>

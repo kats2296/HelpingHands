@@ -28,4 +28,9 @@
     <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
     <string name="play_again">Play Again</string>
 
+    <string name="ongoing_events">Ongoing events</string>
+    <string name="create_an_event">Create an event</string>
+    <string name="previous_events">Previous events</string>
+
+
 </resources>
