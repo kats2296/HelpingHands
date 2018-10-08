@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".activity.OrgSignUpActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tv_login">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                style="@style/CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp10"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp10"
+                app:cardCornerRadius="@dimen/dp10"
+                app:cardElevation="@dimen/dp10"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp40"
+                    android:layout_marginRight="@dimen/dp40"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_orgname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp50"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_orgname"
+                            android:layout_width="@dimen/dp0"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:hint="@string/organization_name"
+                            android:inputType="text"
+                            android:textSize="@dimen/sp14" />
+
+                        <ImageView
+                            android:layout_width="@dimen/dp20"
+                            android:layout_height="@dimen/dp20"
+                            android:src="@drawable/ic_people_outline_black_24dp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="@dimen/dp5"
+                        android:id="@+id/line1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/colorGray" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_contactno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_contactno"
+                            android:layout_width="@dimen/dp0"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:textSize="@dimen/sp14"
+                            android:hint="@string/contact_number"
+                            android:inputType="number" />
+
+
+                        <ImageView
+                            android:layout_width="@dimen/dp20"
+                            android:layout_height="@dimen/dp20"
+                            android:src="@drawable/ic_phone_android_black_24dp" />
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_marginTop="@dimen/dp5"
+                        android:id="@+id/line2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/colorGray" />
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_headname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_headname"
+                            android:layout_width="@dimen/dp0"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:hint="@string/head_name"
+                            android:textSize="@dimen/sp14" />
+
+                        <ImageView
+                            android:layout_width="@dimen/dp20"
+                            android:layout_height="@dimen/dp20"
+                            android:src="@drawable/ic_person_outline_black_24dp" />
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_marginTop="@dimen/dp5"
+                        android:id="@+id/line5"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/colorGray" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_address"
+                            android:layout_width="@dimen/dp0"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:hint="@string/organization_s_address"
+                            android:maxLength="15"
+                            android:textSize="@dimen/sp14" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_location_on_black_24dp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="@dimen/dp5"
+                        android:id="@+id/line6"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/colorGray" />
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_password"
+                            android:layout_width="@dimen/dp0"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:hint="@string/password"
+                            android:maxLength="15"
+                            android:inputType="textPassword"
+                            android:textSize="@dimen/sp14" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/password" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="@dimen/dp5"
+                        android:id="@+id/line7"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/colorGray" />
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_confirmpass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_confirmpass"
+                            android:layout_width="@dimen/dp0"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:hint="@string/confirm_password"
+                            android:maxLength="15"
+                            android:inputType="textPassword"
+                            android:textSize="@dimen/sp14" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/password" />
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_marginTop="@dimen/dp5"
+                        android:id="@+id/line8"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/colorGray" />
+
+
+                    <Button
+                        android:id="@+id/bt_signup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp40"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/dp30"
+                        android:layout_marginTop="@dimen/dp30"
+                        android:background="@drawable/sp_button"
+                        android:paddingLeft="@dimen/dp20"
+                        android:paddingRight="@dimen/dp20"
+                        android:text="@string/sign_up"
+                        android:textColor="@color/colorWhite" />
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp10"
+        android:text="@string/already"
+        android:textSize="15sp"
+        android:textColor="@color/colorWhite" />
+
+</RelativeLayout>

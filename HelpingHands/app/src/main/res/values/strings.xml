@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">HelpingHands</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="login">LOGIN</string>
+    <string name="no_account">Don\'t have an account ? SIGN UP</string>
+    <string name="send">SEND</string>
+    <string name="organization_name">Organization Name</string>
+    <string name="contact_number">Contact Number</string>
+    <string name="head_name">Head Name</string>
+    <string name="organization_s_address">Organization\'s Address</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="already">Already have an account? LOGIN</string>
+    <string name="name">Name</string>
+    <string name="address">Address</string>
+
+    <string name="zero_hunger_text">End hunger, achieve food security and improved nutrition, and promote sustainable agriculture.</string>
+    <string name="health">Ensure healthy lives and promote well-being for all at all ages</string>
+    <string name="no_poverty">End poverty in all its forms everywhere</string>
+    <string name="education">Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all.</string>
+
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+
 </resources>
