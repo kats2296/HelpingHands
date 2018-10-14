@@ -23,4 +23,5 @@
     <dimen name="cardViewRadius">5dp</dimen>
     <dimen name="cardViewElevation">5dp</dimen>
     <dimen name="dp200">200dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
 </resources>
