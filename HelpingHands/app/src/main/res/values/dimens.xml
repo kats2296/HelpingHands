@@ -14,7 +14,6 @@
     <dimen name="dp15">15dp</dimen>
     <dimen name="dp40">40dp</dimen>
     <dimen name="dp0">0dp</dimen>
-    <dimen name="dp200">200dp</dimen>
     <dimen name="sp18">18sp</dimen>
 
     <dimen name="dots_height">30dp</dimen>
@@ -23,5 +22,5 @@
     <dimen name="cardViewMargin">25dp</dimen>
     <dimen name="cardViewRadius">5dp</dimen>
     <dimen name="cardViewElevation">5dp</dimen>
-
+    <dimen name="dp200">200dp</dimen>
 </resources>

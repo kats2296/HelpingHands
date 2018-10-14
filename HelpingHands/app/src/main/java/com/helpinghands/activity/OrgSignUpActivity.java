@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.helpinghands.OrganisationHomeActivity;
 import com.helpinghands.R;
 
 import butterknife.ButterKnife;
@@ -25,5 +26,14 @@ public class OrgSignUpActivity extends AppCompatActivity {
         Intent intent = new Intent(OrgSignUpActivity.this, LoginActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
+    }
+
+    @OnClick(R.id.bt_signup)
+    void launchHomeScreen() {
+
+        Intent intent = new Intent(OrgSignUpActivity.this , OrganisationHomeActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+
     }
 }

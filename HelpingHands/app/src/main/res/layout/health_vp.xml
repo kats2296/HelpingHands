@@ -15,7 +15,9 @@
         <ImageView
             android:layout_width="@dimen/dp200"
             android:layout_height="@dimen/dp200"
-            android:src="@drawable/medicalaids" />
+            android:src="@drawable/ic_medical_aids"
+            android:background="@color/colorWhite"
+            />
 
 
         <TextView

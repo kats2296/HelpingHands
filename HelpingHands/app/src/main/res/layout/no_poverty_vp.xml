@@ -15,7 +15,9 @@
         <ImageView
             android:layout_width="@dimen/dp200"
             android:layout_height="@dimen/dp200"
-            android:src="@drawable/poverty" />
+            android:src="@drawable/ic_no_poverty"
+            android:background="@color/colorWhite"
+            />
 
 
         <TextView

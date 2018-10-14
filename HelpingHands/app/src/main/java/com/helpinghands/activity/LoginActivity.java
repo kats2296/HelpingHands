@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.helpinghands.OrganisationHomeActivity;
 import com.helpinghands.R;
 
 import butterknife.BindView;
@@ -38,4 +39,15 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(intent);
         }
 
+    @OnClick(R.id.bt_login)
+    void launchHomeScreen() {
+
+        if(pos.equalsIgnoreCase("organization")) {
+
+            Intent intent = new Intent(LoginActivity.this , OrganisationHomeActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+        }
+
+    }
 }

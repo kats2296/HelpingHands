@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/zero_hunger">
+    android:background="@color/zero_hunger"
+    >
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -15,7 +16,9 @@
         <ImageView
             android:layout_width="@dimen/dp200"
             android:layout_height="@dimen/dp200"
-            android:src="@drawable/zerohunger" />
+            android:src="@drawable/ic_zero_hunger"
+            android:background="@color/colorWhite"
+            />
 
 
         <TextView
