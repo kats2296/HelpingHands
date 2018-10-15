@@ -13,6 +13,7 @@ import com.helpinghands.Model.Event
 
 import com.helpinghands.R
 import com.helpinghands.adapter.EventAdapter
+import com.helpinghands.helper.Constants
 
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
@@ -56,13 +57,13 @@ class RegisteredVolunteerEventsFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(context!!)
 
         registeredEventList.add(Event("Food Give Away","Noida","Helping Hands",
-                "16-10-2018 10:00 A.M.", 10 , "FOOD"))
+                "16-10-2018 10:00 A.M.", 10 , "FOOD", Constants.DEFAULT_EVENT))
 
         registeredEventList.add(Event("Food Give Away","Noida","Helping Hands",
-                "16-10-2018 10:00 A.M.", 10 , "FOOD"))
+                "16-10-2018 10:00 A.M.", 10 , "FOOD", Constants.DEFAULT_EVENT))
 
         registeredEventList.add(Event("Food Give Away","Noida","Helping Hands",
-                "16-10-2018 10:00 A.M.", 10 , "FOOD"))
+                "16-10-2018 10:00 A.M.", 10 , "FOOD", Constants.DEFAULT_EVENT))
 
         adapter = EventAdapter(context!!, registeredEventList, null,
                 mListenerRegisteredVolEvent)

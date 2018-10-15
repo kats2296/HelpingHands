@@ -10,6 +10,7 @@ import com.helpinghands.Fragments.RegisteredVolunteerEventsFragment
 import com.helpinghands.Model.Event
 import com.helpinghands.R
 import com.helpinghands.adapter.PagerAdapter
+import com.helpinghands.helper.Constants
 import kotlinx.android.synthetic.main.activity_volunteer_home.*
 
 class VolunteerHomeActivity : AppCompatActivity(), TabLayout.OnTabSelectedListener,
@@ -50,7 +51,8 @@ RegisteredVolunteerEventsFragment.OnRegisteredVolEventFragmentInteractionListene
     private fun setupViewPager(view_pager: ViewPager?) {
 
         val adapter = PagerAdapter(supportFragmentManager)
-        adapter.addFragment(OngoingEventFragment.newInstance(1), "Ongoing Events")
+        adapter.addFragment(OngoingEventFragment.newInstance(1, Constants.VOLUNTEERING_EVENT),
+                "Ongoing Events")
         adapter.addFragment(RegisteredVolunteerEventsFragment.
                 newInstance("two","two"), "Registered Events")
         view_pager?.adapter = adapter

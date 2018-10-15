@@ -9,6 +9,7 @@ import com.helpinghands.Model.Event
 import com.helpinghands.Fragments.OngoingEventFragment
 import com.helpinghands.Fragments.RegisteredVolunteerEventsFragment
 import com.helpinghands.R
+import com.helpinghands.helper.Constants
 import kotlinx.android.synthetic.main.event_item.view.*
 
 class EventAdapter(private var context: Context,
@@ -55,6 +56,7 @@ class EventAdapter(private var context: Context,
         val volunteers          = mView.textViewTotalvolunteers
         val category            = mView.textViewEventCategory
         val dateTime                      = mView.textViewDateTime
+        val volConstrtaintLayout  =  mView.constrLayoutVolunteer
 
 
         fun bindEvents(event: Event){
@@ -65,6 +67,12 @@ class EventAdapter(private var context: Context,
             volunteers.text = event.volunteers.toString()
             category.text = event.category
             dateTime.text = event.dateTime
+
+            if (event.eventType == Constants.DEFAULT_EVENT){
+                volConstrtaintLayout.visibility = View.GONE
+            }else{
+                volConstrtaintLayout.visibility = View.VISIBLE
+            }
         }
 
     }

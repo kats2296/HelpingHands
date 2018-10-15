@@ -12,6 +12,8 @@ import android.view.ViewGroup
 import com.helpinghands.Model.Event
 import com.helpinghands.R
 import com.helpinghands.adapter.EventAdapter
+import com.helpinghands.helper.Constants
+import java.lang.invoke.ConstantCallSite
 
 /**
  * A fragment representing a list of Items.
@@ -21,6 +23,7 @@ import com.helpinghands.adapter.EventAdapter
 class OngoingEventFragment : Fragment() {
 
     private var columnCount = 1
+    private var type = ""
 
     private var listener: OnOngoingEventFragmentInteractionListener? = null
 
@@ -31,6 +34,7 @@ class OngoingEventFragment : Fragment() {
 
         arguments?.let {
             columnCount = it.getInt(ARG_COLUMN_COUNT)
+            type = it.getString(TYPE)
         }
     }
 
@@ -40,12 +44,19 @@ class OngoingEventFragment : Fragment() {
 
         // Set the adapter
 
+        var eventType = ""
+        if (type == Constants.VOLUNTEERING_EVENT){
+            eventType = Constants.VOLUNTEERING_EVENT
+        }else{
+            eventType = Constants.DEFAULT_EVENT
+        }
+
         ongoingEventList.add(Event("Food Give Away","Noida","Helping Hands",
-                "16-10-2018 10:00 A.M.", 10 , "FOOD"))
+                "16-10-2018 10:00 A.M.", 10 , "FOOD", eventType))
         ongoingEventList.add(Event("Food Give Away","Noida","Helping Hands",
-                "16-10-2018 10:00 A.M.", 10 , "FOOD"))
+                "16-10-2018 10:00 A.M.", 10 , "FOOD", eventType))
         ongoingEventList.add(Event("Food Give Away","Noida","Helping Hands",
-                "16-10-2018 10:00 A.M.", 10 , "FOOD"))
+                "16-10-2018 10:00 A.M.", 10 , "FOOD",eventType))
 
         if (view is RecyclerView) {
             with(view) {
@@ -91,12 +102,14 @@ class OngoingEventFragment : Fragment() {
     companion object {
 
         const val ARG_COLUMN_COUNT = "column-count"
+        const val TYPE = "type"
 
         @JvmStatic
-        fun newInstance(columnCount: Int) =
+        fun newInstance(columnCount: Int, type: String) =
                 OngoingEventFragment().apply {
                     arguments = Bundle().apply {
                         putInt(ARG_COLUMN_COUNT, columnCount)
+                        putString(TYPE, type)
                     }
                 }
     }

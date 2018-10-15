@@ -6,4 +6,5 @@ data class Event(
         val orgName: String,
         val dateTime: String,
         val volunteers: Int,
-        val category: String)
+        val category: String,
+        val eventType: String)
