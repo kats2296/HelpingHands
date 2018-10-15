@@ -23,4 +23,9 @@
     <dimen name="cardViewRadius">5dp</dimen>
     <dimen name="cardViewElevation">5dp</dimen>
     <dimen name="dp200">200dp</dimen>
+    <dimen name="sp25">25sp</dimen>
+    <dimen name="dp130">130dp</dimen>
+    <dimen name="sp20">20sp</dimen>
+    <dimen name="sp10">10sp</dimen>
+    <dimen name="sp15">15sp</dimen>
 </resources>
