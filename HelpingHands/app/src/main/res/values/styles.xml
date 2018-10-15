@@ -14,4 +14,9 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="TabTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/sanfrancisco_display_semibold</item>
+    </style>
+
 </resources>

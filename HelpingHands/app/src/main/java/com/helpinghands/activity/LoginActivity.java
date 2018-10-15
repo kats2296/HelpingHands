@@ -84,7 +84,7 @@ public class LoginActivity extends AppCompatActivity {
 
             if(pos.equalsIgnoreCase("volunteer")) {
 
-                Intent intent = new Intent(LoginActivity.this , OrgHomeActivity.class);
+                Intent intent = new Intent(LoginActivity.this , VolunteerHomeActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
             }

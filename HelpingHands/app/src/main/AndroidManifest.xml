@@ -30,9 +30,12 @@
         <activity android:name=".activity.EventDetailsActivity"
             android:theme="@style/AppTheme"
             />
-        <activity android:name=".activity.ForgotPasswordActivity" />
-        <activity android:name=".activity.ChangePassword" />
-        <activity android:name=".activity.VolunteerHomeActivity" />
+        <activity android:name=".activity.ForgotPasswordActivity"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".activity.ChangePassword"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".activity.VolunteerHomeActivity"
+            android:theme="@style/AppTheme"/>
         <activity android:name=".activity.OrgHomeActivity"
             android:theme="@style/AppTheme"
             ></activity>

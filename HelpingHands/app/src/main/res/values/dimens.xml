@@ -13,15 +13,16 @@
     <dimen name="dp100">100dp</dimen>
     <dimen name="dp15">15dp</dimen>
     <dimen name="dp40">40dp</dimen>
+    <dimen name="dp25">25dp</dimen>
     <dimen name="dp0">0dp</dimen>
     <dimen name="sp18">18sp</dimen>
 
     <dimen name="dots_height">30dp</dimen>
     <dimen name="dots_margin_bottom">20dp</dimen>
 
-    <dimen name="cardViewMargin">25dp</dimen>
-    <dimen name="cardViewRadius">5dp</dimen>
-    <dimen name="cardViewElevation">5dp</dimen>
+    <dimen name="cardViewMargin">@dimen/dp25</dimen>
+    <dimen name="cardViewRadius">@dimen/dp5</dimen>
+    <dimen name="cardViewElevation">@dimen/dp5</dimen>
     <dimen name="dp200">200dp</dimen>
     <dimen name="sp25">25sp</dimen>
     <dimen name="dp130">130dp</dimen>
