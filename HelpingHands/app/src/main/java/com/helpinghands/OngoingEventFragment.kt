@@ -37,6 +37,10 @@ class OngoingEventFragment : Fragment() {
         val view = inflater.inflate(R.layout.ongoing_fragment_item_list, container, false)
 
         // Set the adapter
+
+        ongoingEventList.add(Event("Food Give Away","Noida","Helping Hands",
+                "16-10-2018 10:00 A.M.", 10 , "FOOD"))
+
         if (view is RecyclerView) {
             with(view) {
                 layoutManager = when {

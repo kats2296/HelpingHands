@@ -13,18 +13,25 @@ import android.view.View;
 
 import com.helpinghands.EventDetailsActivity;
 import com.helpinghands.Fragments.OrgHomeFragment;
+import com.helpinghands.Model.Event;
+import com.helpinghands.OngoingEventFragment;
 import com.helpinghands.R;
+
+import org.jetbrains.annotations.Nullable;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class OrgHomeActivity extends AppCompatActivity {
+public class OrgHomeActivity extends AppCompatActivity
+implements OngoingEventFragment.OnOngoingEventFragmentInteractionListener {
 
     @BindView(R.id.navigation)
     BottomNavigationView bottomNavigationView;
 
     private Fragment orgHomeFrag;
     private FragmentManager fragmentManager;
+
+    private Fragment ongoingEventFragment;
 
 
     @Override
@@ -51,13 +58,13 @@ public class OrgHomeActivity extends AppCompatActivity {
                         break;
 
                     case R.id.ongoing_events:
-                        orgHomeFrag = new OrgHomeFragment();
-                        addFragment(orgHomeFrag);
+                        ongoingEventFragment = new OngoingEventFragment();
+                        addFragment(ongoingEventFragment);
                         break;
 
                     case R.id.previous_events:
-                        orgHomeFrag = new OrgHomeFragment();
-                        addFragment(orgHomeFrag);
+                        ongoingEventFragment = new OngoingEventFragment();
+                        addFragment(ongoingEventFragment);
                         break;
                 }
 
@@ -80,4 +87,8 @@ public class OrgHomeActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @Override
+    public void onOngoingEventFragmentInteractionListener(@Nullable Event item) {
+
+    }
 }

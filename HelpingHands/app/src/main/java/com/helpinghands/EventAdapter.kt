@@ -48,6 +48,7 @@ class EventAdapter(private var context: Context,
         val orgName             = mView.textViewOrgName
         val volunteers          = mView.textViewTotalvolunteers
         val category            = mView.textViewEventCategory
+        val dateTime                      = mView.textViewDateTime
 
 
         fun bindEvents(event: Event){
@@ -57,6 +58,7 @@ class EventAdapter(private var context: Context,
             orgName.text = event.orgName
             volunteers.text = event.volunteers.toString()
             category.text = event.category
+            dateTime.text = event.dateTime
         }
 
     }
