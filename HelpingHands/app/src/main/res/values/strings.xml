@@ -32,5 +32,20 @@
     <string name="create_an_event">Create an event</string>
     <string name="previous_events">Previous events</string>
 
+    <string name="text_fp">Don\'t worry! Please enter your email to reset your password.</string>
+    <string name="change_password">Change Password</string>
+    <string name="enter_new_pass">Enter your new password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_new_password">Confirm New Password</string>
+    <string name="change">CHANGE</string>
+    <string name="event_name">Event Name</string>
+    <string name="submit">SUBMIT</string>
+    <string name="number_of_people">Number of people</string>
+    <string name="timings">Timings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="quote">The purpose of life is not to be happy. It is to be useful, to be honorable, to be compassionate, to have it make some difference that you have lived and lived well.</string>
+
 
 </resources>

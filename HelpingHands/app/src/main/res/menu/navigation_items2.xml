@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/register_events"
+        android:title="Register for events" />
+
+    <item android:id="@+id/upcoming_events"
+        android:title="Your Upcoming Events" />
+
+    <item android:id="@+id/previous_events"
+        android:title="Your Previous Events" />
+</menu>
