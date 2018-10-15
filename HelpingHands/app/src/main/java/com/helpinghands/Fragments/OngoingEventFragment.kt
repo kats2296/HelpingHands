@@ -42,6 +42,10 @@ class OngoingEventFragment : Fragment() {
 
         ongoingEventList.add(Event("Food Give Away","Noida","Helping Hands",
                 "16-10-2018 10:00 A.M.", 10 , "FOOD"))
+        ongoingEventList.add(Event("Food Give Away","Noida","Helping Hands",
+                "16-10-2018 10:00 A.M.", 10 , "FOOD"))
+        ongoingEventList.add(Event("Food Give Away","Noida","Helping Hands",
+                "16-10-2018 10:00 A.M.", 10 , "FOOD"))
 
         if (view is RecyclerView) {
             with(view) {
@@ -49,7 +53,7 @@ class OngoingEventFragment : Fragment() {
                     columnCount <= 1 -> LinearLayoutManager(context)
                     else -> GridLayoutManager(context, columnCount)
                 }
-                adapter = EventAdapter(context, ongoingEventList, listener)
+                adapter = EventAdapter(context, ongoingEventList, listener, null)
             }
         }
         return view

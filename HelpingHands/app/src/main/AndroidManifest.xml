@@ -20,11 +20,6 @@
         <activity android:name=".activity.VolSignUpActivity" />
         <activity android:name=".activity.ChooseActivity" />
         <activity android:name=".viewpager.WelcomeActivity">
-            <intent-filter>
-                <category android:name="android.intent.category.LAUNCHER" />
-
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
         </activity>
         <activity android:name=".activity.ProblemsSelectionActivity" />
         <activity android:name=".activity.EventDetailsActivity"
@@ -35,7 +30,13 @@
         <activity android:name=".activity.ChangePassword"
             android:theme="@style/AppTheme"/>
         <activity android:name=".activity.VolunteerHomeActivity"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme">
+        <intent-filter>
+            <category android:name="android.intent.category.LAUNCHER" />
+
+            <action android:name="android.intent.action.MAIN" />
+        </intent-filter>
+        </activity>
         <activity android:name=".activity.OrgHomeActivity"
             android:theme="@style/AppTheme"
             ></activity>

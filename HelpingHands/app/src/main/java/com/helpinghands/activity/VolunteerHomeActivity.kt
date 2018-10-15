@@ -14,10 +14,10 @@ import kotlinx.android.synthetic.main.activity_volunteer_home.*
 
 class VolunteerHomeActivity : AppCompatActivity(), TabLayout.OnTabSelectedListener,
 OngoingEventFragment.OnOngoingEventFragmentInteractionListener,
-RegisteredVolunteerEventsFragment.OnFragmentInteractionListener{
+RegisteredVolunteerEventsFragment.OnRegisteredVolEventFragmentInteractionListener{
 
 
-    override fun onFragmentInteraction(uri: Uri) {
+    override fun onRegisteredVolEventFragmentInteractionListener(uri: Uri) {
 
     }
 

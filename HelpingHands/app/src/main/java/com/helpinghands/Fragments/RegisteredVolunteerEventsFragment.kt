@@ -4,11 +4,15 @@ import android.content.Context
 import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.helpinghands.Model.Event
 
 import com.helpinghands.R
+import com.helpinghands.adapter.EventAdapter
 
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
@@ -17,7 +21,7 @@ private const val ARG_PARAM2 = "param2"
 /**
  * A simple [Fragment] subclass.
  * Activities that contain this fragment must implement the
- * [RegisteredVolunteerEventsFragment.OnFragmentInteractionListener] interface
+ * [RegisteredVolunteerEventsFragment.OnRegisteredVolEventFragmentInteractionListener] interface
  * to handle interaction events.
  * Use the [RegisteredVolunteerEventsFragment.newInstance] factory method to
  * create an instance of this fragment.
@@ -26,7 +30,13 @@ private const val ARG_PARAM2 = "param2"
 class RegisteredVolunteerEventsFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
-    private var listener: OnFragmentInteractionListener? = null
+    private var mListenerRegisteredVolEvent: OnRegisteredVolEventFragmentInteractionListener? = null
+
+    private var registeredEventList: ArrayList<Event> = ArrayList()
+
+    private lateinit var  recyclerView: RecyclerView
+
+    private lateinit var adapter: EventAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,25 +49,46 @@ class RegisteredVolunteerEventsFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_registered_volunteer_events, container, false)
+        val view  = inflater.inflate(R.layout.fragment_registered_volunteer_events,
+                container, false)
+
+        recyclerView = view.findViewById(R.id.recylerViewRegisteredVolEvent)
+        recyclerView.layoutManager = LinearLayoutManager(context!!)
+
+        registeredEventList.add(Event("Food Give Away","Noida","Helping Hands",
+                "16-10-2018 10:00 A.M.", 10 , "FOOD"))
+
+        registeredEventList.add(Event("Food Give Away","Noida","Helping Hands",
+                "16-10-2018 10:00 A.M.", 10 , "FOOD"))
+
+        registeredEventList.add(Event("Food Give Away","Noida","Helping Hands",
+                "16-10-2018 10:00 A.M.", 10 , "FOOD"))
+
+        adapter = EventAdapter(context!!, registeredEventList, null,
+                mListenerRegisteredVolEvent)
+
+        recyclerView.adapter = adapter
+
+        return view
+
     }
 
     fun onButtonPressed(uri: Uri) {
-        listener?.onFragmentInteraction(uri)
+        mListenerRegisteredVolEvent?.onRegisteredVolEventFragmentInteractionListener(uri)
     }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        if (context is OnFragmentInteractionListener) {
-            listener = context
+        if (context is OnRegisteredVolEventFragmentInteractionListener) {
+            mListenerRegisteredVolEvent = context
         } else {
-            throw RuntimeException(context.toString() + " must implement OnFragmentInteractionListener")
+            throw RuntimeException(context.toString() + " must implement OnRegisteredVolEventFragmentInteractionListener")
         }
     }
 
     override fun onDetach() {
         super.onDetach()
-        listener = null
+        mListenerRegisteredVolEvent = null
     }
 
     /**
@@ -71,8 +102,8 @@ class RegisteredVolunteerEventsFragment : Fragment() {
      * (http://developer.android.com/training/basics/fragments/communicating.html)
      * for more information.
      */
-    interface OnFragmentInteractionListener {
-        fun onFragmentInteraction(uri: Uri)
+    interface OnRegisteredVolEventFragmentInteractionListener {
+        fun onRegisteredVolEventFragmentInteractionListener(uri: Uri)
     }
 
     companion object {

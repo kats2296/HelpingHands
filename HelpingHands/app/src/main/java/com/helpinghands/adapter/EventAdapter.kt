@@ -7,22 +7,26 @@ import android.view.View
 import android.view.ViewGroup
 import com.helpinghands.Model.Event
 import com.helpinghands.Fragments.OngoingEventFragment
+import com.helpinghands.Fragments.RegisteredVolunteerEventsFragment
 import com.helpinghands.R
 import kotlinx.android.synthetic.main.event_item.view.*
 
 class EventAdapter(private var context: Context,
                    private var eventList: ArrayList<Event>,
-                   private val mListener: OngoingEventFragment.OnOngoingEventFragmentInteractionListener?)
+                   private val mOngoingListener:
+                   OngoingEventFragment.OnOngoingEventFragmentInteractionListener?,
+                   private val mRegisteredListener:
+                   RegisteredVolunteerEventsFragment.OnRegisteredVolEventFragmentInteractionListener?)
     : RecyclerView.Adapter<EventAdapter.EventViewHolder>() {
 
     private val mOnClickListener: View.OnClickListener
 
     init {
         mOnClickListener = View.OnClickListener { v ->
-            val item = v.tag as Event
-            // Notify the active callbacks interface (the activity, if the fragment is attached to
-            // one) that an item has been selected.
-            mListener?.onOngoingEventFragmentInteractionListener(item)
+//            val item = v.tag as Event
+//            // Notify the active callbacks interface (the activity, if the fragment is attached to
+//            // one) that an item has been selected.
+//            mListener?.onOngoingEventFragmentInteractionListener(item)
         }
     }
 
