@@ -4,7 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Fragments.OrgHomeFragment">
+    tools:context=".Fragments.OrgHomeFragment"
+    android:background="@color/homeScreenbackgroundColor"
+    >
 
     <TextView
         android:layout_width="match_parent"

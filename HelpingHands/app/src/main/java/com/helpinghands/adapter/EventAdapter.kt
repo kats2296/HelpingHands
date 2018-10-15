@@ -1,4 +1,4 @@
-package com.helpinghands
+package com.helpinghands.adapter
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.helpinghands.Model.Event
+import com.helpinghands.Fragments.OngoingEventFragment
+import com.helpinghands.R
 import kotlinx.android.synthetic.main.event_item.view.*
 
 class EventAdapter(private var context: Context,

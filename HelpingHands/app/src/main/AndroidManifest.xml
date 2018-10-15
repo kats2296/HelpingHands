@@ -26,8 +26,8 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".ProblemsSelectionActivity" />
-        <activity android:name=".EventDetailsActivity"
+        <activity android:name=".activity.ProblemsSelectionActivity" />
+        <activity android:name=".activity.EventDetailsActivity"
             android:theme="@style/AppTheme"
             />
         <activity android:name=".activity.ForgotPasswordActivity" />

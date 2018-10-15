@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/homeScreenbackgroundColor"
     android:focusableInTouchMode="true"
-    android:background="@color/colorPrimary"
-    tools:context=".EventDetailsActivity">
+    tools:context=".activity.EventDetailsActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -38,15 +38,15 @@
                     android:orientation="vertical">
 
                     <!--<TextView-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:text="EVENT DETAILS"-->
-                        <!--android:textSize="@dimen/sp25"-->
-                        <!--android:textColor="@color/colorBlack"-->
-                        <!--android:layout_gravity="center"-->
-                        <!--android:layout_marginTop="@dimen/dp10"-->
-                        <!--android:textStyle="italic"-->
-                        <!--/>-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="EVENT DETAILS"-->
+                    <!--android:textSize="@dimen/sp25"-->
+                    <!--android:textColor="@color/colorBlack"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:layout_marginTop="@dimen/dp10"-->
+                    <!--android:textStyle="italic"-->
+                    <!--/>-->
 
                     <LinearLayout
                         android:id="@+id/ll_eventname"
@@ -193,8 +193,8 @@
                             android:layout_weight="1"
                             android:background="@null"
                             android:hint="@string/number_of_people"
-                            android:maxLength="15"
                             android:inputType="number"
+                            android:maxLength="15"
                             android:textSize="@dimen/sp14" />
 
                         <ImageView
@@ -232,8 +232,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/dp30"
                             android:layout_marginTop="@dimen/dp10"
-                            android:orientation="horizontal"
-                            >
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/radioButton"
@@ -280,8 +279,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/dp30"
                             android:layout_marginTop="@dimen/dp10"
-                            android:orientation="horizontal"
-                            >
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/radioButton3"

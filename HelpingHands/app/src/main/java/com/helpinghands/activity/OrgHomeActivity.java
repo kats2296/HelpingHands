@@ -9,12 +9,10 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 
-import com.helpinghands.EventDetailsActivity;
 import com.helpinghands.Fragments.OrgHomeFragment;
 import com.helpinghands.Model.Event;
-import com.helpinghands.OngoingEventFragment;
+import com.helpinghands.Fragments.OngoingEventFragment;
 import com.helpinghands.R;
 
 import org.jetbrains.annotations.Nullable;

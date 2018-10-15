@@ -1,9 +1,11 @@
-package com.helpinghands
+package com.helpinghands.activity
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
-import com.helpinghands.R.id.recyclerViewProblems
+import com.helpinghands.Model.Problem
+import com.helpinghands.R
+import com.helpinghands.adapter.ProblemsSelectionAdapterAdapter
 import kotlinx.android.synthetic.main.activity_problems_selection.*
 
 class ProblemsSelectionActivity : AppCompatActivity() {

@@ -1,28 +1,25 @@
 package com.helpinghands.adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.helpinghands.EventDetailsActivity;
 import com.helpinghands.R;
 import com.helpinghands.activity.OrgHomeActivity;
 
-import java.util.ArrayList;
-
-import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class OrgHomeAdapter extends RecyclerView.Adapter<OrgHomeAdapter.OrgHomeViewHolder> {
 
-    String[] names = {"ZERO HUNGER" , "NO POVERTY" , "GOOD HEALTH AND WELL BEING" , "DONATIONS"};
+    String[] names = {"ZERO HUNGER" , "EDUCATION" , "GOOD HEALTH AND WELL BEING" , "DONATIONS"};
+    int[] images =   {R.drawable.ic_zero_hunger , R.drawable.ic_education, R.drawable.ic_medical_aids ,
+                        R.drawable.ic_no_poverty};
     Context context;
 
     public OrgHomeAdapter(Context context) {
@@ -45,6 +42,7 @@ public class OrgHomeAdapter extends RecyclerView.Adapter<OrgHomeAdapter.OrgHomeV
     public void onBindViewHolder(@NonNull OrgHomeViewHolder holder, int position) {
 
         holder.tv_service.setText(String.valueOf(names[position]));
+        holder.iv_service.setImageResource(images[position]);
 
     }
 
@@ -56,11 +54,13 @@ public class OrgHomeAdapter extends RecyclerView.Adapter<OrgHomeAdapter.OrgHomeV
     public class OrgHomeViewHolder extends RecyclerView.ViewHolder {
 
         private TextView tv_service;
+        private ImageView iv_service;
 
         public OrgHomeViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this , itemView);
             tv_service = itemView.findViewById(R.id.tv_service);
+            iv_service = itemView.findViewById(R.id.iv_service);
         }
     }
 

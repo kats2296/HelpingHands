@@ -6,8 +6,8 @@
     android:name="com.helpinghands.OngoingEventFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
     app:layoutManager="android.support.v7.widget.LinearLayoutManager"
-    tools:context=".OngoingEventFragment"
-    tools:listitem="@layout/event_item" />
+    tools:context=".Fragments.OngoingEventFragment"
+    tools:listitem="@layout/event_item"
+    android:background="@color/homeScreenbackgroundColor"
+    />

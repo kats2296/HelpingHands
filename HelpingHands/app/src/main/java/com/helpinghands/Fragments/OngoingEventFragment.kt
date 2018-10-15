@@ -1,4 +1,4 @@
-package com.helpinghands
+package com.helpinghands.Fragments
 
 import android.content.Context
 import android.os.Bundle
@@ -10,6 +10,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.helpinghands.Model.Event
+import com.helpinghands.R
+import com.helpinghands.adapter.EventAdapter
 
 /**
  * A fragment representing a list of Items.
@@ -47,7 +49,7 @@ class OngoingEventFragment : Fragment() {
                     columnCount <= 1 -> LinearLayoutManager(context)
                     else -> GridLayoutManager(context, columnCount)
                 }
-                adapter = EventAdapter(context,ongoingEventList, listener)
+                adapter = EventAdapter(context, ongoingEventList, listener)
             }
         }
         return view
