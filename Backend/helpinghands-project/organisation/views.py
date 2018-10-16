@@ -7,7 +7,7 @@ from django.http import HttpResponse
 from django.contrib.auth.forms import UserCreationForm
 import json
 from django.db import models
-
+from django.http import JsonResponse
 from .models import Organisation, Event
 
 
@@ -49,6 +49,7 @@ def create(request):
         org.save()
         return HttpResponse("success")
 
+
 def login(request):
 
     if request.method == 'POST':
@@ -64,6 +65,7 @@ def login(request):
 
         except models.ObjectDoesNotExist:
             return HttpResponse("User with this email doesnt exist.")
+
 
 def create_event(request):
 
@@ -82,8 +84,23 @@ def create_event(request):
         event.is_pickup_available = data['is_pickup_available']
         event.category = data['category']
 
+        event.content_object = Organisation.objects.get(email=data['email'])
+
         event.save()
         return HttpResponse("event created")
+
+
+def get_all_events(request):
+    if request.method == 'POST':
+        data = json.loads(request.body.decode('utf-8'))
+
+        try:
+            org = Organisation.objects.get(email=data['email'])
+            event = org.events.all()
+            return JsonResponse({'events': list(event.values())})
+
+        except models.ObjectDoesNotExist:
+            return HttpResponse("user with this email doesn't exist")
 
 
 

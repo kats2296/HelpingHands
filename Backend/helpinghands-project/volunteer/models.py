@@ -1,6 +1,8 @@
 from django.db import models
 
 # Create your models here.
+from django.contrib.contenttypes.fields import GenericRelation
+from organisation.models import Event
 
 
 class Volunteer(models.Model):
@@ -11,5 +13,6 @@ class Volunteer(models.Model):
     password = models.TextField(max_length=100, default="", null=True, blank=True)
     confirm_password = models.TextField(max_length=100, default="", null=True, blank=True)
     is_verified = models.BooleanField(default=False)
+    events = GenericRelation(Event)
 
 
