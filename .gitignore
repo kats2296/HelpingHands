@@ -1,5 +1,14 @@
 
-# Created by https://www.gitignore.io/api/pycharm,sublimetext,androidstudio
+### Django ###
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+/media
+/static
+djangp_practise/
 
 ### AndroidStudio ###
 # Covers files to be ignored for android development using Android Studio.
@@ -233,5 +242,3 @@ bh_unicode_properties.cache
 # https://packagecontrol.io/packages/sublime-github
 GitHub.sublime-settings
 
-
-# End of https://www.gitignore.io/api/pycharm,sublimetext,androidstudio
