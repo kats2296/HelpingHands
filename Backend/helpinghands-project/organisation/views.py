@@ -8,7 +8,7 @@ from django.contrib.auth.forms import UserCreationForm
 import json
 from django.db import models
 
-from .models import Organisation
+from .models import Organisation, Event
 
 
 def signup(request):
@@ -62,6 +62,27 @@ def login(request):
 
         except models.ObjectDoesNotExist:
             return HttpResponse("User with this email doesnt exist.")
+
+def create_event(request):
+
+    if request.method == 'POST':
+        data = json.loads(request.body.decode('utf-8'))
+
+        event = Event()
+        event.name = data['name']
+        event.contact_number = data['mobile']
+        event.email = data['email']
+        event.address = data['address']
+        event.date = data['date']
+        event.time = data['time']
+        event.number_of_people = data['num_people']
+        event.total_volunteers = data['total_volunteers']
+        event.is_pickup_available = data['is_pickup_available']
+        event.category = data['category']
+
+        event.save()
+        return HttpResponse("event created")
+
 
 
 

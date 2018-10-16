@@ -12,3 +12,18 @@ class Organisation(models.Model):
     password = models.TextField(max_length=100, default="", null=True, blank=True)
     confirm_password = models.TextField(max_length=100, default="", null=True, blank=True)
     is_verified = models.BooleanField(default=False)
+
+class Event(models.Model):
+    name = models.CharField(max_length=255)
+    contact_number = models.TextField(max_length=255)
+    email = models.CharField(max_length=255)
+    address = models.TextField(max_length=255)
+    date = models.TextField(max_length=255)
+    time = models.TextField(max_length=255)
+    total_volunteers = models.IntegerField()
+    volunteers_volunteered = models.IntegerField(default=0)
+    volunteers_left = models.IntegerField(default=0)
+    number_of_people = models.IntegerField()
+    is_pickup_available = models.BooleanField(default=False)
+    category = models.CharField(max_length=255)
+    is_completed = models.BooleanField(default=False)
