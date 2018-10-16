@@ -6,6 +6,7 @@ from django.contrib import auth
 from django.http import HttpResponse
 from django.contrib.auth.forms import UserCreationForm
 import json
+from django.db import models
 
 from .models import Organisation
 
@@ -17,15 +18,50 @@ def signup(request):
         data = json.loads(request.body.decode('utf-8'))
         print(data)
 
-        org = Organisation()
-        org.name = data['name']
-        org.contact_number = data['mobile']
-        org.head_name = data['head_name']
-        org.address = data['address']
-        org.password = data['password']
-        org.confirm_password = data['confirm_password']
+        org = Organisation.objects.get(email=data['email'])
 
-        # org = Organisation(name, contact_number, head_name, address, password, confirm_password)
-        print(org)
+        if org.is_verified:
+            org.name = data['name']
+            org.contact_number = data['mobile']
+            org.head_name = data['head_name']
+            org.address = data['address']
+            org.password = data['password']
+            org.confirm_password = data['confirm_password']
+
+            # org = Organisation(name, contact_number, head_name, address, password, confirm_password)
+            print(org)
+            org.save()
+            return HttpResponse("successfull")
+
+        else :
+            return HttpResponse("email not verified")
+
+
+def create(request):
+
+    if request.method == 'POST':
+        data = json.loads(request.body.decode('utf-8'))
+
+        org = Organisation()
+        org.email = data['email']
         org.save()
-        return HttpResponse("successfull")
+        return HttpResponse("success")
+
+def login(request):
+
+    if request.method == 'POST':
+        data = json.loads(request.body.decode('utf-8'))
+
+        try:
+            org = Organisation.objects.get(email=data['email'])
+            if org.password == data['password']:
+                return HttpResponse("successful login")
+
+            else:
+                return HttpResponse("incorrect password")
+
+        except models.ObjectDoesNotExist:
+            return HttpResponse("User with this email doesnt exist.")
+
+
+
