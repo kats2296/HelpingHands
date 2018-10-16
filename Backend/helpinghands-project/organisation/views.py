@@ -9,6 +9,7 @@ import json
 from django.db import models
 from django.http import JsonResponse
 from .models import Organisation, Event
+from django.forms.models import model_to_dict
 
 
 def signup(request):
@@ -103,5 +104,33 @@ def get_all_events(request):
             return HttpResponse("user with this email doesn't exist")
 
 
+def get_ongoing_events(request):
+    if request.method == 'POST':
+        data = json.loads(request.body.decode('utf-8'))
+        try:
+            org = Organisation.objects.get(email=data['email'])
+            event_list = org.events.all()
+            ongoing_events = []
+            for event in event_list:
+                if not event.is_completed:
+                    ongoing_events.append(model_to_dict(event))
+            return JsonResponse({'ongoing_events': ongoing_events})
+
+        except models.ObjectDoesNotExist:
+            return HttpResponse("user with this email doesn't exist")
 
 
+def get_previous_events(request):
+    if request.method == 'POST':
+        data = json.loads(request.body.decode('utf-8'))
+        try:
+            org = Organisation.objects.get(email=data['email'])
+            event_list = org.events.all()
+            ongoing_events = []
+            for event in event_list:
+                if event.is_completed:
+                    ongoing_events.append(model_to_dict(event))
+            return JsonResponse({'previous_events': ongoing_events})
+
+        except models.ObjectDoesNotExist:
+            return HttpResponse("user with this email doesn't exist")

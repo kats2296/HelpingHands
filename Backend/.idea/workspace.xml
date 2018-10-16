@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e9ccf91a-0fc1-4c08-a057-c0e3a7b774a3" name="Default" comment="made backend project with organisation app">
+    <list default="true" id="e9ccf91a-0fc1-4c08-a057-c0e3a7b774a3" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/helpinghands-project/helpinghands/settings.py" afterPath="$PROJECT_DIR$/helpinghands-project/helpinghands/settings.py" />
-      <change beforePath="$PROJECT_DIR$/helpinghands-project/organisation/models.py" afterPath="$PROJECT_DIR$/helpinghands-project/organisation/models.py" />
       <change beforePath="$PROJECT_DIR$/helpinghands-project/organisation/urls.py" afterPath="$PROJECT_DIR$/helpinghands-project/organisation/urls.py" />
       <change beforePath="$PROJECT_DIR$/helpinghands-project/organisation/views.py" afterPath="$PROJECT_DIR$/helpinghands-project/organisation/views.py" />
-      <change beforePath="$PROJECT_DIR$/helpinghands-project/volunteer/models.py" afterPath="$PROJECT_DIR$/helpinghands-project/volunteer/models.py" />
-      <change beforePath="$PROJECT_DIR$/../HelpingHands/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/../HelpingHands/app/src/main/AndroidManifest.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/helpinghands-project/organisation/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="36" lean-forward="false" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+            <state relative-caret-position="195">
+              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -31,11 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/helpinghands-project/organisation/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="92" column="18" lean-forward="false" selection-start-line="92" selection-start-column="18" selection-end-line="92" selection-end-column="18" />
+            <state relative-caret-position="467">
+              <caret line="135" column="26" lean-forward="false" selection-start-line="135" selection-start-column="26" selection-end-line="135" selection-end-column="26" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -130,8 +126,8 @@
         <option value="$PROJECT_DIR$/helpinghands-project/helpinghands/settings.py" />
         <option value="$PROJECT_DIR$/helpinghands-project/volunteer/models.py" />
         <option value="$PROJECT_DIR$/helpinghands-project/organisation/models.py" />
-        <option value="$PROJECT_DIR$/helpinghands-project/organisation/views.py" />
         <option value="$PROJECT_DIR$/helpinghands-project/organisation/urls.py" />
+        <option value="$PROJECT_DIR$/helpinghands-project/organisation/views.py" />
       </list>
     </option>
   </component>
@@ -239,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1539713503791</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="get all events wrt org">
+      <created>1539725481265</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1539725481265</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -295,7 +298,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="created volunteer app" />
     <MESSAGE value="volunteer create signup login working" />
-    <option name="LAST_COMMIT_MESSAGE" value="volunteer create signup login working" />
+    <MESSAGE value="get all events wrt org" />
+    <option name="LAST_COMMIT_MESSAGE" value="get all events wrt org" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -620,16 +624,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/helpinghands-project/organisation/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="92" column="18" lean-forward="false" selection-start-line="92" selection-start-column="18" selection-end-line="92" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/helpinghands-project/helpinghands/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -642,10 +636,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/helpinghands-project/organisation/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="36" lean-forward="false" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+        <state relative-caret-position="195">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helpinghands-project/organisation/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="135" column="26" lean-forward="false" selection-start-line="135" selection-start-column="26" selection-end-line="135" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
