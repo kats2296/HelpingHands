@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'volunteer.apps.VolunteerConfig',
     'organisation.apps.OrganisationConfig',
     'django.contrib.admin',
     'django.contrib.auth',

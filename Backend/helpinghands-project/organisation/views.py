@@ -18,23 +18,25 @@ def signup(request):
         data = json.loads(request.body.decode('utf-8'))
         print(data)
 
-        org = Organisation.objects.get(email=data['email'])
+        try:
+            org = Organisation.objects.get(email=data['email'])
+            if org.is_verified:
+                org.name = data['name']
+                org.contact_number = data['mobile']
+                org.head_name = data['head_name']
+                org.address = data['address']
+                org.password = data['password']
+                org.confirm_password = data['confirm_password']
 
-        if org.is_verified:
-            org.name = data['name']
-            org.contact_number = data['mobile']
-            org.head_name = data['head_name']
-            org.address = data['address']
-            org.password = data['password']
-            org.confirm_password = data['confirm_password']
+                # org = Organisation(name, contact_number, head_name, address, password, confirm_password)
+                print(org)
+                org.save()
+                return HttpResponse("successfull")
 
-            # org = Organisation(name, contact_number, head_name, address, password, confirm_password)
-            print(org)
-            org.save()
-            return HttpResponse("successfull")
-
-        else :
-            return HttpResponse("email not verified")
+            else:
+                return HttpResponse("email not verified")
+        except models.ObjectDoesNotExist:
+            return HttpResponse("user with this email id does not exist")
 
 
 def create(request):
