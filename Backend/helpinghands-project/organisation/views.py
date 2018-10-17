@@ -50,6 +50,7 @@ def create(request):
         org.email = data['email']
         message = Helper.send_verification_email(data['email'])
         if message[0] == 1:
+            org.activation_key = message[2]
             org.save()
             return HttpResponse(message[1])
         else:

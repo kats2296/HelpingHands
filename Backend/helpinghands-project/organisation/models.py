@@ -37,5 +37,6 @@ class Organisation(models.Model):
     confirm_password = models.TextField(max_length=100, default="", null=True, blank=True)
     is_verified = models.BooleanField(default=False)
     events = GenericRelation(Event)
+    activation_key = models.CharField(max_length=255, default="", null=True, blank=True)
 
 

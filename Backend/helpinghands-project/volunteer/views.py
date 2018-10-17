@@ -47,6 +47,7 @@ def create(request):
         volunteer.email = data['email']
         message = Helper.send_verification_email(data['email'])
         if message[0] == 1:
+            volunteer.activation_key = message[2]
             volunteer.save()
             return HttpResponse(message[1])
         else:

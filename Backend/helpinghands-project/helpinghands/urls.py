@@ -15,9 +15,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls import url
+from .helper import VerifyEmailActivateUser
+from oauth2_provider.contrib.rest_framework import OAuth2Authentication
+from rest_framework.documentation import include_docs_urls
+from rest_framework.permissions import AllowAny
+
 
 urlpatterns = [
+    url(r'^', include_docs_urls(title='Helping Hands API',
+                                authentication_classes=(OAuth2Authentication,),
+                                permission_classes=(AllowAny,))),
     path('admin/', admin.site.urls),
     path('organisation/', include('organisation.urls')),
     path('volunteer/', include('volunteer.urls')),
+    url(r'^account/activation/(?P<key>[\w.-]+)$', VerifyEmailActivateUser.as_view(),
+        name='email_receive')
 ]
