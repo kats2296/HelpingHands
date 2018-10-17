@@ -8,7 +8,7 @@ from django.http import HttpResponse
 from django.contrib.auth.forms import UserCreationForm
 import json
 from django.db import models
-
+from helpinghands.helper import Helper
 from .models import Volunteer
 
 
@@ -45,8 +45,12 @@ def create(request):
 
         volunteer = Volunteer()
         volunteer.email = data['email']
-        volunteer.save()
-        return HttpResponse("success")
+        message = Helper.send_verification_email(data['email'])
+        if message[0] == 1:
+            volunteer.save()
+            return HttpResponse(message[1])
+        else:
+            return HttpResponse(message[1])
 
 
 def login(request):

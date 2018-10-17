@@ -79,13 +79,24 @@ WSGI_APPLICATION = 'helpinghands.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'hh_db',
+        'NAME': 'helping_hands_db',
         'USER': 'postgres',
         'PASSWORD': 'barcelona1',
         'HOST': 'localhost',
         'PORT': '5432',
     }
 }
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+)
+from .private import EMAIL_HOST_USER, EMAIL_HOST_PASSWORD
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = EMAIL_HOST_USER
+EMAIL_HOST_PASSWORD = EMAIL_HOST_PASSWORD
+EMAIL_PORT = 587
 
 
 # Password validation

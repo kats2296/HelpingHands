@@ -10,6 +10,7 @@ from django.db import models
 from django.http import JsonResponse
 from .models import Organisation, Event
 from django.forms.models import model_to_dict
+from helpinghands.helper import Helper
 
 
 def signup(request):
@@ -28,9 +29,9 @@ def signup(request):
                 org.address = data['address']
                 org.password = data['password']
                 org.confirm_password = data['confirm_password']
-
                 # org = Organisation(name, contact_number, head_name, address, password, confirm_password)
                 print(org)
+
                 org.save()
                 return HttpResponse("successfull")
 
@@ -47,8 +48,12 @@ def create(request):
 
         org = Organisation()
         org.email = data['email']
-        org.save()
-        return HttpResponse("success")
+        message = Helper.send_verification_email(data['email'])
+        if message[0] == 1:
+            org.save()
+            return HttpResponse(message[1])
+        else:
+            return HttpResponse(message[1])
 
 
 def login(request):
