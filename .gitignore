@@ -9,6 +9,7 @@ db.sqlite3
 /media
 /static
 djangp_practise/
+private.py
 
 ### AndroidStudio ###
 # Covers files to be ignored for android development using Android Studio.
