@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.ChooseActivity">
+    tools:context=".activity.ChooseActivity"
+    android:background="@color/homeScreenbackgroundColor">
 
     <ImageView
         android:id="@+id/imageView"
@@ -13,7 +14,7 @@
         android:layout_height="150dp"
         android:layout_gravity="center"
         android:layout_marginTop="5dp"
-        android:src="@drawable/wheel"
+        android:src="@mipmap/ic_launcher"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
