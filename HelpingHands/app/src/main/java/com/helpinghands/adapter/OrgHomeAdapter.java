@@ -21,6 +21,7 @@ public class OrgHomeAdapter extends RecyclerView.Adapter<OrgHomeAdapter.OrgHomeV
     int[] images =   {R.drawable.ic_zero_hunger , R.drawable.ic_education, R.drawable.ic_medical_aids ,
                         R.drawable.ic_no_poverty};
     Context context;
+    int card_pos;
 
     public OrgHomeAdapter(Context context) {
         this.context = context;
@@ -61,6 +62,9 @@ public class OrgHomeAdapter extends RecyclerView.Adapter<OrgHomeAdapter.OrgHomeV
             ButterKnife.bind(this , itemView);
             tv_service = itemView.findViewById(R.id.tv_service);
             iv_service = itemView.findViewById(R.id.iv_service);
+
+
+
         }
     }
 

@@ -1,19 +1,28 @@
 package com.helpinghands.activity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.widget.EditText;
 
 import com.helpinghands.R;
+import com.helpinghands.database.StoreUserData;
 import com.helpinghands.helper.Helper;
+import com.helpinghands.helper.Logger;
+import com.helpinghands.retrofit.ApiCall;
+import com.helpinghands.retrofit.IApiCallback;
+import com.helpinghands.retrofit.requests.VolSignupRequest;
+import com.helpinghands.retrofit.response.VolSignResponse;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import retrofit2.Response;
 
-public class VolSignUpActivity extends AppCompatActivity {
+public class VolSignUpActivity extends AppCompatActivity implements IApiCallback {
 
     @BindView(R.id.et_name)
     EditText et_name;
@@ -26,11 +35,17 @@ public class VolSignUpActivity extends AppCompatActivity {
     @BindView(R.id.et_confirmpass)
     EditText et_confirm_pass;
 
+    StoreUserData storeUserData;
+    private ProgressDialog progressDialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vol_sign_up);
         ButterKnife.bind(this);
+
+        storeUserData = StoreUserData.getInstance(this);
+        progressDialog=Helper.initProgressDialog(this);
 
     }
 
@@ -90,9 +105,16 @@ public class VolSignUpActivity extends AppCompatActivity {
 
         else {
 
-            Intent intent = new Intent(VolSignUpActivity.this , VolunteerHomeActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            startActivity(intent);
+            VolSignupRequest request = new VolSignupRequest();
+            request.setName(name);
+            request.setEmail(storeUserData.getEmail());
+            request.setMobile(contact);
+            request.setAddress(address);
+            request.setPassword(password);
+            request.setConfirm_password(confirmpass);
+
+            progressDialog.show();
+            ApiCall.getInstance().vol_register(request, this);
 
         }
 
@@ -100,5 +122,48 @@ public class VolSignUpActivity extends AppCompatActivity {
 
     private void showToast(String mess) {
         Helper.showToast(this, mess);
+    }
+
+    @Override
+    public void onSuccess(Object type, Object data) {
+
+        progressDialog.dismiss();
+        Response<VolSignResponse> response = (Response<VolSignResponse>) data;
+
+        Logger.show(""
+                + response.isSuccessful() + "          " + response.body());
+
+        if(response.code() == 401) {
+            showToast("Your email has not been verified");
+        }
+
+        else if(response.code() == 400) {
+            showToast("User with this email id doesn't exists");
+        }
+
+        else if (response.body() != null) {
+
+                String message = response.body().getVolSignupResponse();
+                if (response.code()==201) {
+
+                    storeUserData.setLogin(1);
+
+                    Intent intent = new Intent(VolSignUpActivity.this , VolunteerHomeActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intent);
+                }
+
+            } else {
+
+                showToast("Please Try Again");
+            }
+    }
+
+    @Override
+    public void onFailure(Object data) {
+
+        progressDialog.dismiss();
+        Logger.show(data.toString());
+
     }
 }

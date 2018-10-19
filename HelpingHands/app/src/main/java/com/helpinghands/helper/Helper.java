@@ -1,5 +1,6 @@
 package com.helpinghands.helper;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -24,4 +25,11 @@ public class Helper {
             e.printStackTrace();
         }
     }
+
+    public static ProgressDialog initProgressDialog(Context context){
+        ProgressDialog progressDialog=new ProgressDialog(context);
+        progressDialog.setMessage("Loading...");
+        return progressDialog;
+    }
+
 }
