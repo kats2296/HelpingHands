@@ -39,8 +39,8 @@ public class EventDetailsActivity extends AppCompatActivity implements IApiCallb
     EditText et_time;
     @BindView(R.id.et_number)
     EditText et_number_of_ppl;
-//    @BindView(R.id.et_volunteers)
-//    EditText number_volunteers;
+    @BindView(R.id.et_volunteers)
+    EditText number_volunteers;
     @BindView(R.id.radioGroup2)
     RadioGroup ispickup;
 
@@ -76,7 +76,7 @@ public class EventDetailsActivity extends AppCompatActivity implements IApiCallb
         String time = et_time.getText().toString();
         String number_of_ppl = et_number_of_ppl.getText().toString();
         String date = et_date.getText().toString();
-//        int volunteers = Integer.parseInt(number_volunteers.getText().toString());
+        String volunteers = number_volunteers.getText().toString();
 
         if (TextUtils.isEmpty(eventname)) {
             showToast("Please enter event name");
@@ -95,6 +95,7 @@ public class EventDetailsActivity extends AppCompatActivity implements IApiCallb
         else {
 
             int num_of_ppl = Integer.parseInt(number_of_ppl);
+            int num_volunteers = Integer.parseInt(volunteers);
 
             int selectedId2 = ispickup.getCheckedRadioButtonId();
             pickup = findViewById(selectedId2);
@@ -109,7 +110,7 @@ public class EventDetailsActivity extends AppCompatActivity implements IApiCallb
                 pickupBolVal = false;
 
             CreateEventRequest request = new CreateEventRequest(eventname, contact, storeUserData.getEmail(), address,
-                    date, time, num_of_ppl,10, pickupBolVal,  category);
+                    date, time, num_of_ppl,num_volunteers, pickupBolVal,  category);
             progressDialog.show();
 
             ApiCall.getInstance().create_event(request, this);

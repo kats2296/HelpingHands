@@ -37,17 +37,6 @@
                     android:layout_marginRight="@dimen/dp20"
                     android:orientation="vertical">
 
-                    <!--<TextView-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:text="EVENT DETAILS"-->
-                    <!--android:textSize="@dimen/sp25"-->
-                    <!--android:textColor="@color/colorBlack"-->
-                    <!--android:layout_gravity="center"-->
-                    <!--android:layout_marginTop="@dimen/dp10"-->
-                    <!--android:textStyle="italic"-->
-                    <!--/>-->
-
                     <LinearLayout
                         android:id="@+id/ll_eventname"
                         android:layout_width="match_parent"
@@ -61,6 +50,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:background="@null"
+                            android:inputType="text"
                             android:hint="@string/event_name"
                             android:textSize="@dimen/sp14" />
 
@@ -244,87 +234,87 @@
                         android:layout_marginTop="@dimen/dp5"
                         android:background="@color/colorGray" />
 
-                    <!--<LinearLayout-->
-                        <!--android:id="@+id/ll_number_volunteers"-->
-                        <!--android:layout_width="match_parent"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_marginTop="@dimen/dp20"-->
-                        <!--android:orientation="horizontal">-->
-
-                        <!--<EditText-->
-                            <!--android:id="@+id/et_volunteers"-->
-                            <!--android:layout_width="@dimen/dp0"-->
-                            <!--android:layout_height="wrap_content"-->
-                            <!--android:layout_weight="1"-->
-                            <!--android:background="@null"-->
-                            <!--android:hint="Number of Volunteers"-->
-                            <!--android:inputType="number"-->
-                            <!--android:maxLength="15"-->
-                            <!--android:textSize="@dimen/sp14" />-->
-
-                        <!--<ImageView-->
-                            <!--android:layout_width="20dp"-->
-                            <!--android:layout_height="20dp"-->
-                            <!--android:src="@drawable/ic_people_outline_black_24dp" />-->
-
-                    <!--</LinearLayout>-->
-
-
-                    <!--<View-->
-                        <!--android:id="@+id/line11"-->
-                        <!--android:layout_width="match_parent"-->
-                        <!--android:layout_height="0.5dp"-->
-                        <!--android:layout_marginTop="@dimen/dp5"-->
-                        <!--android:background="@color/colorGray" />-->
-
-
-
                     <LinearLayout
-                        android:id="@+id/ll_need_vol"
+                        android:id="@+id/ll_number_volunteers"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/dp20"
-                        android:orientation="vertical">
+                        android:orientation="horizontal">
 
-                        <TextView
-                            android:id="@+id/tv_need_vol"
-                            android:layout_width="wrap_content"
+                        <EditText
+                            android:id="@+id/et_volunteers"
+                            android:layout_width="@dimen/dp0"
                             android:layout_height="wrap_content"
-                            android:text="Need Volunteer Support ? "
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:hint="Number of Volunteers"
+                            android:inputType="number"
+                            android:maxLength="15"
                             android:textSize="@dimen/sp14" />
 
-                        <RadioGroup
-                            android:id="@+id/radioGroup1"
-                            android:layout_width="match_parent"
-                            android:layout_height="@dimen/dp30"
-                            android:layout_marginTop="@dimen/dp10"
-                            android:orientation="horizontal">
-
-                            <RadioButton
-                                android:id="@+id/radioButton"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="Yes" />
-
-                            <RadioButton
-                                android:id="@+id/radioButton2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="No" />
-                        </RadioGroup>
-
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_people_outline_black_24dp" />
 
                     </LinearLayout>
 
 
                     <View
-                        android:id="@+id/line9"
+                        android:id="@+id/line11"
                         android:layout_width="match_parent"
                         android:layout_height="0.5dp"
                         android:layout_marginTop="@dimen/dp5"
                         android:background="@color/colorGray" />
+
+
+
+                    <!--<LinearLayout-->
+                        <!--android:id="@+id/ll_need_vol"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginTop="@dimen/dp20"-->
+                        <!--android:orientation="vertical">-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/tv_need_vol"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="Need Volunteer Support ? "-->
+                            <!--android:textSize="@dimen/sp14" />-->
+
+                        <!--<RadioGroup-->
+                            <!--android:id="@+id/radioGroup1"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="@dimen/dp30"-->
+                            <!--android:layout_marginTop="@dimen/dp10"-->
+                            <!--android:orientation="horizontal">-->
+
+                            <!--<RadioButton-->
+                                <!--android:id="@+id/radioButton"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_weight="1"-->
+                                <!--android:text="Yes" />-->
+
+                            <!--<RadioButton-->
+                                <!--android:id="@+id/radioButton2"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_weight="1"-->
+                                <!--android:text="No" />-->
+                        <!--</RadioGroup>-->
+
+
+                    <!--</LinearLayout>-->
+
+
+                    <!--<View-->
+                        <!--android:id="@+id/line9"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="0.5dp"-->
+                        <!--android:layout_marginTop="@dimen/dp5"-->
+                        <!--android:background="@color/colorGray" />-->
 
                     <LinearLayout
                         android:id="@+id/ll_pickup"
