@@ -40,11 +40,12 @@
             android:theme="@style/AppTheme" />
         <activity
             android:name=".activity.VolunteerHomeActivity"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".activity.OrgHomeActivity"
             android:theme="@style/AppTheme" />
-        <activity android:name=".EventDetailsActivity"></activity>
+        <activity android:name=".EventDetailsActivity" />
+        <activity android:name=".activity.VolunteerAddedActivity"></activity>
     </application>
 
 </manifest>

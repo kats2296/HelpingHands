@@ -49,7 +49,6 @@ class EventAdapter(private var context: Context,
 
     inner class EventViewHolder(val mView: View): RecyclerView.ViewHolder(mView){
 
-        val eventImage         = mView.imageViewEvent
         val eventName           = mView.textViewEventName
         val eventLocation       = mView.textViewEventLocation
         val orgName             = mView.textViewOrgName

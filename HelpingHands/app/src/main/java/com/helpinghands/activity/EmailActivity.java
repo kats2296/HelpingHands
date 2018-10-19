@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.Patterns;
+import android.view.WindowManager;
 import android.widget.EditText;
 
 import com.helpinghands.R;
@@ -37,6 +38,9 @@ public class EmailActivity extends AppCompatActivity implements IApiCallback {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_email);
         ButterKnife.bind(this);
+
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
+
 
         progressDialog=Helper.initProgressDialog(this);
         storeUserData = StoreUserData.getInstance(this);

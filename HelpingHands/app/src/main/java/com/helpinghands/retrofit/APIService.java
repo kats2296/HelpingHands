@@ -33,7 +33,7 @@ public interface APIService {
     @POST("volunteer/login/")
     Call<VolLoginResponse> vol_login(@Body OrgLoginRequest request);
 
-    @POST("organisation/event/create")
+    @POST("organisation/event/create/")
     Call<CreatEventResponse> create_event(@Body CreateEventRequest request);
 
 }

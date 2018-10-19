@@ -5,19 +5,27 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import com.helpinghands.activity.LoginActivity;
+import com.helpinghands.activity.OrgHomeActivity;
 import com.helpinghands.database.StoreUserData;
 import com.helpinghands.helper.Helper;
+import com.helpinghands.retrofit.ApiCall;
+import com.helpinghands.retrofit.IApiCallback;
 import com.helpinghands.retrofit.requests.CreateEventRequest;
+import com.helpinghands.retrofit.response.CreatEventResponse;
+import com.helpinghands.retrofit.response.OrgLoginResponse;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import retrofit2.Response;
 
-public class EventDetailsActivity extends AppCompatActivity {
+public class EventDetailsActivity extends AppCompatActivity implements IApiCallback {
 
     @BindView(R.id.et_eventname)
     EditText et_eventname;
@@ -40,6 +48,7 @@ public class EventDetailsActivity extends AppCompatActivity {
 
     private ProgressDialog progressDialog;
     StoreUserData storeUserData;
+    String category;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,9 +57,10 @@ public class EventDetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_event_details);
         ButterKnife.bind(this);
 
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
+
         Intent intent = getIntent();
-        String category = intent.getStringExtra("category");
-        showToast(category);
+        category = intent.getStringExtra("category");
 
         progressDialog=Helper.initProgressDialog(this);
         storeUserData = StoreUserData.getInstance(this);
@@ -64,23 +74,9 @@ public class EventDetailsActivity extends AppCompatActivity {
         String contact = et_contact.getText().toString();
         String address = et_address.getText().toString();
         String time = et_time.getText().toString();
-        int number_of_ppl = Integer.parseInt(et_number_of_ppl.getText().toString());
+        String number_of_ppl = et_number_of_ppl.getText().toString();
         String date = et_date.getText().toString();
 //        int volunteers = Integer.parseInt(number_volunteers.getText().toString());
-
-        int selectedId2 = ispickup.getCheckedRadioButtonId();
-        pickup = findViewById(selectedId2);
-
-        String pickupVal = pickup.getText().toString();
-        Boolean pickupBolVal;
-
-        if(pickupVal.equalsIgnoreCase("Yes"))
-            pickupBolVal = true;
-
-        else
-            pickupBolVal = false;
-
-
 
         if (TextUtils.isEmpty(eventname)) {
             showToast("Please enter event name");
@@ -98,9 +94,25 @@ public class EventDetailsActivity extends AppCompatActivity {
             showToast("Please enter number of people"); }
         else {
 
-            CreateEventRequest request = new CreateEventRequest(eventname, contact, storeUserData.getEmail(), address,
-                    date, time, number_of_ppl,10, pickupBolVal,  "");
+            int num_of_ppl = Integer.parseInt(number_of_ppl);
 
+            int selectedId2 = ispickup.getCheckedRadioButtonId();
+            pickup = findViewById(selectedId2);
+
+            String pickupVal = pickup.getText().toString();
+            Boolean pickupBolVal;
+
+            if(pickupVal.equalsIgnoreCase("Yes"))
+                pickupBolVal = true;
+
+            else
+                pickupBolVal = false;
+
+            CreateEventRequest request = new CreateEventRequest(eventname, contact, storeUserData.getEmail(), address,
+                    date, time, num_of_ppl,10, pickupBolVal,  category);
+            progressDialog.show();
+
+            ApiCall.getInstance().create_event(request, this);
         }
 
     }
@@ -109,6 +121,32 @@ public class EventDetailsActivity extends AppCompatActivity {
         Helper.showToast(this, mess);
     }
 
+    @Override
+    public void onSuccess(Object type, Object data) {
+
+        progressDialog.dismiss();
+
+        Response<CreatEventResponse> response = (Response<CreatEventResponse>) data;
+
+        if (response.code() == 201) {
+
+                String message = response.body().getOrgEventCreate();
+
+                showToast("Successfully created an event");
+                onBackPressed();
+
+
+            } else {
+
+                showToast("Please Try Again");
+            }
+
+    }
+
+    @Override
+    public void onFailure(Object data) {
+
+    }
 }
 
 

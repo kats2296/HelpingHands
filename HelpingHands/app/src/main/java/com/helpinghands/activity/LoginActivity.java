@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.Patterns;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -36,12 +37,16 @@ public class LoginActivity extends AppCompatActivity implements IApiCallback {
 
     private ProgressDialog progressDialog;
     StoreUserData storeUserData;
+    String email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
+
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
+
 
         progressDialog=Helper.initProgressDialog(this);
         storeUserData = StoreUserData.getInstance(this);
@@ -71,7 +76,7 @@ public class LoginActivity extends AppCompatActivity implements IApiCallback {
 
     private void validateData() {
 
-        String email=etEmail.getText().toString();
+        email=etEmail.getText().toString();
         String password=etPassword.getText().toString();
 
         if (TextUtils.isEmpty(email)){
@@ -158,6 +163,7 @@ public class LoginActivity extends AppCompatActivity implements IApiCallback {
                         if(pos.equalsIgnoreCase("organization")) {
 
                             storeUserData.setLogin(1);
+                            storeUserData.setEmail(email);
 
                             Intent intent = new Intent(LoginActivity.this , OrgHomeActivity.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -194,6 +200,7 @@ public class LoginActivity extends AppCompatActivity implements IApiCallback {
                     if(pos.equalsIgnoreCase("volunteer")) {
 
                         storeUserData.setLogin(2);
+                        storeUserData.setEmail(email);
 
                         Intent intent = new Intent(LoginActivity.this , VolunteerHomeActivity.class);
                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.Patterns;
+import android.view.WindowManager;
 import android.widget.EditText;
 
 import com.helpinghands.R;
@@ -46,6 +47,9 @@ public class OrgSignUpActivity extends AppCompatActivity implements IApiCallback
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_org_sign_up);
         ButterKnife.bind(this);
+
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
+
 
         storeUserData = StoreUserData.getInstance(this);
         progressDialog=Helper.initProgressDialog(this);
