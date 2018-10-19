@@ -1,6 +1,7 @@
 package com.helpinghands;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -46,6 +47,10 @@ public class EventDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_details);
         ButterKnife.bind(this);
+
+        Intent intent = getIntent();
+        String category = intent.getStringExtra("category");
+        showToast(category);
 
         progressDialog=Helper.initProgressDialog(this);
         storeUserData = StoreUserData.getInstance(this);

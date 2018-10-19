@@ -80,12 +80,6 @@ implements OngoingEventFragment.OnOngoingEventFragmentInteractionListener {
         fragmentTransaction.commit();
     }
 
-    public void startIntent() {
-
-        Intent intent = new Intent(OrgHomeActivity.this, EventDetailsActivity.class);
-        startActivity(intent);
-    }
-
     @Override
     public void onOngoingEventFragmentInteractionListener(@Nullable Event item) {
 

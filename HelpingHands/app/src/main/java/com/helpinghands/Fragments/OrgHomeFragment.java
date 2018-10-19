@@ -1,6 +1,7 @@
 package com.helpinghands.Fragments;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
@@ -11,7 +12,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.helpinghands.EventDetailsActivity;
 import com.helpinghands.R;
+import com.helpinghands.activity.OrgHomeActivity;
 import com.helpinghands.adapter.OrgHomeAdapter;
 
 import butterknife.BindView;
@@ -41,6 +44,8 @@ public class OrgHomeFragment extends Fragment {
         return view;
     }
 
+    String[] names = {"ZERO HUNGER" , "EDUCATION" , "GOOD HEALTH AND WELL BEING" , "DONATIONS"};
+
     private void findView() {
 
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity() , 2));
@@ -48,14 +53,20 @@ public class OrgHomeFragment extends Fragment {
         RecyclerViewClickListener listener = new RecyclerViewClickListener() {
             @Override
             public void onClick(View view, int position) {
-                Log.d("CHECK", String.valueOf(position)+"****");
-                Toast.makeText(getContext(), String.valueOf(position), Toast.LENGTH_LONG).show();
+                startIntent(position);
             }
         };
 
         homeAdapter = new OrgHomeAdapter(getContext(), listener);
         recyclerView.setAdapter(homeAdapter);
 
+    }
+
+    public void startIntent(int position) {
+
+        Intent intent = new Intent(getContext(), EventDetailsActivity.class);
+        intent.putExtra("category", names[position]);
+        startActivity(intent);
     }
 
 
