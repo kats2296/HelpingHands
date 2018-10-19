@@ -72,7 +72,8 @@ class OngoingEventFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(context!!)
         progressBar = view.findViewById(R.id.progressBarOngoignOrg)
 
-        adapter = EventAdapter(context!!, ongoingEventList, listener, null, null)
+        adapter = EventAdapter(context!!, ongoingEventList, listener, null, null,
+                null)
 
         recyclerView.adapter = adapter
 

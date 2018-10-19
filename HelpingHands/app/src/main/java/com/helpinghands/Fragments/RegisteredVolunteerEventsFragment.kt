@@ -36,14 +36,11 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  *
  */
-
-var ongoingAllForVolunteer: ArrayList<eventsResponse> = ArrayList()
+var registeredEvents : ArrayList<eventsResponse> = ArrayList()
 class RegisteredVolunteerEventsFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
     private var mListenerRegisteredVolEvent: OnRegisteredVolEventFragmentInteractionListener? = null
-
-    private var registeredEventList: ArrayList<eventsResponse> = ArrayList()
 
     private lateinit var  recyclerView: RecyclerView
 
@@ -73,17 +70,24 @@ class RegisteredVolunteerEventsFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(context!!)
         progressBar = view.findViewById(R.id.progressBarVolOngoingAll)
 
-        adapter = EventAdapter(context!!, registeredEventList, null,null,
-                mListenerRegisteredVolEvent)
+        adapter = EventAdapter(context!!, registeredEvents, null,null,
+                mListenerRegisteredVolEvent, null)
 
         recyclerView.adapter = adapter
 
-        if (ongoingAllForVolunteer.size==0) {
-            progressBar.visibility = View.VISIBLE
-            getListOfAllOngoingEvents()
+        if (registeredEvents.size==0) {
+//            progressBar.visibility = View.VISIBLE
+//            getListOfAllOngoingEvents()
         }
         return view
 
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if (registeredEvents.size>0){
+            adapter.notifyDataSetChanged()
+        }
     }
 
     private fun getListOfAllOngoingEvents() {
@@ -93,14 +97,14 @@ class RegisteredVolunteerEventsFragment : Fragment() {
                 .subscribe({ allOngoingEvents ->
                     allOngoingEvents.all_ongoing_events.forEach {
                         it.eventType = Constants.VOLUNTEERING_EVENT
-                        ongoingAllForVolunteer.add(it)
+                        registeredEvents.add(it)
                     }
                 },
                         {
                             progressBar.visibility = View.GONE
                         },
                         {
-                            Log.d("EVENTS", ongoingEventList.size.toString())
+                            Log.d("EVENTS", registeredEvents.size.toString())
                             progressBar.visibility = View.GONE
                             adapter.notifyDataSetChanged()
                         })

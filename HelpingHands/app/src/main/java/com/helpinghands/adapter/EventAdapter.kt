@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import com.helpinghands.Fragments.OngoingEventFragment
 import com.helpinghands.Fragments.PreviousEventFragment
 import com.helpinghands.Fragments.RegisteredVolunteerEventsFragment
+import com.helpinghands.Fragments.VolAllOngoingEventsFragment
 import com.helpinghands.R
 import com.helpinghands.helper.Constants
 import com.helpinghands.retrofit.eventsResponse
@@ -21,7 +22,9 @@ class EventAdapter(private var context: Context,
                    private val mPreviousListener:
                    PreviousEventFragment.OnPreviousEventFragmentInteractionListener?,
                    private val mRegisteredListener:
-                   RegisteredVolunteerEventsFragment.OnRegisteredVolEventFragmentInteractionListener?)
+                   RegisteredVolunteerEventsFragment.OnRegisteredVolEventFragmentInteractionListener?,
+                   private val mvolAllOngoingListener:
+                   VolAllOngoingEventsFragment.OnAllvolEventFragmentInteractionListener?)
     : RecyclerView.Adapter<EventAdapter.EventViewHolder>() {
 
     private val mOnClickListener: View.OnClickListener
@@ -46,6 +49,12 @@ class EventAdapter(private var context: Context,
     override fun onBindViewHolder(holder: EventViewHolder, position: Int) {
 
         holder.bindEvents(eventList[position])
+
+        if (mvolAllOngoingListener!=null){
+            holder.volConstrtaintLayout.setOnClickListener {
+                mvolAllOngoingListener.onVolunteerClick(eventList[position], holder.adapterPosition)
+            }
+        }
 
     }
 
