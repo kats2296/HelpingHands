@@ -4,10 +4,10 @@ from . import views
 
 urlpatterns = [
     path('create/', views.create, name='create'),
-    path('signup/', views.signup, name='signup'),
-    path('login/', views.login, name='login'),
-    path('event/create/', views.create_event, name='create_event'),
-    path('events/all/', views.get_all_events),
-    path('events/ongoing/', views.get_ongoing_events),
-    path('events/previous/', views.get_previous_events),
+    path('signup/', views.OrgSignup.as_view(), name='signup'),
+    path('login/', views.OrgLogin.as_view(), name='login'),
+    path('event/create/', views.OrgCreateEvent.as_view(), name='create_event'),
+    path('events/all/', views.OrgGetAllEvents.as_view(), name='get_all_events'),
+    path('events/ongoing/', views.OrgOngoignEvents.as_view(), name='get_org_ongoing_event'),
+    path('events/previous/', views.OrgPreviousEvents.as_view()),
 ]

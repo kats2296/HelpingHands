@@ -52,7 +52,7 @@ class VerifyEmailActivateUser(views.APIView):
         if is_vol:
             vol.is_verified = True
             vol.save()
-            return HttpResponse("Activation Completed")
+            return HttpResponse("<h1>Activation Completed</h1>")
 
         else:
             return Response({"Error": "Activation code invalid or expired"}, status=status.HTTP_304_NOT_MODIFIED)

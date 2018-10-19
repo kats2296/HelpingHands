@@ -1,21 +1,21 @@
 from django.shortcuts import render
 
 # Create your views here.
-from django.contrib.auth.models import User
-from django.contrib import auth
 from django.http import HttpResponse
-from django.contrib.auth.forms import UserCreationForm
 import json
 from django.db import models
 from django.http import JsonResponse
 from .models import Organisation, Event
+from volunteer.models import Volunteer
 from django.forms.models import model_to_dict
 from helpinghands.helper import Helper
+from rest_framework.response import Response
+from rest_framework import views, permissions, status
 
 
-def signup(request):
+class OrgSignup(views.APIView):
 
-    if request.method == 'POST':
+    def post(self, request, **kwargs):
         # form = UserCreationForm(request.POST)
         data = json.loads(request.body.decode('utf-8'))
         print(data)
@@ -33,12 +33,12 @@ def signup(request):
                 print(org)
 
                 org.save()
-                return HttpResponse("successfull")
+                return Response({"OrgSignupResponse": "Successfully signed up"}, status=status.HTTP_201_CREATED)
 
             else:
-                return HttpResponse("email not verified")
+                return Response({"OrgSignupResponse": "Email not verified"}, status=status.HTTP_401_UNAUTHORIZED)
         except models.ObjectDoesNotExist:
-            return HttpResponse("user with this email id does not exist")
+            return Response({"OrgSignupResponse": "user with this email id does not exist"}, status=status.HTTP_400_BAD_REQUEST)
 
 
 def create(request):
@@ -46,43 +46,66 @@ def create(request):
     if request.method == 'POST':
         data = json.loads(request.body.decode('utf-8'))
 
-        org = Organisation()
-        org.email = data['email']
-        message = Helper.send_verification_email(data['email'])
-        if message[0] == 1:
-            org.activation_key = message[2]
-            org.save()
-            return HttpResponse(message[1])
-        else:
-            return HttpResponse(message[1])
+        all_orgs = Organisation.objects
+
+        for orgs in all_orgs.all():
+            if orgs.email == data['email']:
+                return HttpResponse("Email already registered")
+
+        character = data['position']
+
+        print("pos"+character)
+
+        if character == "organization":
+            org = Organisation()
+            org.email = data['email']
+
+            message = Helper.send_verification_email(data['email'])
+            if message[0] == 1:
+                org.activation_key = message[2]
+                org.save()
+                return HttpResponse(message[1])
+            else:
+                return HttpResponse(message[1])
+        elif character == "volunteer":
+
+            vol = Volunteer()
+            vol.email = data['email']
+
+            message = Helper.send_verification_email(data['email'])
+            if message[0] == 1:
+                vol.activation_key = message[2]
+                vol.save()
+                return HttpResponse(message[1])
+            else:
+                return HttpResponse(message[1])
 
 
-def login(request):
-
-    if request.method == 'POST':
+class OrgLogin(views.APIView):
+    def post(self, request, **kwargs):
         data = json.loads(request.body.decode('utf-8'))
 
         try:
             org = Organisation.objects.get(email=data['email'])
             if org.password == data['password']:
-                return HttpResponse("successful login")
+                return Response({"OrgLogin": "successful login"}, status.HTTP_200_OK)
 
             else:
-                return HttpResponse("incorrect password")
+                return Response({"OrgLogin": "incorrect password"}, status.HTTP_401_UNAUTHORIZED)
 
         except models.ObjectDoesNotExist:
-            return HttpResponse("User with this email doesnt exist.")
+            return Response({"VolLogin": "User with this email doesnt exist."}, status.HTTP_400_BAD_REQUEST)
 
 
-def create_event(request):
+class OrgCreateEvent(views.APIView):
+    def post(self, request, **kwargs):
 
-    if request.method == 'POST':
         data = json.loads(request.body.decode('utf-8'))
-
+        email = data['email']
         event = Event()
         event.name = data['name']
         event.contact_number = data['mobile']
-        event.email = data['email']
+        event.email = email
         event.address = data['address']
         event.date = data['date']
         event.time = data['time']
@@ -90,15 +113,18 @@ def create_event(request):
         event.total_volunteers = data['total_volunteers']
         event.is_pickup_available = data['is_pickup_available']
         event.category = data['category']
+        event.content_object = Organisation.objects.get(email=email)
 
-        event.content_object = Organisation.objects.get(email=data['email'])
+        try:
+            event.save()
+            return Response({"OrgEventCreate": "event created"}, status.HTTP_201_CREATED)
+        except:
+            return Response({"OrgEventCreate": "event creation failed"}, status.HTTP_406_NOT_ACCEPTABLE)
 
-        event.save()
-        return HttpResponse("event created")
 
+class OrgGetAllEvents(views.APIView):
 
-def get_all_events(request):
-    if request.method == 'POST':
+    def post(self, request, **kwargs):
         data = json.loads(request.body.decode('utf-8'))
 
         try:
@@ -107,11 +133,11 @@ def get_all_events(request):
             return JsonResponse({'events': list(event.values())})
 
         except models.ObjectDoesNotExist:
-            return HttpResponse("user with this email doesn't exist")
+            return Response({"OrgLogin": "User with this email doesnt exist."}, status.HTTP_409_CONFLICT)
 
 
-def get_ongoing_events(request):
-    if request.method == 'POST':
+class OrgOngoignEvents(views.APIView):
+    def post(self, request, **kwargs):
         data = json.loads(request.body.decode('utf-8'))
         try:
             org = Organisation.objects.get(email=data['email'])
@@ -123,11 +149,11 @@ def get_ongoing_events(request):
             return JsonResponse({'ongoing_events': ongoing_events})
 
         except models.ObjectDoesNotExist:
-            return HttpResponse("user with this email doesn't exist")
+            return Response({"OrgLogin": "User with this email doesnt exist."}, status.HTTP_409_CONFLICT)
 
 
-def get_previous_events(request):
-    if request.method == 'POST':
+class OrgPreviousEvents(views.APIView):
+    def post(self, request, **kwargs):
         data = json.loads(request.body.decode('utf-8'))
         try:
             org = Organisation.objects.get(email=data['email'])
@@ -139,4 +165,4 @@ def get_previous_events(request):
             return JsonResponse({'previous_events': ongoing_events})
 
         except models.ObjectDoesNotExist:
-            return HttpResponse("user with this email doesn't exist")
+            return Response({"OrgLogin": "User with this email doesnt exist."}, status.HTTP_409_CONFLICT)
