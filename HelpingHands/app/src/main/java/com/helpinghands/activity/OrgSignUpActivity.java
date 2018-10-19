@@ -1,5 +1,6 @@
 package com.helpinghands.activity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,13 +10,20 @@ import android.util.Patterns;
 import android.widget.EditText;
 
 import com.helpinghands.R;
+import com.helpinghands.database.StoreUserData;
 import com.helpinghands.helper.Helper;
+import com.helpinghands.helper.Logger;
+import com.helpinghands.retrofit.ApiCall;
+import com.helpinghands.retrofit.IApiCallback;
+import com.helpinghands.retrofit.requests.OrgSignupRequest;
+import com.helpinghands.retrofit.response.OrgSignupResponse;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import retrofit2.Response;
 
-public class OrgSignUpActivity extends AppCompatActivity {
+public class OrgSignUpActivity extends AppCompatActivity implements IApiCallback {
 
     @BindView(R.id.et_orgname)
     EditText et_orgname;
@@ -30,11 +38,17 @@ public class OrgSignUpActivity extends AppCompatActivity {
     @BindView(R.id.et_confirmpass)
     EditText et_confirm_pass;
 
+    StoreUserData storeUserData;
+    private ProgressDialog progressDialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_org_sign_up);
         ButterKnife.bind(this);
+
+        storeUserData = StoreUserData.getInstance(this);
+        progressDialog=Helper.initProgressDialog(this);
     }
 
     @OnClick(R.id.tv_login)
@@ -98,9 +112,17 @@ public class OrgSignUpActivity extends AppCompatActivity {
 
         else {
 
-            Intent intent = new Intent(OrgSignUpActivity.this , OrgHomeActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            startActivity(intent);
+            OrgSignupRequest request = new OrgSignupRequest();
+            request.setName(orgname);
+            request.setEmail(storeUserData.getEmail());
+            request.setMobile(contact);
+            request.setHead_name(head);
+            request.setAddress(address);
+            request.setPassword(password);
+            request.setConfirm_password(confirmpass);
+
+            progressDialog.show();
+            ApiCall.getInstance().org_register(request, this);
 
       }
 
@@ -108,5 +130,59 @@ public class OrgSignUpActivity extends AppCompatActivity {
 
     private void showToast(String mess) {
         Helper.showToast(this, mess);
+    }
+
+    @Override
+    public void onSuccess(Object type, Object data) {
+
+        progressDialog.dismiss();
+        Response<OrgSignupResponse> response = (Response<OrgSignupResponse>) data;
+
+
+        Log.d("ERRROS", String.valueOf(response.code()));
+
+
+        if(response.code() == 401) {
+            showToast("Your email has not been verified");
+        }
+
+        else if(response.code() == 400) {
+            showToast("User with this email id doesn't exists");
+        }
+
+        else if (response.body() != null) {
+
+                String message = response.body().getOrgSignupResponse();
+                Log.d("@@@@@@@@@@@@@@" , message);
+
+                if (response.code()==201) {
+
+                    storeUserData.setLogin(1);
+
+                    Intent intent = new Intent(OrgSignUpActivity.this , OrgHomeActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intent);
+                }
+
+
+
+            } else {
+
+                showToast("Please Try Again");
+            }
+
+
+            if (!response.isSuccessful()){
+
+
+            }
+    }
+
+    @Override
+    public void onFailure(Object data) {
+
+        progressDialog.dismiss();
+        Logger.show(data.toString());
+
     }
 }

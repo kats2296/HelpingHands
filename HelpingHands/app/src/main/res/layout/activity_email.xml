@@ -15,7 +15,7 @@
         android:layout_height="200dp"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/dp10"
-        android:src="@mipmap/ic_launcher" />
+        android:src="@mipmap/ic_launcher_foreground" />
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
