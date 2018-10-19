@@ -12,6 +12,7 @@ import android.view.MenuItem;
 
 import com.helpinghands.EventDetailsActivity;
 import com.helpinghands.Fragments.OrgHomeFragment;
+import com.helpinghands.Fragments.PreviousEventFragment;
 import com.helpinghands.Model.Event;
 import com.helpinghands.Fragments.OngoingEventFragment;
 import com.helpinghands.R;
@@ -22,7 +23,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class OrgHomeActivity extends AppCompatActivity
-implements OngoingEventFragment.OnOngoingEventFragmentInteractionListener {
+implements OngoingEventFragment.OnOngoingEventFragmentInteractionListener,
+PreviousEventFragment.OnPreviousEventFragmentInteractionListener{
 
     @BindView(R.id.navigation)
     BottomNavigationView bottomNavigationView;
@@ -62,7 +64,7 @@ implements OngoingEventFragment.OnOngoingEventFragmentInteractionListener {
                         break;
 
                     case R.id.previous_events:
-                        ongoingEventFragment = new OngoingEventFragment();
+                        ongoingEventFragment = new PreviousEventFragment();
                         addFragment(ongoingEventFragment);
                         break;
                 }
@@ -82,6 +84,11 @@ implements OngoingEventFragment.OnOngoingEventFragmentInteractionListener {
 
     @Override
     public void onOngoingEventFragmentInteractionListener(@Nullable Event item) {
+
+    }
+
+    @Override
+    public void onPreviousEventFragmentInteractionListener(@Nullable Event item) {
 
     }
 }

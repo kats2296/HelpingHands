@@ -70,8 +70,8 @@ class VolLogin(views.APIView):
             return Response({"VolLogin": "User with this email doesnt exist."}, status.HTTP_400_BAD_REQUEST)
 
 
-def volunteer_event(request):
-    if request.method == 'POST':
+class VolunteerEvent(views.APIView):
+    def post(self, request, **kwargs):
         data = json.loads(request.body.decode('utf-8'))
         return HttpResponse("event created")
 

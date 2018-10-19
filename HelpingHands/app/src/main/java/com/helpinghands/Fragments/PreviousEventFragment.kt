@@ -25,16 +25,16 @@ import io.reactivex.schedulers.Schedulers
 /**
  * A fragment representing a list of Items.
  * Activities containing this fragment MUST implement the
- * [OngoingEventFragment.OnListFragmentInteractionListener] interface.
+ * [PreviousEventFragment.OnListFragmentInteractionListener] interface.
  */
-var ongoingEventList: ArrayList<eventsResponse> = ArrayList()
+var previousEventList: ArrayList<eventsResponse> = ArrayList()
 
-class OngoingEventFragment : Fragment() {
+class PreviousEventFragment : Fragment() {
 
     private var columnCount = 1
     private var type = ""
 
-    private var listener: OnOngoingEventFragmentInteractionListener? = null
+    private var listener: OnPreviousEventFragmentInteractionListener? = null
 
 
     private val apiService by lazy {
@@ -72,43 +72,43 @@ class OngoingEventFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(context!!)
         progressBar = view.findViewById(R.id.progressBarOngoignOrg)
 
-        adapter = EventAdapter(context!!, ongoingEventList, listener, null, null)
+        adapter = EventAdapter(context!!, previousEventList,null,  listener, null)
 
         recyclerView.adapter = adapter
 
 
-        if (ongoingEventList.size==0) {
+        if (previousEventList.size==0) {
             progressBar.visibility = View.VISIBLE
-            getListOfOngoingEvents(eventType)
+            getListOfOngoingFragments(eventType)
         }
         return view
     }
 
-    private fun getListOfOngoingEvents(eventType: String) {
+    private fun getListOfOngoingFragments(eventType: String) {
 
-        hhDisposable = apiService.getOngoignEventList(email = EmailBody(StoreUserData.getInstance(context)
+        hhDisposable = apiService.getPreviousEventList(email = EmailBody(StoreUserData.getInstance(context)
                 .email))
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe({ ongoingsEvents ->
-                    ongoingsEvents.ongoing_events.forEach {
+                .subscribe({ previousEvents ->
+                    previousEvents.previous_events.forEach {
                         it.eventType = Constants.DEFAULT_EVENT
-                        ongoingEventList.add(it)
+                        previousEventList.add(it)
                     }
                 },
                         {
                             progressBar.visibility = View.GONE
                         },
                         {
-                            Log.d("EVENTS", ongoingEventList.size.toString())
                             progressBar.visibility = View.GONE
+                            Log.d("EVENTS", previousEventList.size.toString())
                             adapter.notifyDataSetChanged()
                         })
     }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        if (context is OnOngoingEventFragmentInteractionListener) {
+        if (context is OnPreviousEventFragmentInteractionListener) {
             listener = context
         } else {
             throw RuntimeException(context.toString() + " must implement OnListFragmentInteractionListener")
@@ -131,8 +131,8 @@ class OngoingEventFragment : Fragment() {
      * [Communicating with Other Fragments](http://developer.android.com/training/basics/fragments/communicating.html)
      * for more information.
      */
-    interface OnOngoingEventFragmentInteractionListener {
-        fun onOngoingEventFragmentInteractionListener(item: Event?)
+    interface OnPreviousEventFragmentInteractionListener {
+        fun onPreviousEventFragmentInteractionListener(item: Event?)
     }
 
     companion object {
@@ -142,7 +142,7 @@ class OngoingEventFragment : Fragment() {
 
         @JvmStatic
         fun newInstance(columnCount: Int, type: String) =
-                OngoingEventFragment().apply {
+                PreviousEventFragment().apply {
                     arguments = Bundle().apply {
                         putInt(ARG_COLUMN_COUNT, columnCount)
                         putString(TYPE, type)

@@ -6,14 +6,22 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.helpinghands.Model.Event
+import android.widget.ProgressBar
 
 import com.helpinghands.R
 import com.helpinghands.adapter.EventAdapter
+import com.helpinghands.database.StoreUserData
 import com.helpinghands.helper.Constants
+import com.helpinghands.retrofit.EmailBody
+import com.helpinghands.retrofit.HHApiService
+import com.helpinghands.retrofit.eventsResponse
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.Disposable
+import io.reactivex.schedulers.Schedulers
 
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
@@ -28,16 +36,24 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  *
  */
+
+var ongoingAllForVolunteer: ArrayList<eventsResponse> = ArrayList()
 class RegisteredVolunteerEventsFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
     private var mListenerRegisteredVolEvent: OnRegisteredVolEventFragmentInteractionListener? = null
 
-    private var registeredEventList: ArrayList<Event> = ArrayList()
+    private var registeredEventList: ArrayList<eventsResponse> = ArrayList()
 
     private lateinit var  recyclerView: RecyclerView
 
     private lateinit var adapter: EventAdapter
+    private val apiService by lazy {
+        HHApiService.create()
+    }
+    private lateinit var progressBar: ProgressBar
+
+    private var hhDisposable: Disposable? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,23 +71,39 @@ class RegisteredVolunteerEventsFragment : Fragment() {
 
         recyclerView = view.findViewById(R.id.recylerViewRegisteredVolEvent)
         recyclerView.layoutManager = LinearLayoutManager(context!!)
+        progressBar = view.findViewById(R.id.progressBarVolOngoingAll)
 
-        registeredEventList.add(Event("Food Give Away","Noida","Helping Hands",
-                "16-10-2018 10:00 A.M.", 10 , "FOOD", Constants.DEFAULT_EVENT))
-
-        registeredEventList.add(Event("Food Give Away","Noida","Helping Hands",
-                "16-10-2018 10:00 A.M.", 10 , "FOOD", Constants.DEFAULT_EVENT))
-
-        registeredEventList.add(Event("Food Give Away","Noida","Helping Hands",
-                "16-10-2018 10:00 A.M.", 10 , "FOOD", Constants.DEFAULT_EVENT))
-
-        adapter = EventAdapter(context!!, registeredEventList, null,
+        adapter = EventAdapter(context!!, registeredEventList, null,null,
                 mListenerRegisteredVolEvent)
 
         recyclerView.adapter = adapter
 
+        if (ongoingAllForVolunteer.size==0) {
+            progressBar.visibility = View.VISIBLE
+            getListOfAllOngoingEvents()
+        }
         return view
 
+    }
+
+    private fun getListOfAllOngoingEvents() {
+        hhDisposable = apiService.getAllOngoingEventList()
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe({ allOngoingEvents ->
+                    allOngoingEvents.all_ongoing_events.forEach {
+                        it.eventType = Constants.VOLUNTEERING_EVENT
+                        ongoingAllForVolunteer.add(it)
+                    }
+                },
+                        {
+                            progressBar.visibility = View.GONE
+                        },
+                        {
+                            Log.d("EVENTS", ongoingEventList.size.toString())
+                            progressBar.visibility = View.GONE
+                            adapter.notifyDataSetChanged()
+                        })
     }
 
     fun onButtonPressed(uri: Uri) {

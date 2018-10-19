@@ -2,20 +2,24 @@ package com.helpinghands.adapter
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.helpinghands.Model.Event
 import com.helpinghands.Fragments.OngoingEventFragment
+import com.helpinghands.Fragments.PreviousEventFragment
 import com.helpinghands.Fragments.RegisteredVolunteerEventsFragment
 import com.helpinghands.R
 import com.helpinghands.helper.Constants
+import com.helpinghands.retrofit.eventsResponse
 import kotlinx.android.synthetic.main.event_item.view.*
 
 class EventAdapter(private var context: Context,
-                   private var eventList: ArrayList<Event>,
+                   private var eventList: ArrayList<eventsResponse>,
                    private val mOngoingListener:
                    OngoingEventFragment.OnOngoingEventFragmentInteractionListener?,
+                   private val mPreviousListener:
+                   PreviousEventFragment.OnPreviousEventFragmentInteractionListener?,
                    private val mRegisteredListener:
                    RegisteredVolunteerEventsFragment.OnRegisteredVolEventFragmentInteractionListener?)
     : RecyclerView.Adapter<EventAdapter.EventViewHolder>() {
@@ -58,15 +62,16 @@ class EventAdapter(private var context: Context,
         val volConstrtaintLayout  =  mView.constrLayoutVolunteer
 
 
-        fun bindEvents(event: Event){
+        fun bindEvents(event: eventsResponse){
 
-            eventName.text = event.eventName
-            eventLocation.text = event.eventLocation
-            orgName.text = event.orgName
-            volunteers.text = event.volunteers.toString()
+            eventName.text = event.name
+            eventLocation.text = event.address
+            orgName.text = "event name"
+            volunteers.text = event.total_volunteers
             category.text = event.category
-            dateTime.text = event.dateTime
+            dateTime.text = event.date
 
+            Log.d("*****", event.eventType.toString())
             if (event.eventType == Constants.DEFAULT_EVENT){
                 volConstrtaintLayout.visibility = View.GONE
             }else{
