@@ -3,12 +3,14 @@ package com.helpinghands.adapter;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.helpinghands.Fragments.OrgHomeFragment;
 import com.helpinghands.R;
 import com.helpinghands.activity.OrgHomeActivity;
 
@@ -22,9 +24,11 @@ public class OrgHomeAdapter extends RecyclerView.Adapter<OrgHomeAdapter.OrgHomeV
                         R.drawable.ic_no_poverty};
     Context context;
     int card_pos;
+    private OrgHomeFragment.RecyclerViewClickListener mListener;
 
-    public OrgHomeAdapter(Context context) {
+    public OrgHomeAdapter(Context context, OrgHomeFragment.RecyclerViewClickListener listener) {
         this.context = context;
+        mListener = listener;
     }
 
     @NonNull
@@ -36,7 +40,7 @@ public class OrgHomeAdapter extends RecyclerView.Adapter<OrgHomeAdapter.OrgHomeV
 
         ButterKnife.bind(this , v);
 
-        return new OrgHomeViewHolder(v);
+        return new OrgHomeViewHolder(v, mListener);
     }
 
     @Override
@@ -52,24 +56,34 @@ public class OrgHomeAdapter extends RecyclerView.Adapter<OrgHomeAdapter.OrgHomeV
         return 4;
     }
 
-    public class OrgHomeViewHolder extends RecyclerView.ViewHolder {
+
+
+    public class OrgHomeViewHolder extends RecyclerView.ViewHolder
+            implements View.OnClickListener {
 
         private TextView tv_service;
         private ImageView iv_service;
+        private OrgHomeFragment.RecyclerViewClickListener mListener;
 
-        public OrgHomeViewHolder(View itemView) {
+        public OrgHomeViewHolder(View itemView, OrgHomeFragment.RecyclerViewClickListener listener) {
             super(itemView);
             ButterKnife.bind(this , itemView);
             tv_service = itemView.findViewById(R.id.tv_service);
             iv_service = itemView.findViewById(R.id.iv_service);
+            mListener = listener;
 
-
+            itemView.setOnClickListener(this);
 
         }
-    }
 
-    @OnClick(R.id.cv_service)
-    void getDetailsPage() {
-        ((OrgHomeActivity)context).startIntent();
+        @Override
+        public void onClick(View v) {
+            mListener.onClick(itemView, getAdapterPosition());
+        }
     }
+//
+//    @OnClick(R.id.cv_service)
+//    void getDetailsPage() {
+//        ((OrgHomeActivity)context).startIntent();
+//    }
 }

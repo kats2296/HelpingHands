@@ -30,8 +30,8 @@ public class EventDetailsActivity extends AppCompatActivity {
     EditText et_time;
     @BindView(R.id.et_number)
     EditText et_number_of_ppl;
-    @BindView(R.id.et_volunteers)
-    EditText number_volunteers;
+//    @BindView(R.id.et_volunteers)
+//    EditText number_volunteers;
     @BindView(R.id.radioGroup2)
     RadioGroup ispickup;
 
@@ -61,7 +61,7 @@ public class EventDetailsActivity extends AppCompatActivity {
         String time = et_time.getText().toString();
         int number_of_ppl = Integer.parseInt(et_number_of_ppl.getText().toString());
         String date = et_date.getText().toString();
-        int volunteers = Integer.parseInt(number_volunteers.getText().toString());
+//        int volunteers = Integer.parseInt(number_volunteers.getText().toString());
 
         int selectedId2 = ispickup.getCheckedRadioButtonId();
         pickup = findViewById(selectedId2);
@@ -94,7 +94,7 @@ public class EventDetailsActivity extends AppCompatActivity {
         else {
 
             CreateEventRequest request = new CreateEventRequest(eventname, contact, storeUserData.getEmail(), address,
-                    date, time, number_of_ppl,volunteers, pickupBolVal,  );
+                    date, time, number_of_ppl,10, pickupBolVal,  "");
 
         }
 

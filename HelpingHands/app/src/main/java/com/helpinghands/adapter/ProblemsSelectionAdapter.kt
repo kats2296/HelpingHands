@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import com.helpinghands.activity.EventDetailsActivity
+import com.helpinghands.EventDetailsActivity
 import com.helpinghands.Model.Problem
 import com.helpinghands.R
 import kotlinx.android.synthetic.main.problem_item.view.*
