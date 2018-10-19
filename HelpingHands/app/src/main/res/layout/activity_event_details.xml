@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/homeScreenbackgroundColor"
     android:focusableInTouchMode="true"
-    tools:context=".activity.EventDetailsActivity">
+    tools:context=".EventDetailsActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -147,6 +147,38 @@
 
 
                     <LinearLayout
+                        android:id="@+id/ll_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_date"
+                            android:layout_width="@dimen/dp0"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:hint="Date"
+                            android:inputType="text"
+                            android:maxLength="15"
+                            android:textSize="@dimen/sp14" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_access_time_black_24dp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/line7"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:background="@color/colorGray" />
+
+                    <LinearLayout
                         android:id="@+id/ll_time"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -172,7 +204,7 @@
                     </LinearLayout>
 
                     <View
-                        android:id="@+id/line7"
+                        android:id="@+id/line10"
                         android:layout_width="match_parent"
                         android:layout_height="0.5dp"
                         android:layout_marginTop="@dimen/dp5"
@@ -211,6 +243,40 @@
                         android:layout_height="0.5dp"
                         android:layout_marginTop="@dimen/dp5"
                         android:background="@color/colorGray" />
+
+                    <!--<LinearLayout-->
+                        <!--android:id="@+id/ll_number_volunteers"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginTop="@dimen/dp20"-->
+                        <!--android:orientation="horizontal">-->
+
+                        <!--<EditText-->
+                            <!--android:id="@+id/et_volunteers"-->
+                            <!--android:layout_width="@dimen/dp0"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:background="@null"-->
+                            <!--android:hint="Number of Volunteers"-->
+                            <!--android:inputType="number"-->
+                            <!--android:maxLength="15"-->
+                            <!--android:textSize="@dimen/sp14" />-->
+
+                        <!--<ImageView-->
+                            <!--android:layout_width="20dp"-->
+                            <!--android:layout_height="20dp"-->
+                            <!--android:src="@drawable/ic_people_outline_black_24dp" />-->
+
+                    <!--</LinearLayout>-->
+
+
+                    <!--<View-->
+                        <!--android:id="@+id/line11"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="0.5dp"-->
+                        <!--android:layout_marginTop="@dimen/dp5"-->
+                        <!--android:background="@color/colorGray" />-->
+
 
 
                     <LinearLayout

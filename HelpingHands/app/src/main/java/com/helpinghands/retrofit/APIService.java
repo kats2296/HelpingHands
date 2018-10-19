@@ -1,9 +1,11 @@
 package com.helpinghands.retrofit;
 
+import com.helpinghands.retrofit.requests.CreateEventRequest;
 import com.helpinghands.retrofit.requests.CreateRequest;
 import com.helpinghands.retrofit.requests.OrgLoginRequest;
 import com.helpinghands.retrofit.requests.OrgSignupRequest;
 import com.helpinghands.retrofit.requests.VolSignupRequest;
+import com.helpinghands.retrofit.response.CreatEventResponse;
 import com.helpinghands.retrofit.response.OrgLoginResponse;
 import com.helpinghands.retrofit.response.OrgSignupResponse;
 import com.helpinghands.retrofit.response.VolLoginResponse;
@@ -30,5 +32,8 @@ public interface APIService {
 
     @POST("volunteer/login/")
     Call<VolLoginResponse> vol_login(@Body OrgLoginRequest request);
+
+    @POST("organisation/event/create")
+    Call<CreatEventResponse> create_event(@Body CreateEventRequest request);
 
 }

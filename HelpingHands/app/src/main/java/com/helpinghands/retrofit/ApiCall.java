@@ -1,10 +1,12 @@
 package com.helpinghands.retrofit;
 
 
+import com.helpinghands.retrofit.requests.CreateEventRequest;
 import com.helpinghands.retrofit.requests.CreateRequest;
 import com.helpinghands.retrofit.requests.OrgLoginRequest;
 import com.helpinghands.retrofit.requests.OrgSignupRequest;
 import com.helpinghands.retrofit.requests.VolSignupRequest;
+import com.helpinghands.retrofit.response.CreatEventResponse;
 import com.helpinghands.retrofit.response.OrgLoginResponse;
 import com.helpinghands.retrofit.response.OrgSignupResponse;
 import com.helpinghands.retrofit.response.VolLoginResponse;
@@ -118,6 +120,23 @@ public class ApiCall {
 
             @Override
             public void onFailure(Call<VolLoginResponse> call, Throwable t) {
+                iApiCallback.onFailure("" + t.getMessage());
+
+            }
+        });
+    }
+
+    public void create_event(CreateEventRequest request, final IApiCallback iApiCallback) {
+
+        Call<CreatEventResponse> call = service.create_event(request);
+        call.enqueue(new Callback<CreatEventResponse>() {
+            @Override
+            public void onResponse(Call<CreatEventResponse> call, Response<CreatEventResponse> response) {
+                iApiCallback.onSuccess("login volunteer" , response);
+            }
+
+            @Override
+            public void onFailure(Call<CreatEventResponse> call, Throwable t) {
                 iApiCallback.onFailure("" + t.getMessage());
 
             }
