@@ -47,7 +47,7 @@ class VerifyEmailActivateUser(views.APIView):
         if is_org:
             org.is_verified = True
             org.save()
-            return HttpResponse("Activation Completed")
+            return HttpResponse("<h1>Activation Completed</h1>")
 
         if is_vol:
             vol.is_verified = True
