@@ -1,0 +1,708 @@
+YEAR,States/Union Territory,Name of the District,Number of Sub Centres,Number of PHCs,Number of CHCs,Number of Sub Divisional Hospitals,Number of District Hospitals,Total Number of HealthCare Units
+2017-2018,A & N Island,Nicobar,41,4,1,0,1,47
+2017-2018,A & N Island,North & Middle Andaman,43,8,2,0,1,54
+2017-2018,A & N Island,South Andaman,39,10,1,0,1,51
+2017-2018,A & N Island,Total,123,22,4,0,3,152
+2017-2018,Andhra Pradesh,Anantapur,609,80,15,3,0,707
+2017-2018,Andhra Pradesh,Chittoor,653,94,12,6,1,766
+2017-2018,Andhra Pradesh,Kadapa,462,70,12,1,1,546
+2017-2018,Andhra Pradesh,East Godavari,837,119,26,3,1,986
+2017-2018,Andhra Pradesh,Guntur,689,82,17,2,1,791
+2017-2018,Andhra Pradesh,Krishna,609,81,12,2,1,705
+2017-2018,Andhra Pradesh,Kurnool,576,83,18,1,1,679
+2017-2018,Andhra Pradesh,Nellore,481,74,14,2,0,571
+2017-2018,Andhra Pradesh,Prakasam,555,85,14,3,0,657
+2017-2018,Andhra Pradesh,Srikakulam,488,76,16,2,0,582
+2017-2018,Andhra Pradesh,Visakhapatnam,573,86,11,2,0,672
+2017-2018,Andhra Pradesh,Vizianagaram,470,66,11,1,1,549
+2017-2018,Andhra Pradesh,West Godavari,657,79,15,3,1,755
+2017-2018,Andhra Pradesh,Total,7659,1075,193,31,8,8966
+2017-2018,Arunachal Pradesh,Anjaw,44,7,5,0,1,57
+2017-2018,Arunachal Pradesh,Changlang,35,8,5,0,1,49
+2017-2018,Arunachal Pradesh,Dibang Valley,10,1,0,0,1,12
+2017-2018,Arunachal Pradesh,East Kameng,51,11,3,0,1,66
+2017-2018,Arunachal Pradesh,East Siang,40,15,5,0,1,61
+2017-2018,Arunachal Pradesh,Lohit,29,9,5,0,1,44
+2017-2018,Arunachal Pradesh,Lower Dibang Valley,19,6,4,0,1,30
+2017-2018,Arunachal Pradesh,Lower Subansiri,35,8,3,0,1,47
+2017-2018,Arunachal Pradesh,Longding,18,3,3,0,1,25
+2017-2018,Arunachal Pradesh,Papum Pare,56,14,3,0,2,75
+2017-2018,Arunachal Pradesh,Tawang,15,5,2,0,1,23
+2017-2018,Arunachal Pradesh,Tirap,18,8,1,0,1,28
+2017-2018,Arunachal Pradesh,Upper Siang,14,2,4,0,1,21
+2017-2018,Arunachal Pradesh,Upper Subansiri,58,15,5,0,1,79
+2017-2018,Arunachal Pradesh,West Kameng,26,5,5,0,1,37
+2017-2018,Arunachal Pradesh,West Siang,62,13,7,0,1,83
+2017-2018,Arunachal Pradesh,Kurug Kumey,58,13,3,0,1,75
+2017-2018,Arunachal Pradesh,Total,588,143,63,0,18,812
+2017-2018,Assam,Barpeta,264,51,6,1,1,323
+2017-2018,Assam,Bongaigaon,84,30,3,0,1,118
+2017-2018,Assam,Baksa,157,41,5,0,1,204
+2017-2018,Assam,Cachar,270,33,5,0,1,309
+2017-2018,Assam,Chirang,86,25,3,0,1,115
+2017-2018,Assam,Darrang,163,30,6,0,1,200
+2017-2018,Assam,Dhemaji,98,22,4,0,1,125
+2017-2018,Assam,Dhubri,246,44,8,2,1,301
+2017-2018,Assam,Dibrugarh,231,30,7,0,0,268
+2017-2018,Assam,Goalpara,151,41,5,0,1,198
+2017-2018,Assam,Golaghat,144,40,4,1,1,190
+2017-2018,Assam,Hailakandi,105,13,3,0,1,122
+2017-2018,Assam,Jorhat,144,44,5,2,0,195
+2017-2018,Assam,Kamrup (Rural),280,71,11,1,1,364
+2017-2018,Assam,Kamrup (Metro),51,25,3,0,1,80
+2017-2018,Assam,Karbi Anglong,145,46,5,1,1,198
+2017-2018,Assam,Karimganj,218,29,5,0,1,253
+2017-2018,Assam,Kokrajhar,161,45,4,1,1,212
+2017-2018,Assam,Lakhimpur,156,30,8,1,1,196
+2017-2018,Assam,Morigaon,123,36,5,0,1,165
+2017-2018,Assam,Nagaon,354,80,15,0,1,450
+2017-2018,Assam,Nalbari,121,47,9,0,1,178
+2017-2018,Assam,N.C.HILLS (Dima Hasao),65,11,2,0,1,79
+2017-2018,Assam,Sivasagar,219,45,4,2,1,271
+2017-2018,Assam,Sonitpur,275,58,7,2,1,343
+2017-2018,Assam,Tinsukia,164,23,6,0,1,194
+2017-2018,Assam,Udalguri,146,24,3,0,1,174
+2017-2018,Assam,Total,4621,1014,151,14,25,5825
+2017-2018,Bihar,Araria,199,39,2,1,1,242
+2017-2018,Bihar,Aurangabad,216,68,6,1,1,292
+2017-2018,Bihar,Arwal,64,33,0,0,1,98
+2017-2018,Bihar,Banka,265,42,4,0,1,312
+2017-2018,Bihar,Begusarai,287,40,2,4,1,334
+2017-2018,Bihar,Bhagalpur,258,70,4,2,1,335
+2017-2018,Bihar,Bhojpur,302,40,4,2,1,349
+2017-2018,Bihar,Buxar,161,39,0,1,1,202
+2017-2018,Bihar,Darbhanga,259,62,8,1,0,330
+2017-2018,Bihar,Gaya,440,63,10,2,1,516
+2017-2018,Bihar,Gopalganj,186,31,8,1,1,227
+2017-2018,Bihar,Jamui,279,34,6,0,1,320
+2017-2018,Bihar,Jahanabad,92,37,2,0,1,132
+2017-2018,Bihar,Kaimur (Bhabua),197,28,4,1,1,231
+2017-2018,Bihar,Katihar,345,59,4,2,1,411
+2017-2018,Bihar,Khagaria,171,32,1,0,1,205
+2017-2018,Bihar,Kishanganj,136,16,1,0,1,154
+2017-2018,Bihar,Lakhisarai,102,19,1,0,1,123
+2017-2018,Bihar,Madhepura,272,46,1,1,1,321
+2017-2018,Bihar,Madhubani,429,90,4,4,1,528
+2017-2018,Bihar,Munger,154,28,2,2,1,187
+2017-2018,Bihar,Muzaffarpur,480,92,9,0,1,582
+2017-2018,Bihar,Nalanda,374,63,3,2,1,443
+2017-2018,Bihar,Nawada,325,48,2,1,1,377
+2017-2018,Bihar,Pashchim Champaran,368,49,2,2,1,422
+2017-2018,Bihar,Patna,387,90,4,4,0,485
+2017-2018,Bihar,Purba Champaran,327,70,12,3,1,413
+2017-2018,Bihar,Purnia,334,52,2,3,1,392
+2017-2018,Bihar,Rohtas,186,47,6,2,1,242
+2017-2018,Bihar,Saharsa,152,35,1,1,1,190
+2017-2018,Bihar,Samastipur,362,59,8,4,1,434
+2017-2018,Bihar,Saran,413,57,9,2,1,482
+2017-2018,Bihar,Sheikhpura,85,23,1,0,1,110
+2017-2018,Bihar,Sheohar,29,15,0,0,1,45
+2017-2018,Bihar,Sitamarhi,212,50,5,2,1,270
+2017-2018,Bihar,Siwan,367,61,9,1,1,439
+2017-2018,Bihar,Supaul,178,31,2,1,1,213
+2017-2018,Bihar,Vaishali,336,44,2,2,1,385
+2017-2018,Bihar,Total,9729,1802,151,55,36,11773
+2017-2018,Chandigarh,Total,17,3,2,1,1,24
+2017-2018,Chhattisgarh,Bastar,244,42,7,1,1,295
+2017-2018,Chhattisgarh,Balod,196,30,6,0,1,233
+2017-2018,Chhattisgarh,Balodabazar,215,31,5,1,1,253
+2017-2018,Chhattisgarh,Balrampur,193,28,5,1,1,228
+2017-2018,Chhattisgarh,Bemetara,126,21,3,1,1,152
+2017-2018,Chhattisgarh,Bijapur,93,10,5,0,1,109
+2017-2018,Chhattisgarh,Bilaspur,274,55,8,0,1,338
+2017-2018,Chhattisgarh,Dantewada,76,11,4,0,1,92
+2017-2018,Chhattisgarh,Dhamtari,180,23,3,1,1,208
+2017-2018,Chhattisgarh,Durg,128,21,8,1,1,159
+2017-2018,Chhattisgarh,Gariyaband,198,16,5,0,1,220
+2017-2018,Chhattisgarh,Janjgir-Champa,271,46,10,1,1,329
+2017-2018,Chhattisgarh,Jashpur,258,34,8,1,1,302
+2017-2018,Chhattisgarh,Kanker,248,34,8,1,1,292
+2017-2018,Chhattisgarh,Kawardha,145,25,5,0,1,176
+2017-2018,Chhattisgarh,Kondagaon,173,22,5,0,1,201
+2017-2018,Chhattisgarh,Korba,259,38,5,0,1,303
+2017-2018,Chhattisgarh,Korea,189,30,5,0,1,225
+2017-2018,Chhattisgarh,Mahasamund,222,30,5,0,1,258
+2017-2018,Chhattisgarh,Mungeli,120,28,3,0,1,152
+2017-2018,Chhattisgarh,Narayanpur,58,8,1,0,1,68
+2017-2018,Chhattisgarh,Raigarh,338,53,9,2,0,402
+2017-2018,Chhattisgarh,Raipur,167,30,8,1,1,207
+2017-2018,Chhattisgarh,Rajnandgaon,316,48,9,1,0,374
+2017-2018,Chhattisgarh,Sukma,86,13,2,0,1,102
+2017-2018,Chhattisgarh,Surajpur,215,38,7,0,1,261
+2017-2018,Chhattisgarh,Surguja,198,25,6,0,0,229
+2017-2018,Chhattisgarh,Total,5186,790,155,13,24,6168
+2017-2018,Dadra & Nagar Haveli,Total,56,11,0,1,1,69
+2017-2018,Daman & Diu,Daman,20,3,1,0,1,25
+2017-2018,Daman & Diu,Diu,6,1,1,0,1,9
+2017-2018,Daman & Diu,Total,26,4,2,0,2,34
+2017-2018,Delhi,East,1,0,0,0,2,3
+2017-2018,Delhi,North-East,1,0,0,0,1,2
+2017-2018,Delhi,North,5,0,0,0,3,8
+2017-2018,Delhi,North-West,3,0,0,1,5,9
+2017-2018,Delhi,West,0,0,0,0,7,7
+2017-2018,Delhi,South-West,11,3,0,1,3,18
+2017-2018,Delhi,South,5,2,0,0,2,9
+2017-2018,Delhi,Central,0,0,0,4,9,13
+2017-2018,Delhi,New Delhi,0,0,0,3,7,10
+2017-2018,Delhi,South-East,0,0,0,0,2,2
+2017-2018,Delhi,Shahdara,0,0,0,1,6,7
+2017-2018,Delhi,Total,26,5,0,10,47,88
+2017-2018,Goa,North Goa,126,13,2,0,1,142
+2017-2018,Goa,South Goa,86,9,2,1,1,99
+2017-2018,Goa,Total,212,22,4,1,2,241
+2017-2018,Gujarat,Ahmedabad,258,39,10,1,0,308
+2017-2018,Gujarat,Amreli,245,41,12,3,1,302
+2017-2018,Gujarat,Anand,274,50,12,0,1,337
+2017-2018,Gujarat,Arvali (Modasa),215,35,10,1,0,261
+2017-2018,Gujarat,Banas Kantha (Palanpur),745,98,24,3,1,871
+2017-2018,Gujarat,Bharuch,237,38,9,0,1,285
+2017-2018,Gujarat,Bhavnagar,300,44,13,2,0,359
+2017-2018,Gujarat,Botad,88,15,5,0,1,109
+2017-2018,Gujarat,Chhotaudepur,310,45,10,0,1,366
+2017-2018,Gujarat,Dahod,637,85,13,1,1,737
+2017-2018,Gujarat,Dang (Ahva),68,9,3,0,1,81
+2017-2018,Gujarat,Devbhumi Dwaraka,161,19,4,1,1,186
+2017-2018,Gujarat,Gandhinagar,171,26,9,1,0,207
+2017-2018,Gujarat,Gir Somnath (Veraval),172,25,8,0,1,206
+2017-2018,Gujarat,Jamnagar,212,31,7,0,0,250
+2017-2018,Gujarat,Junagadh,237,38,10,0,0,285
+2017-2018,Gujarat,Kachchh (Bhuj),435,59,15,2,0,511
+2017-2018,Gujarat,Kheda (Nadiyad),311,51,14,1,1,378
+2017-2018,Gujarat,Mahesana,288,56,14,2,1,361
+2017-2018,Gujarat,Mahisagar (Lunavada),224,33,5,1,1,264
+2017-2018,Gujarat,Morbi,196,27,6,1,1,231
+2017-2018,Gujarat,Narmada (Rajpipla),174,25,3,1,1,204
+2017-2018,Gujarat,Navsari,296,44,10,2,1,353
+2017-2018,Gujarat,Panch Mahals (Godhra),299,48,11,0,1,359
+2017-2018,Gujarat,Patan,322,38,15,1,0,376
+2017-2018,Gujarat,Porbandar,85,11,4,0,1,101
+2017-2018,Gujarat,Rajkot,337,47,12,4,1,401
+2017-2018,Gujarat,Sabar Kantha (Himatnagar),276,44,12,1,0,333
+2017-2018,Gujarat,Surat,394,55,13,1,0,463
+2017-2018,Gujarat,Surendranagar,343,44,12,2,1,402
+2017-2018,Gujarat,Tapi (Vyara),241,35,5,0,1,282
+2017-2018,Gujarat,Vadodara,242,42,10,0,1,295
+2017-2018,Gujarat,Valsad,363,45,11,1,0,420
+2017-2018,Gujarat,Total,9156,1342,331,33,22,10884
+2017-2018,Haryana,Ambala,104,18,4,2,1,129
+2017-2018,Haryana,Bhiwani,214,42,9,4,1,270
+2017-2018,Haryana,Faridabad,61,14,2,1,1,79
+2017-2018,Haryana,Fatehabad,131,18,4,1,1,155
+2017-2018,Haryana,Gurgaon,75,13,3,3,1,95
+2017-2018,Haryana,Hisar,198,35,8,2,1,244
+2017-2018,Haryana,Jhajjar,123,28,6,2,1,160
+2017-2018,Haryana,Jind,162,28,7,1,1,199
+2017-2018,Haryana,Kaithal,143,23,6,0,1,173
+2017-2018,Haryana,Karnal,146,25,6,1,0,178
+2017-2018,Haryana,Kurukshetra,117,21,5,0,1,144
+2017-2018,Haryana,Mewat,84,18,3,0,1,106
+2017-2018,Haryana,Mohidergarh (Narnaul),135,25,7,1,1,169
+2017-2018,Haryana,Palwal,95,20,4,0,1,120
+2017-2018,Haryana,Panchkula,46,10,2,0,1,59
+2017-2018,Haryana,Panipat,89,18,4,0,1,112
+2017-2018,Haryana,Rewari,112,18,5,1,1,137
+2017-2018,Haryana,Rohtak,116,21,5,2,1,145
+2017-2018,Haryana,Sirsa,151,26,8,0,1,186
+2017-2018,Haryana,Sonipat,161,35,6,1,1,204
+2017-2018,Haryana,Yamunanagar,113,18,6,1,1,139
+2017-2018,Haryana,Total,2576,474,110,23,20,3203
+2017-2018,Himachal Pradesh,Bilaspur,113,36,9,1,1,160
+2017-2018,Himachal Pradesh,Chamba,177,42,6,5,1,231
+2017-2018,Himachal Pradesh,Hamirpur,151,29,3,3,1,187
+2017-2018,Himachal Pradesh,Kangra,438,87,11,13,1,550
+2017-2018,Himachal Pradesh,Kinnaur,34,21,4,1,1,61
+2017-2018,Himachal Pradesh,Kullu,99,21,3,5,1,129
+2017-2018,Himachal Pradesh,Lahul & Spiti,36,16,3,0,1,56
+2017-2018,Himachal Pradesh,Mandi,317,73,13,9,1,413
+2017-2018,Himachal Pradesh,Shimla,247,99,12,10,1,369
+2017-2018,Himachal Pradesh,Sirmaur,147,37,4,4,1,193
+2017-2018,Himachal Pradesh,Solan,178,35,5,4,1,223
+2017-2018,Himachal Pradesh,Una,134,22,6,3,1,166
+2017-2018,Himachal Pradesh,Total,2071,518,79,58,12,2738
+2017-2018,Jammu & Kashmir,Anantanag,149,40,5,0,1,195
+2017-2018,Jammu & Kashmir,Badgam,145,50,9,0,1,205
+2017-2018,Jammu & Kashmir,Bandipora,72,13,3,0,1,89
+2017-2018,Jammu & Kashmir,Baramulla,188,54,6,0,1,249
+2017-2018,Jammu & Kashmir,Doda,105,33,3,0,1,142
+2017-2018,Jammu & Kashmir,Ganderbal,58,19,1,0,1,79
+2017-2018,Jammu & Kashmir,Jammu,204,45,8,0,2,259
+2017-2018,Jammu & Kashmir,Kargil,128,16,4,0,1,149
+2017-2018,Jammu & Kashmir,Kathua,184,35,5,0,1,225
+2017-2018,Jammu & Kashmir,Kishtwar,85,16,1,0,1,103
+2017-2018,Jammu & Kashmir,Kulgam,123,28,3,0,1,155
+2017-2018,Jammu & Kashmir,Kupwara,228,39,7,0,1,275
+2017-2018,Jammu & Kashmir,Leh,113,16,3,0,1,133
+2017-2018,Jammu & Kashmir,Ramban,93,19,3,0,1,116
+2017-2018,Jammu & Kashmir,Reasi,111,22,2,0,1,136
+2017-2018,Jammu & Kashmir,Pulwama,100,36,3,0,1,140
+2017-2018,Jammu & Kashmir,Poonch,149,32,3,0,1,185
+2017-2018,Jammu & Kashmir,Rajouri,208,37,7,0,1,253
+2017-2018,Jammu & Kashmir,Samba,90,13,3,0,1,107
+2017-2018,Jammu & Kashmir,Shopian,56,10,2,0,1,69
+2017-2018,Jammu & Kashmir,Srinagar,63,29,1,0,1,94
+2017-2018,Jammu & Kashmir,Udhampur,153,35,2,0,1,191
+2017-2018,Jammu & Kashmir,Total,2805,637,84,0,23,3549
+2017-2018,Jharkhand,Bokaro,116,16,8,3,1,144
+2017-2018,Jharkhand,Chatra,93,11,6,0,1,111
+2017-2018,Jharkhand,Deoghar,181,4,7,1,1,194
+2017-2018,Jharkhand,Dhanbad,137,25,8,0,1,171
+2017-2018,Jharkhand,Dumka,258,36,10,0,1,305
+2017-2018,Jharkhand,E. Singhbhum,243,18,9,0,1,271
+2017-2018,Jharkhand,Garhwa,132,12,7,1,1,153
+2017-2018,Jharkhand,Giridih,181,15,12,0,1,209
+2017-2018,Jharkhand,Godda,185,10,7,0,1,203
+2017-2018,Jharkhand,Gumla,242,13,11,0,1,267
+2017-2018,Jharkhand,Hazaribagh,146,14,10,1,1,172
+2017-2018,Jharkhand,Jamtara,132,15,4,0,1,152
+2017-2018,Jharkhand,Kodarma,65,6,4,0,1,76
+2017-2018,Jharkhand,Khunti,108,4,6,0,1,119
+2017-2018,Jharkhand,Latehar,97,10,7,0,1,115
+2017-2018,Jharkhand,Lohardaga,73,10,5,0,1,89
+2017-2018,Jharkhand,Pakaur,121,9,6,0,1,137
+2017-2018,Jharkhand,Palamu,171,21,8,2,1,203
+2017-2018,Jharkhand,Ramgarh,54,5,4,0,1,64
+2017-2018,Jharkhand,Ranchi,365,28,13,1,1,408
+2017-2018,Jharkhand,Sahibganj,155,10,6,1,1,173
+2017-2018,Jharkhand,Saraikela,194,13,8,1,1,217
+2017-2018,Jharkhand,Simdega,162,7,7,0,1,177
+2017-2018,Jharkhand,W. Singhbhum,342,15,15,1,1,374
+2017-2018,Jharkhand,Total,3953,327,188,12,24,4504
+2017-2018,Karnataka,Bagalkot,233,48,8,5,1,295
+2017-2018,Karnataka,Bangalore Urban,279,104,5,3,3,394
+2017-2018,Karnataka,Bangalore Rural,198,48,2,4,0,252
+2017-2018,Karnataka,Belgaum,597,148,16,9,1,771
+2017-2018,Karnataka,Bellary,293,73,11,6,1,384
+2017-2018,Karnataka,Bidar,274,58,8,4,1,345
+2017-2018,Karnataka,Bijapur,314,67,9,4,1,395
+2017-2018,Karnataka,Chamarajanagar,258,64,3,3,1,329
+2017-2018,Karnataka,Chikballapur,203,59,2,5,1,270
+2017-2018,Karnataka,Chikmagalur,368,90,5,6,1,470
+2017-2018,Karnataka,Chitradurga,342,81,11,5,1,440
+2017-2018,Karnataka,Dakshina Kannada,430,71,8,4,2,515
+2017-2018,Karnataka,Davanagere,324,101,6,5,1,437
+2017-2018,Karnataka,Dharwad,185,45,0,3,1,234
+2017-2018,Karnataka,Gadag,187,39,2,4,1,233
+2017-2018,Karnataka,Gulbarga,337,91,16,6,1,451
+2017-2018,Karnataka,Hassan,475,136,15,7,1,634
+2017-2018,Karnataka,Haveri,311,69,5,6,1,392
+2017-2018,Karnataka,Kodagu,196,29,7,2,1,235
+2017-2018,Karnataka,Kolar,265,65,2,4,1,337
+2017-2018,Karnataka,Koppal,177,48,9,3,1,238
+2017-2018,Karnataka,Mandya,410,115,10,6,1,542
+2017-2018,Karnataka,Mysore,510,147,10,6,0,673
+2017-2018,Karnataka,Raichur,212,52,6,4,1,275
+2017-2018,Karnataka,Ramanagara,240,62,4,3,1,310
+2017-2018,Karnataka,Shimoga,356,110,7,6,2,481
+2017-2018,Karnataka,Tumkur,522,146,4,9,1,682
+2017-2018,Karnataka,Udupi,323,62,6,2,1,394
+2017-2018,Karnataka,Uttara Kannada,344,83,3,10,1,441
+2017-2018,Karnataka,Yadgir,169,42,6,2,1,220
+2017-2018,Karnataka,Total,9332,2353,206,146,32,12069
+2017-2018,Kerala,Alappuzha,310,59,16,6,2,393
+2017-2018,Kerala,Ernakulam,346,70,22,11,1,450
+2017-2018,Kerala,Idukki,262,42,12,4,2,322
+2017-2018,Kerala,Kannur,348,81,10,7,1,447
+2017-2018,Kerala,Kasaragod,209,39,9,2,1,260
+2017-2018,Kerala,Kollam,357,54,16,8,1,436
+2017-2018,Kerala,Kottayam,279,55,20,3,0,357
+2017-2018,Kerala,Kozhikode,340,62,15,7,1,425
+2017-2018,Kerala,Malappuram,500,85,22,6,3,616
+2017-2018,Kerala,Palakkad,427,75,18,6,1,527
+2017-2018,Kerala,Pathanamthitta,221,42,12,4,1,280
+2017-2018,Kerala,Thiruvananthapuram,407,62,20,7,2,498
+2017-2018,Kerala,Thrissur,399,75,23,6,1,504
+2017-2018,Kerala,Wayanad,170,23,9,2,1,205
+2017-2018,Kerala,Total,4575,824,224,79,18,5720
+2017-2018,Lakshadweep,Total,14,4,3,2,1,24
+2017-2018,Madhya Pradesh,Aagar-Malwa,72,5,3,0,1,81
+2017-2018,Madhya Pradesh,Alirajpur,195,15,5,0,1,216
+2017-2018,Madhya Pradesh,Anup Pur,139,16,7,0,1,163
+2017-2018,Madhya Pradesh,Ashok Nagar,97,10,4,0,1,112
+2017-2018,Madhya Pradesh,Balaghat,289,37,10,2,1,339
+2017-2018,Madhya Pradesh,Badwani,294,29,8,1,1,333
+2017-2018,Madhya Pradesh,Betul,264,33,10,0,1,308
+2017-2018,Madhya Pradesh,Bhind,189,21,7,1,1,219
+2017-2018,Madhya Pradesh,Bhopal,63,9,3,2,1,78
+2017-2018,Madhya Pradesh,Burhanpur,97,13,4,0,1,115
+2017-2018,Madhya Pradesh,Chhatarpur,202,37,10,0,1,250
+2017-2018,Madhya Pradesh,Chhindwara,313,67,11,4,1,396
+2017-2018,Madhya Pradesh,Damoh,179,15,6,1,1,202
+2017-2018,Madhya Pradesh,Datia,96,10,3,2,1,112
+2017-2018,Madhya Pradesh,Dewas,180,21,7,1,1,210
+2017-2018,Madhya Pradesh,Dhar,393,47,14,1,1,456
+2017-2018,Madhya Pradesh,Dindori,180,23,7,0,1,211
+2017-2018,Madhya Pradesh,Guna,119,15,5,1,1,141
+2017-2018,Madhya Pradesh,Gwalior,101,15,2,4,1,123
+2017-2018,Madhya Pradesh,Harda,63,6,4,0,1,74
+2017-2018,Madhya Pradesh,Hoshangabad,140,15,6,2,1,164
+2017-2018,Madhya Pradesh,Indore,92,25,4,3,1,125
+2017-2018,Madhya Pradesh,Jabalpur,189,22,5,3,1,220
+2017-2018,Madhya Pradesh,Jhabua,229,19,6,1,1,256
+2017-2018,Madhya Pradesh,Khandwa,172,32,6,0,1,211
+2017-2018,Madhya Pradesh,Khargone,276,54,10,2,1,343
+2017-2018,Madhya Pradesh,Katni,159,18,6,1,1,185
+2017-2018,Madhya Pradesh,Mandla,291,32,8,1,1,333
+2017-2018,Madhya Pradesh,Mandsour,159,40,7,2,1,209
+2017-2018,Madhya Pradesh,Morena,201,18,8,2,1,230
+2017-2018,Madhya Pradesh,Narsinghpur,142,20,6,1,1,170
+2017-2018,Madhya Pradesh,Neemuch,104,19,3,2,1,129
+2017-2018,Madhya Pradesh,Panna,159,15,6,0,1,181
+2017-2018,Madhya Pradesh,Raisen,181,18,9,2,1,211
+2017-2018,Madhya Pradesh,Rajgarh,165,27,4,3,1,200
+2017-2018,Madhya Pradesh,Ratlam,158,24,6,2,1,191
+2017-2018,Madhya Pradesh,Rewa,271,30,11,1,1,314
+2017-2018,Madhya Pradesh,Sagar,259,27,11,2,1,300
+2017-2018,Madhya Pradesh,Satna,280,43,9,2,1,335
+2017-2018,Madhya Pradesh,Sehore,153,18,9,1,1,182
+2017-2018,Madhya Pradesh,Seoni,265,30,7,1,1,304
+2017-2018,Madhya Pradesh,Shahdol,236,28,7,1,1,273
+2017-2018,Madhya Pradesh,Shajapur,103,14,4,3,1,125
+2017-2018,Madhya Pradesh,Sheopur,90,9,3,0,1,103
+2017-2018,Madhya Pradesh,Shivpuri,191,14,9,0,1,215
+2017-2018,Madhya Pradesh,Sidhi,189,25,6,0,1,221
+2017-2018,Madhya Pradesh,Sigrouli,202,15,6,0,1,224
+2017-2018,Madhya Pradesh,Tikamgarh,177,20,7,0,1,205
+2017-2018,Madhya Pradesh,Ujjain,172,22,5,6,1,206
+2017-2018,Madhya Pradesh,Umaria,116,12,3,0,1,132
+2017-2018,Madhya Pradesh,Vidisha,146,22,7,2,1,178
+2017-2018,Madhya Pradesh,Total,9192,1171,334,66,51,10814
+2017-2018,Maharashtra,Ahmadnagar,555,96,23,2,1,677
+2017-2018,Maharashtra,Akola,178,30,5,1,0,214
+2017-2018,Maharashtra,Amravati,333,56,9,4,1,403
+2017-2018,Maharashtra,Aurangabad,279,50,10,3,0,342
+2017-2018,Maharashtra,Beed,280,50,10,3,1,344
+2017-2018,Maharashtra,Bhandara,193,33,7,2,1,236
+2017-2018,Maharashtra,Buldana,280,52,12,2,1,347
+2017-2018,Maharashtra,Chandrapur,339,58,10,3,1,411
+2017-2018,Maharashtra,Dhule,232,41,6,2,0,281
+2017-2018,Maharashtra,Gadchiroli,376,45,9,3,1,434
+2017-2018,Maharashtra,Gondiya,238,39,10,1,1,289
+2017-2018,Maharashtra,Hingoli,132,24,3,1,1,161
+2017-2018,Maharashtra,Jalgaon,442,77,18,3,1,541
+2017-2018,Maharashtra,Jalna,213,40,8,1,1,263
+2017-2018,Maharashtra,Kolhapur,413,73,16,4,0,506
+2017-2018,Maharashtra,Latur,252,46,10,2,0,310
+2017-2018,Maharashtra,Nagpur,316,49,9,2,0,376
+2017-2018,Maharashtra,Nanded,377,65,12,4,0,458
+2017-2018,Maharashtra,Nandurbar,290,58,12,2,1,363
+2017-2018,Maharashtra,Nashik,577,103,23,4,1,708
+2017-2018,Maharashtra,Osmanabad,206,42,6,3,1,258
+2017-2018,Maharashtra,Parbhani,214,31,6,2,1,254
+2017-2018,Maharashtra,Pune,539,96,20,4,1,660
+2017-2018,Maharashtra,Raigarh (Raigad),288,52,8,5,1,354
+2017-2018,Maharashtra,Ratnagiri,378,67,8,3,1,457
+2017-2018,Maharashtra,Sangli,320,59,13,2,0,394
+2017-2018,Maharashtra,Satara,400,71,15,2,1,489
+2017-2018,Maharashtra,Sindhudurg,248,38,7,3,1,297
+2017-2018,Maharashtra,Solapur,431,77,13,3,0,524
+2017-2018,Maharashtra,Thane,492,78,15,5,1,591
+2017-2018,Maharashtra,Wardha,181,27,6,2,1,217
+2017-2018,Maharashtra,Washim,153,25,7,0,1,186
+2017-2018,Maharashtra,Yavatmal,435,63,14,3,0,515
+2017-2018,Maharashtra,Total,10580,1811,360,86,23,12860
+2017-2018,Manipur,Bishnupur,33,7,2,0,1,43
+2017-2018,Manipur,Chandel,26,6,1,1,1,35
+2017-2018,Manipur,Churachandpur,65,11,1,0,1,78
+2017-2018,Manipur,Imphal East,54,11,2,0,0,67
+2017-2018,Manipur,Imphal West,51,9,2,0,0,62
+2017-2018,Manipur,Senapati,66,14,2,0,1,83
+2017-2018,Manipur,Tamenglong,29,6,1,0,1,37
+2017-2018,Manipur,Thoubal,57,13,5,0,1,76
+2017-2018,Manipur,Ukhrul,40,8,1,0,1,50
+2017-2018,Manipur,Total,421,85,17,1,7,531
+2017-2018,Meghalaya,East Garo Hills,31,7,1,0,1,40
+2017-2018,Meghalaya,East Khasi Hills,64,26,6,0,4,100
+2017-2018,Meghalaya,Jaintia Hills,34,6,2,0,0,42
+2017-2018,Meghalaya,North Garo Hills,52,9,1,0,0,62
+2017-2018,Meghalaya,Ri Bhoi,27,8,3,0,1,39
+2017-2018,Meghalaya,South Garo Hills,21,6,1,0,1,29
+2017-2018,Meghalaya,South West Garo Hills,28,9,1,1,0,39
+2017-2018,Meghalaya,South West Khasi Hills,21,2,2,0,0,25
+2017-2018,Meghalaya,West Garo Hills,61,9,5,0,2,77
+2017-2018,Meghalaya,West Jaintia Hills,46,12,3,0,1,62
+2017-2018,Meghalaya,West Khasi Hills,46,15,2,0,2,65
+2017-2018,Meghalaya,Total,431,109,27,1,12,580
+2017-2018,Mizoram,Aizawl(West),39,6,0,2,1,48
+2017-2018,Mizoram,Aizwal(East),55,6,2,0,0,63
+2017-2018,Mizoram,Champhai,59,11,2,0,1,73
+2017-2018,Mizoram,Kolasib,26,5,1,0,1,33
+2017-2018,Mizoram,Lawngtlai,37,5,1,0,1,44
+2017-2018,Mizoram,Lunglei,70,9,1,1,1,82
+2017-2018,Mizoram,Mamit,33,6,1,0,1,41
+2017-2018,Mizoram,Saiha,24,4,0,0,1,29
+2017-2018,Mizoram,Serchhip,27,5,1,0,1,34
+2017-2018,Mizoram,Total,370,57,9,3,8,447
+2017-2018,Nagaland,Dimapur,47,10,2,0,1,60
+2017-2018,Nagaland,Kohima,40,15,3,0,1,59
+2017-2018,Nagaland,Kiphere,19,4,1,0,1,25
+2017-2018,Nagaland,Longleng,8,3,0,0,1,12
+2017-2018,Nagaland,Mokokchung,51,15,3,0,1,70
+2017-2018,Nagaland,Mon,50,15,2,0,1,68
+2017-2018,Nagaland,Phek,43,23,3,0,1,70
+2017-2018,Nagaland,Peren,16,8,1,0,1,26
+2017-2018,Nagaland,Tuensang,38,13,2,0,1,54
+2017-2018,Nagaland,Wokha,37,12,2,0,1,52
+2017-2018,Nagaland,Zunheboto,47,13,2,0,1,63
+2017-2018,Nagaland,Total,396,131,21,0,11,559
+2017-2018,Odisha,Anugul,166,31,9,3,1,210
+2017-2018,Odisha,Balangir,226,44,15,2,1,288
+2017-2018,Odisha,Baleshwar (Balasore),275,69,17,1,1,363
+2017-2018,Odisha,Bargarh,204,46,14,1,1,266
+2017-2018,Odisha,Baudh,67,12,5,0,1,85
+2017-2018,Odisha,Bhadrak,178,53,7,0,1,239
+2017-2018,Odisha,Cuttack,332,66,18,2,1,419
+2017-2018,Odisha,Debagarh (Deogarh),42,8,4,0,1,55
+2017-2018,Odisha,Dhenkanal,167,36,10,2,1,216
+2017-2018,Odisha,Gajapati,136,21,8,0,1,166
+2017-2018,Odisha,Ganjam,460,90,30,2,1,583
+2017-2018,Odisha,Jagatsinghapur,189,37,9,0,1,236
+2017-2018,Odisha,Jajapur,260,59,12,0,1,332
+2017-2018,Odisha,Jharsuguda,66,16,6,0,1,89
+2017-2018,Odisha,Kalahandi,242,45,16,1,1,305
+2017-2018,Odisha,Kandhamal,172,40,14,1,1,228
+2017-2018,Odisha,Kendrapara,227,46,9,0,1,283
+2017-2018,Odisha,Kendujhar (Keonjhar),351,66,17,2,1,437
+2017-2018,Odisha,Khordha,202,65,13,0,2,282
+2017-2018,Odisha,Koraput,307,48,16,1,1,373
+2017-2018,Odisha,Malkangiri,158,28,8,0,1,195
+2017-2018,Odisha,Mayurbhanj,589,86,28,3,1,707
+2017-2018,Odisha,Nabarangapur,289,40,11,0,1,341
+2017-2018,Odisha,Nayagarh,166,37,12,0,1,216
+2017-2018,Odisha,Nuapada,95,17,6,0,1,119
+2017-2018,Odisha,Puri,241,50,16,0,1,308
+2017-2018,Odisha,Rayagada,235,38,11,1,1,286
+2017-2018,Odisha,Sambalpur,167,31,11,2,1,212
+2017-2018,Odisha,Sonepur,89,20,5,1,1,116
+2017-2018,Odisha,Sundargarh,390,60,20,2,2,474
+2017-2018,Odisha,Total,6688,1305,377,27,32,8429
+2017-2018,Puducherry,Karaikal,17,9,1,0,1,28
+2017-2018,Puducherry,Mahe,0,0,0,0,1,1
+2017-2018,Puducherry,Puducherry,36,15,2,0,2,55
+2017-2018,Puducherry,Yanam,0,0,0,0,1,1
+2017-2018,Puducherry,Total,53,24,3,0,5,85
+2017-2018,Punjab,Amritsar,179,33,6,2,1,221
+2017-2018,Punjab,Barnala,71,10,4,1,1,87
+2017-2018,Punjab,Bhatinda,136,19,9,3,1,168
+2017-2018,Punjab,Faridkot,62,8,3,1,1,75
+2017-2018,Punjab,Fatehgarh Sahib,73,13,5,1,1,93
+2017-2018,Punjab,Firozpur,122,17,4,1,1,145
+2017-2018,Punjab,Fazilka,109,19,6,1,1,136
+2017-2018,Punjab,Gurdaspur,222,30,13,1,1,267
+2017-2018,Punjab,Hoshiarpur,244,31,12,3,1,291
+2017-2018,Punjab,Jalandhar,198,28,12,2,1,241
+2017-2018,Punjab,Kapurthala,88,12,5,3,1,109
+2017-2018,Punjab,Ludhiana,265,31,11,4,1,312
+2017-2018,Punjab,Mansa,103,13,4,2,1,123
+2017-2018,Punjab,Moga,122,21,6,0,1,150
+2017-2018,Punjab,Mohali,76,12,5,2,1,96
+2017-2018,Punjab,Muktsar,102,19,5,3,1,130
+2017-2018,Punjab,Nawanshahar,95,17,3,1,1,117
+2017-2018,Punjab,Patiala,185,28,10,3,1,227
+2017-2018,Punjab,Pathankot,69,9,4,0,1,83
+2017-2018,Punjab,Ropar,85,12,4,1,1,103
+2017-2018,Punjab,Sangrur,192,28,8,4,1,233
+2017-2018,Punjab,Tarn Taran,153,17,11,2,1,184
+2017-2018,Punjab,Total,2951,427,150,41,22,3591
+2017-2018,Rajasthan,Ajmer,400,63,20,3,2,488
+2017-2018,Rajasthan,Alwar,762,120,36,0,1,919
+2017-2018,Rajasthan,Banswara,471,53,21,0,1,546
+2017-2018,Rajasthan,Baran,279,47,12,0,1,339
+2017-2018,Rajasthan,Barmer,764,93,22,1,1,881
+2017-2018,Rajasthan,Bharatpur,417,67,17,0,1,502
+2017-2018,Rajasthan,Bhilwara,540,73,24,0,1,638
+2017-2018,Rajasthan,Bikaner,448,55,13,0,1,517
+2017-2018,Rajasthan,Bundi,215,31,11,0,1,258
+2017-2018,Rajasthan,Chittaurgarh,398,47,21,1,1,468
+2017-2018,Rajasthan,Churu,468,86,16,2,1,573
+2017-2018,Rajasthan,Dausa,340,44,15,0,1,400
+2017-2018,Rajasthan,Dhaulpur,233,27,7,1,1,269
+2017-2018,Rajasthan,Dungarpur,374,55,15,1,1,446
+2017-2018,Rajasthan,Ganganagar,439,54,17,0,1,511
+2017-2018,Rajasthan,Hanumangarh,380,54,14,0,1,449
+2017-2018,Rajasthan,Jaipur,678,119,30,1,1,829
+2017-2018,Rajasthan,Jaisalmer,169,21,8,0,1,199
+2017-2018,Rajasthan,Jalore,430,69,10,0,1,510
+2017-2018,Rajasthan,Jhalwar,341,42,15,0,0,398
+2017-2018,Rajasthan,Jhunjhunu,641,109,26,1,1,778
+2017-2018,Rajasthan,Jodhpur,677,82,24,0,2,785
+2017-2018,Rajasthan,Karauli,297,36,9,1,1,344
+2017-2018,Rajasthan,Kota,216,40,13,0,1,270
+2017-2018,Rajasthan,Nagaur,854,121,28,2,1,1006
+2017-2018,Rajasthan,Pali,489,80,21,1,1,592
+2017-2018,Rajasthan,Rajsamand,275,44,12,1,1,333
+2017-2018,Rajasthan,Sawai Madhopur,291,36,11,1,1,340
+2017-2018,Rajasthan,Sikar,693,99,30,1,1,824
+2017-2018,Rajasthan,Sirohi,233,29,9,0,1,272
+2017-2018,Rajasthan,Tonk,308,59,9,0,1,377
+2017-2018,Rajasthan,Udaipur,676,96,27,1,1,801
+2017-2018,Rajasthan,Pratapgarh,212,29,8,0,1,250
+2017-2018,Rajasthan,Total,14408,2080,571,19,34,17112
+2017-2018,Sikkim,East,48,6,1,0,1,56
+2017-2018,Sikkim,North,19,5,0,0,1,25
+2017-2018,Sikkim,South,39,6,1,0,1,47
+2017-2018,Sikkim,West,41,7,0,0,1,49
+2017-2018,Sikkim,Total,147,24,2,0,4,177
+2017-2018,Tamil Nadu,Ariyalur,117,30,6,3,1,157
+2017-2018,Tamil Nadu,Chennai,0,0,0,0,0,0
+2017-2018,Tamil Nadu,Coimbatore,328,39,12,10,1,390
+2017-2018,Tamil Nadu,Cuddalore,319,51,13,7,1,391
+2017-2018,Tamil Nadu,Dharmapuri,218,39,8,3,1,269
+2017-2018,Tamil Nadu,Dindigul,311,48,14,11,1,385
+2017-2018,Tamil Nadu,Erode,311,45,14,7,1,378
+2017-2018,Tamil Nadu,Kancheepuram,360,48,13,7,1,429
+2017-2018,Tamil Nadu,Kanniyakumari (Nagarcoil),267,27,9,8,1,312
+2017-2018,Tamil Nadu,Karur,168,24,7,6,1,206
+2017-2018,Tamil Nadu,Krishnagiri,239,46,10,5,1,301
+2017-2018,Tamil Nadu,Madurai,314,41,13,5,1,374
+2017-2018,Tamil Nadu,Nagapattinam,258,42,11,11,1,323
+2017-2018,Tamil Nadu,Namakkal,240,37,15,7,1,300
+2017-2018,Tamil Nadu,Perambalur,90,23,4,2,1,120
+2017-2018,Tamil Nadu,Pudukkottai,242,49,13,12,1,317
+2017-2018,Tamil Nadu,Ramanathapuram (Ramand),244,41,11,8,1,305
+2017-2018,Tamil Nadu,Salem,398,64,20,9,1,492
+2017-2018,Tamil Nadu,Sivaganga,275,35,12,9,1,332
+2017-2018,Tamil Nadu,Thanjavur,309,54,14,12,1,390
+2017-2018,Tamil Nadu,The Nilgiris,194,26,4,5,1,230
+2017-2018,Tamil Nadu,Theni,162,25,8,5,1,201
+2017-2018,Tamil Nadu,Thiruvallur,303,40,14,11,1,369
+2017-2018,Tamil Nadu,Thiruvarur,195,33,10,7,1,246
+2017-2018,Tamil Nadu,Tiruchirappalli (Trichy),307,51,14,9,1,382
+2017-2018,Tamil Nadu,Tirunelveli,379,69,19,15,1,483
+2017-2018,Tamil Nadu,Tiruppur,242,30,13,9,1,295
+2017-2018,Tamil Nadu,Tiruvanamalai,410,73,18,6,1,508
+2017-2018,Tamil Nadu,Toothukudi (Tuticorin),253,39,12,8,1,313
+2017-2018,Tamil Nadu,Vellore,454,78,21,11,1,565
+2017-2018,Tamil Nadu,Viluppuram,560,81,22,9,1,673
+2017-2018,Tamil Nadu,Virudhunagar,245,40,11,9,1,306
+2017-2018,Tamil Nadu,Total,8712,1368,385,246,31,10742
+2017-2018,Telangana,Adilabad,470,72,13,3,0,558
+2017-2018,Telangana,Hyderabad,53,85,10,4,1,153
+2017-2018,Telangana,Karimnagar,580,71,16,3,1,671
+2017-2018,Telangana,Khammam,549,57,11,2,1,620
+2017-2018,Telangana,Mahbubnagar,680,84,14,4,1,783
+2017-2018,Telangana,Medak,489,69,8,4,1,571
+2017-2018,Telangana,Nalgonda,626,72,5,5,1,709
+2017-2018,Telangana,Nizamabad,412,41,14,3,0,470
+2017-2018,Telangana,Rangareddi,399,48,9,1,1,458
+2017-2018,Telangana,Warangal,605,69,14,2,0,690
+2017-2018,Telangana,Total,4863,668,114,31,7,5683
+2017-2018,Tripura,Dhalai,124,15,2,3,1,145
+2017-2018,Tripura,Gomati,143,10,3,2,1,159
+2017-2018,Tripura,Khowai,110,7,2,0,1,120
+2017-2018,Tripura,North Tripura,94,13,2,1,1,111
+2017-2018,Tripura,Sepahijala,155,12,4,2,0,173
+2017-2018,Tripura,South Tripura,156,17,4,2,1,180
+2017-2018,Tripura,Unakoti,74,9,1,1,1,86
+2017-2018,Tripura,West Tripura,177,11,2,0,0,190
+2017-2018,Tripura,Total,1033,94,20,11,6,1164
+2017-2018,Uttar Pradesh,Agra,383,60,16,0,2,461
+2017-2018,Uttar Pradesh,Aligarh,351,47,13,0,3,414
+2017-2018,Uttar Pradesh,Allahabad,539,80,19,0,5,643
+2017-2018,Uttar Pradesh,Ambedkarnagar,232,33,9,0,1,275
+2017-2018,Uttar Pradesh,Amethi,271,50,15,0,0,336
+2017-2018,Uttar Pradesh,Aurayya,164,32,7,0,1,204
+2017-2018,Uttar Pradesh,Azamgarh,490,90,22,0,2,604
+2017-2018,Uttar Pradesh,Badaun,370,55,12,0,2,439
+2017-2018,Uttar Pradesh,Baghpat,200,27,7,0,1,235
+2017-2018,Uttar Pradesh,Bahraich,310,63,14,0,2,389
+2017-2018,Uttar Pradesh,Balia,367,83,15,0,2,467
+2017-2018,Uttar Pradesh,Balrampur,214,33,9,0,2,258
+2017-2018,Uttar Pradesh,Banda,285,54,7,0,2,348
+2017-2018,Uttar Pradesh,Barabanki,353,67,17,0,2,439
+2017-2018,Uttar Pradesh,Bareilly,413,64,13,0,3,493
+2017-2018,Uttar Pradesh,Basti,267,44,9,0,4,324
+2017-2018,Uttar Pradesh,Bijnor,353,53,11,0,2,419
+2017-2018,Uttar Pradesh,Bulandshahar,390,69,13,0,4,476
+2017-2018,Uttar Pradesh,Chaundoli,244,33,5,0,2,284
+2017-2018,Uttar Pradesh,Chitrakoot,140,33,6,0,1,180
+2017-2018,Uttar Pradesh,Deoria,364,77,16,0,2,459
+2017-2018,Uttar Pradesh,Etah,175,36,4,0,2,217
+2017-2018,Uttar Pradesh,Etawah,169,34,8,0,3,214
+2017-2018,Uttar Pradesh,Faizabad,255,38,10,0,3,306
+2017-2018,Uttar Pradesh,Farrukhabad,192,32,8,0,2,234
+2017-2018,Uttar Pradesh,Fatehpur,309,48,9,0,2,368
+2017-2018,Uttar Pradesh,Ferozabad,240,59,7,0,3,309
+2017-2018,Uttar Pradesh,Gautambudhnagar,107,21,5,0,1,134
+2017-2018,Uttar Pradesh,Gaziabad,144,20,4,0,3,171
+2017-2018,Uttar Pradesh,Ghazipur,393,73,16,0,2,484
+2017-2018,Uttar Pradesh,Gonda,338,66,16,0,2,422
+2017-2018,Uttar Pradesh,Gorakhpur,448,79,16,0,2,545
+2017-2018,Uttar Pradesh,Hamirpur,215,41,8,0,2,266
+2017-2018,Uttar Pradesh,Hapur,148,25,4,0,0,177
+2017-2018,Uttar Pradesh,Hardoi,432,62,13,0,2,509
+2017-2018,Uttar Pradesh,Hathras,147,32,7,0,3,189
+2017-2018,Uttar Pradesh,Jalaun,286,39,7,0,2,334
+2017-2018,Uttar Pradesh,Jaunpur,499,92,21,0,3,615
+2017-2018,Uttar Pradesh,Jhansi,326,44,6,0,2,378
+2017-2018,Uttar Pradesh,JP Nagar,172,29,8,0,2,211
+2017-2018,Uttar Pradesh,Kannauj,188,34,11,0,1,234
+2017-2018,Uttar Pradesh,Kanpur (Dehat),217,36,11,0,2,266
+2017-2018,Uttar Pradesh,Kanpur (Nagar),390,44,10,0,4,448
+2017-2018,Uttar Pradesh,Kashi Ram Nagar/ Kashganj,170,36,5,0,1,212
+2017-2018,Uttar Pradesh,Kaushambi,170,36,7,0,1,214
+2017-2018,Uttar Pradesh,Khiri/ Lakhimpur,387,70,14,0,2,473
+2017-2018,Uttar Pradesh,Kushinagar,339,67,14,0,1,421
+2017-2018,Uttar Pradesh,Lalitpur,191,29,5,0,2,227
+2017-2018,Uttar Pradesh,Lucknow,336,35,9,0,11,391
+2017-2018,Uttar Pradesh,Maharanganj,278,46,14,0,1,339
+2017-2018,Uttar Pradesh,Mahoba,140,18,4,0,2,164
+2017-2018,Uttar Pradesh,Mainpuri,203,55,9,0,2,269
+2017-2018,Uttar Pradesh,Mathura,261,37,12,0,3,313
+2017-2018,Uttar Pradesh,Mau,225,45,6,0,2,278
+2017-2018,Uttar Pradesh,Meerut,293,42,12,0,2,349
+2017-2018,Uttar Pradesh,Mirzapur,265,47,13,0,2,327
+2017-2018,Uttar Pradesh,Moradabad,286,35,6,0,2,329
+2017-2018,Uttar Pradesh,Muzzafarnagar,286,47,7,0,2,342
+2017-2018,Uttar Pradesh,Pilibhit,195,29,6,0,2,232
+2017-2018,Uttar Pradesh,Pratapgarh,360,65,27,0,2,454
+2017-2018,Uttar Pradesh,Raibareilly,277,54,12,0,2,345
+2017-2018,Uttar Pradesh,Rampur,211,32,5,0,2,250
+2017-2018,Uttar Pradesh,Saharanpur,338,48,13,0,3,402
+2017-2018,Uttar Pradesh,Sambhal,131,34,8,0,1,174
+2017-2018,Uttar Pradesh,Sant Ravidas Nagar,155,21,6,0,2,184
+2017-2018,Uttar Pradesh,Santkabirnagar,182,26,6,0,1,215
+2017-2018,Uttar Pradesh,Shahjahanpur,310,51,13,0,2,376
+2017-2018,Uttar Pradesh,Shamli,130,28,5,0,0,163
+2017-2018,Uttar Pradesh,Shrawasti,133,17,6,0,1,157
+2017-2018,Uttar Pradesh,Siddharthanagar,274,70,11,0,1,356
+2017-2018,Uttar Pradesh,Sitapur,448,78,17,0,2,545
+2017-2018,Uttar Pradesh,Sonbhadra,165,32,6,0,1,204
+2017-2018,Uttar Pradesh,Sultanpur,232,54,11,0,2,299
+2017-2018,Uttar Pradesh,Unnav,348,52,12,0,2,414
+2017-2018,Uttar Pradesh,Varanasi,312,30,8,0,5,355
+2017-2018,Uttar Pradesh,Total,20521,3497,773,0,160,24951
+2017-2018,Uttarakhand,Almora,206,28,4,2,2,242
+2017-2018,Uttarakhand,Bageshwar,84,12,2,0,1,99
+2017-2018,Uttarakhand,Chamoli,110,13,5,0,1,129
+2017-2018,Uttarakhand,Champawat,68,6,2,1,1,78
+2017-2018,Uttarakhand,Dehradun,175,23,7,4,2,211
+2017-2018,Uttarakhand,Pauri Garhwal,239,32,5,3,2,281
+2017-2018,Uttarakhand,Haridwar,160,28,6,1,2,197
+2017-2018,Uttarakhand,Nainital,143,19,8,4,2,176
+2017-2018,Uttarakhand,Pithoragarh@,156,18,4,0,2,180
+2017-2018,Uttarakhand,Rudraprayag,68,13,2,0,1,84
+2017-2018,Uttarakhand,Tehri Garhwal,204,28,5,1,1,239
+2017-2018,Uttarakhand,Udhamsingh Nagar,153,27,6,1,1,188
+2017-2018,Uttarakhand,Uttarkashi,82,10,3,0,1,96
+2017-2018,Uttarakhand,Total,1848,257,59,17,19,2200
+2017-2018,West Bengal,Bankura,564,69,22,1,1,657
+2017-2018,West Bengal,Barddhaman,765,105,35,3,1,909
+2017-2018,West Bengal,Birbhum,484,58,19,1,2,564
+2017-2018,West Bengal,Dakshin Dinajpur,248,18,8,1,1,276
+2017-2018,West Bengal,Darjiling,230,22,12,2,2,268
+2017-2018,West Bengal,Haora,448,43,15,1,1,508
+2017-2018,West Bengal,Hugli,672,60,18,3,1,754
+2017-2018,West Bengal,Jalpaiguri,301,25,7,1,1,335
+2017-2018,West Bengal,Koch Bihar,406,29,12,4,1,452
+2017-2018,West Bengal,Malda,511,34,16,1,0,562
+2017-2018,West Bengal,Medinipur(W),858,82,29,2,1,972
+2017-2018,West Bengal,Medinipur(E),706,53,24,3,2,788
+2017-2018,West Bengal,Murshidabad,832,69,27,4,0,932
+2017-2018,West Bengal,Nadia,469,47,17,2,1,536
+2017-2018,West Bengal,North Twenty Four Parganas,742,52,22,3,2,821
+2017-2018,West Bengal,Puruliya,485,52,20,1,1,559
+2017-2018,West Bengal,South Twenty Four Parganas,1068,60,30,3,2,1163
+2017-2018,West Bengal,Uttar Dinajpur,344,18,9,1,1,373
+2017-2018,West Bengal,Alipurduar,236,13,7,0,1,257
+2017-2018,West Bengal,Total,10369,909,349,37,22,11686
+2017-2018,All India/ Total,Total,155708,25387,5521,1065,773,188454
