@@ -1,7 +1,7 @@
 import pandas as pd
-from Recommendor.LocationHelper import *
+from Recommendor.Helper.LocationHelper import *
 
-df_poverty = pd.read_csv("poverty_dataset.csv")
+df_poverty = pd.read_csv("dataset/poverty_dataset.csv")
 
 present_state = get_location()
 

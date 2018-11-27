@@ -1,7 +1,7 @@
 import pandas as pd
-from Recommendor.LocationHelper import *
+from Recommendor.Helper.LocationHelper import *
 
-df_healthcare_centres = pd.read_csv("healthcare_centres_dataset.csv")
+df_healthcare_centres = pd.read_csv("dataset/healthcare_centres_dataset.csv")
 
 present_state = get_location()
 

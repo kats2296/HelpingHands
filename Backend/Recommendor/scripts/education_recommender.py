@@ -1,7 +1,7 @@
 import pandas as pd
-from Recommendor.LocationHelper import *
+from Recommendor.Helper.LocationHelper import *
 
-df_literates = pd.read_csv("literacy_dataset .csv")
+df_literates = pd.read_csv("dataset/literacy_dataset.csv")
 
 present_state = get_location()
 
