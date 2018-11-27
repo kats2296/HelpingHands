@@ -14,7 +14,7 @@ class DummyDataBuilderEncoded:
 
     def generate_data(self):
         for year in self.years:
-            year = 2013
+            year = 2014
             for i in xrange(50000):
                 self.organise_data_from_csv(year)
             break
