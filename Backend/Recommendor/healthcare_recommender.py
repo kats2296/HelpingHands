@@ -1,5 +1,5 @@
 import pandas as pd
-from LocationHelper import *
+from Recommendor.LocationHelper import *
 
 df_healthcare_centres = pd.read_csv("healthcare_centres_dataset.csv")
 

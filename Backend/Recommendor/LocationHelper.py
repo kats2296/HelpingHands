@@ -1,4 +1,5 @@
 import requests
+from constants import *
 
 
 def get_location():
@@ -7,7 +8,6 @@ def get_location():
     latitude = response_ip_api.json()['lat']
     longitude = response_ip_api.json()['lon']
 
-    GOOGLE_API_KEY = "AIzaSyDoQyE4OsQTAO8QDzgGYvnR79YJZ51HIK8"
     params = {"latlng": str(latitude)+","+str(longitude), "key": GOOGLE_API_KEY}
     google_maps_url = "https://maps.googleapis.com/maps/api/geocode/json"
     response = requests.get(google_maps_url, params=params)

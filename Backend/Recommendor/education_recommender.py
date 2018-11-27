@@ -1,5 +1,5 @@
 import pandas as pd
-from LocationHelper import *
+from Recommendor.LocationHelper import *
 
 df_literates = pd.read_csv("literacy_dataset .csv")
 
