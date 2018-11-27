@@ -10,6 +10,7 @@ db.sqlite3
 /static
 djangp_practise/
 private.py
+constants.py
 
 ### AndroidStudio ###
 # Covers files to be ignored for android development using Android Studio.
