@@ -18,4 +18,5 @@ min_list = present_state_rural_data.nsmallest(3, 'PL_Persons')
 districts = min_list['INDIA/STATE/UT/DISTRICT'].values
 print(districts)
 
-
+for d in districts:
+    print(get_lat_lng(d))

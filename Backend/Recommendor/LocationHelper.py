@@ -16,7 +16,10 @@ def get_location():
     return location
 
 
-# ipStack = IpStack()
-# print(ipStack.get_location())
+def get_lat_lng(district):
 
+    google_geocode_url = "https://maps.googleapis.com/maps/api/geocode/json"
+    params = {"address": district, "key": GOOGLE_API_KEY}
 
+    response = requests.get(google_geocode_url, params=params)
+    return response.json()['results'][0]['geometry']['location']

@@ -11,3 +11,6 @@ min_list = present_state_data.nsmallest(3, 'Total Number of HealthCare Units')
 
 districts = min_list['Name of the District'].values
 print(districts)
+
+for d in districts:
+    print(get_lat_lng(d))

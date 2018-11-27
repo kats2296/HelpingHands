@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9ccf91a-0fc1-4c08-a057-c0e3a7b774a3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Recommendor/LocationHelper.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Recommendor/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Recommendor/education_recommender.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Recommendor/healthcare_centres_dataset.csv" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Recommendor/healthcare_recommender.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Recommendor/literacy_dataset .csv" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Recommendor/poverty_dataset.csv" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Recommendor/poverty_recommender.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Recommendor/LocationHelper.py" afterPath="$PROJECT_DIR$/Recommendor/LocationHelper.py" />
+      <change beforePath="$PROJECT_DIR$/Recommendor/education_recommender.py" afterPath="$PROJECT_DIR$/Recommendor/education_recommender.py" />
+      <change beforePath="$PROJECT_DIR$/Recommendor/healthcare_recommender.py" afterPath="$PROJECT_DIR$/Recommendor/healthcare_recommender.py" />
+      <change beforePath="$PROJECT_DIR$/Recommendor/poverty_recommender.py" afterPath="$PROJECT_DIR$/Recommendor/poverty_recommender.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="education_recommender.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="education_recommender.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Recommendor/education_recommender.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+            <state relative-caret-position="315">
+              <caret line="21" column="25" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -37,10 +32,22 @@
       <file leaf-file-name="healthcare_recommender.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Recommendor/healthcare_recommender.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="28" lean-forward="false" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+            <state relative-caret-position="210">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="25" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LocationHelper.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Recommendor/LocationHelper.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -49,8 +56,8 @@
       <file leaf-file-name="poverty_recommender.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Recommendor/poverty_recommender.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="225">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -97,11 +104,11 @@
         <option value="$PROJECT_DIR$/Recommendor/private.py" />
         <option value="$PROJECT_DIR$/Recommendor/IpStack.py" />
         <option value="$PROJECT_DIR$/Recommendor/constants.py" />
-        <option value="$PROJECT_DIR$/Recommendor/LocationHelper.py" />
         <option value="$PROJECT_DIR$/Recommendor/Recommendorr/LocationHelper.py" />
-        <option value="$PROJECT_DIR$/Recommendor/poverty_recommender.py" />
-        <option value="$PROJECT_DIR$/Recommendor/education_recommender.py" />
         <option value="$PROJECT_DIR$/Recommendor/healthcare_recommender.py" />
+        <option value="$PROJECT_DIR$/Recommendor/education_recommender.py" />
+        <option value="$PROJECT_DIR$/Recommendor/poverty_recommender.py" />
+        <option value="$PROJECT_DIR$/Recommendor/LocationHelper.py" />
       </list>
     </option>
   </component>
@@ -174,7 +181,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.education_recommender (1)">
+  <component name="RunManager" selected="Python.healthcare_recommender (1)">
     <configuration name="LocationHelper (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -274,8 +281,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.education_recommender (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Python.healthcare_recommender (1)" />
+        <item index="0" class="java.lang.String" itemvalue="Python.healthcare_recommender (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Python.education_recommender (1)" />
         <item index="2" class="java.lang.String" itemvalue="Python.poverty_recommender (1)" />
         <item index="3" class="java.lang.String" itemvalue="Python.LocationHelper (1)" />
         <item index="4" class="java.lang.String" itemvalue="Python.poverty_recommender" />
@@ -359,7 +366,14 @@
       <option name="project" value="LOCAL" />
       <updated>1543259470309</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="refactoring">
+      <created>1543312194074</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1543312194075</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView">
@@ -380,7 +394,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32784185" sideWeight="0.50454545" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6523888" sideWeight="0.49545455" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24382208" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.9357496" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.9143328" sideWeight="0.4969697" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1659091" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -409,7 +423,8 @@
     <MESSAGE value="typo" />
     <MESSAGE value="minor changes" />
     <MESSAGE value="Education_Recommender added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Education_Recommender added" />
+    <MESSAGE value="refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -720,20 +735,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Recommendor/LocationHelper.py">
+    <entry file="file://$PROJECT_DIR$/Recommendor/education_recommender.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="315">
+          <caret line="21" column="25" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Recommendor/poverty_recommender.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="225">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
@@ -742,20 +757,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Recommendor/healthcare_recommender.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="28" lean-forward="false" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        <state relative-caret-position="210">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="25" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Recommendor/education_recommender.py">
+    <entry file="file://$PROJECT_DIR$/Recommendor/LocationHelper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        <state relative-caret-position="375">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>

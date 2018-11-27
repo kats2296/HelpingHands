@@ -11,4 +11,5 @@ min_list = present_state_data.nsmallest(3, 'P_URB_POP')
 districts = min_list['DISTNAME'].values
 print(districts)
 
-
+for d in districts:
+    print(get_lat_lng(d))
