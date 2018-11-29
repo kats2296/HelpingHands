@@ -1,16 +1,19 @@
 import pandas as pd
 from Recommendor.Helper.LocationHelper import *
 
-df_healthcare_centres = pd.read_csv("dataset/healthcare_centres_dataset.csv")
 
-present_state = get_location()
+def get_health_districts():
+    df_healthcare_centres = pd.read_csv("healthcare_centres_dataset.csv")
 
-present_state_data = df_healthcare_centres.loc[df_healthcare_centres['States/Union Territory'] == present_state]
+    present_state = get_location()
 
-min_list = present_state_data.nsmallest(3, 'Total Number of HealthCare Units')
+    present_state_data = df_healthcare_centres.loc[df_healthcare_centres['States/Union Territory'] == present_state]
 
-districts = min_list['Name of the District'].values
-print(districts)
+    min_list = present_state_data.nsmallest(10, 'Total Number of HealthCare Units')
 
-for d in districts:
-    print(get_lat_lng(d))
+    districts = min_list['Name of the District'].values
+    return districts
+    # print(districts)
+    #
+    # for d in districts:
+    #     print(get_lat_lng(d))

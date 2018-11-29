@@ -13,12 +13,13 @@ class DummyDataBuilderEncoded:
         self.event_dict = {1: 'poverty', 2: 'health_care', 3: 'education', 4: 'donations'}
 
     def generate_data(self):
-        year = 2017
-        for i in xrange(50000):
-            self.organise_data_from_csv(year)
+        for year in self.years:
+            print(year)
+            for i in xrange(50000):
+                self.organise_data_from_csv(year)
 
     def organise_data_from_csv(self, year):
-        states_districts = pd.read_csv("dataset/poverty_dataset.csv").iloc[:, 1: 5]
+        states_districts = pd.read_csv("important_districts.csv").iloc[:, 1: 5]
         random_row = states_districts.sample(1)
         state = ''.join(random_row['STATNAME'].values)
         state_code = int(random_row['STATCD'])
