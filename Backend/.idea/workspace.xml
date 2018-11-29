@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9ccf91a-0fc1-4c08-a057-c0e3a7b774a3" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Recommendor/scripts/important_districts_dataset.py" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Recommendor/dataset/events_data.csv" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Recommendor/dataset/healthcare_centres_dataset.csv" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Recommendor/dataset/literacy_dataset.csv" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Recommendor/dataset/poverty_dataset.csv" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Recommendor/scripts/DummyDataBuilderEncoded.py" afterPath="$PROJECT_DIR$/Recommendor/scripts/DummyDataBuilderEncoded.py" />
-      <change beforePath="$PROJECT_DIR$/Recommendor/scripts/education_recommender.py" afterPath="$PROJECT_DIR$/Recommendor/scripts/education_recommender.py" />
-      <change beforePath="$PROJECT_DIR$/Recommendor/scripts/events_data_encoded.csv" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Recommendor/scripts/healthcare_recommender.py" afterPath="$PROJECT_DIR$/Recommendor/scripts/healthcare_recommender.py" />
-      <change beforePath="$PROJECT_DIR$/Recommendor/scripts/poverty_dataset.csv" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Recommendor/scripts/poverty_recommender.py" afterPath="$PROJECT_DIR$/Recommendor/scripts/poverty_recommender.py" />
+      <change beforePath="$PROJECT_DIR$/Predictor/events_data_encoded.csv" afterPath="$PROJECT_DIR$/Predictor/events_data_encoded.csv" />
+      <change beforePath="$PROJECT_DIR$/Recommendor/events_data_encoded.csv" afterPath="$PROJECT_DIR$/Recommendor/events_data_encoded.csv" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,7 +18,7 @@
       <file leaf-file-name="DummyDataBuilderEncoded.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Recommendor/scripts/DummyDataBuilderEncoded.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
+            <state relative-caret-position="15">
               <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
@@ -41,7 +31,7 @@
       <file leaf-file-name="important_districts_dataset.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Recommendor/scripts/important_districts_dataset.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
+            <state relative-caret-position="315">
               <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
@@ -154,7 +144,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -177,6 +166,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -416,7 +406,21 @@
       <option name="project" value="LOCAL" />
       <updated>1543318151306</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="updated dataset with important districts">
+      <created>1543489431839</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1543489431839</updated>
+    </task>
+    <task id="LOCAL-00014" summary="updated dataset with important districts">
+      <created>1543489504430</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1543489504430</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView">
@@ -430,7 +434,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1366" height="738" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -470,7 +473,8 @@
     <MESSAGE value="refactoring" />
     <MESSAGE value="getting lat lng of obtained districts." />
     <MESSAGE value="removed constants file" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed constants file" />
+    <MESSAGE value="updated dataset with important districts" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated dataset with important districts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -721,13 +725,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Recommendor/scripts/check.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Recommendor/scripts/healthcare_recommender.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -764,7 +761,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Recommendor/scripts/important_districts_dataset.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
+        <state relative-caret-position="315">
           <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
@@ -772,9 +769,10 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Recommendor/scripts/check.py" />
     <entry file="file://$PROJECT_DIR$/Recommendor/scripts/DummyDataBuilderEncoded.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
+        <state relative-caret-position="15">
           <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
