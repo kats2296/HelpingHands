@@ -13,9 +13,8 @@ class DummyDataBuilderEncoded:
         self.event_dict = {1: 'poverty', 2: 'health_care', 3: 'education', 4: 'donations'}
 
     def generate_data(self):
-        for year in self.years:
-            print(year)
-            for i in xrange(50000):
+            for i in xrange(10000):
+                year = 2013
                 self.organise_data_from_csv(year)
 
     def organise_data_from_csv(self, year):
@@ -37,7 +36,7 @@ class DummyDataBuilderEncoded:
 
         row = [year, month, state, state_code, district, district_code, event, event_code]
 
-        with open('events_data_encoded.csv', 'a') as csvFile:
+        with open('helpinghands_dataset.csv', 'a') as csvFile:
             writer = csv.writer(csvFile)
             writer.writerow(row)
 
