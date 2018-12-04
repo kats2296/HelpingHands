@@ -11,7 +11,7 @@ class DummyDataBuilderEncoded:
 
     def generate_data(self):
             for i in xrange(10000):
-                year = 2014
+                year = 2010
                 self.organise_data_from_csv(year)
 
     def organise_data_from_csv(self, year):
@@ -31,7 +31,7 @@ class DummyDataBuilderEncoded:
 
         row = [year, month, state, state_code, district, district_code]
 
-        with open('dataset_2014.csv', 'a') as csvFile:
+        with open('dataset_2010.csv', 'a') as csvFile:
             writer = csv.writer(csvFile)
             writer.writerow(row)
 

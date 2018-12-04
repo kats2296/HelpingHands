@@ -201,6 +201,7 @@
   </component>
   <component name="RunManager" selected="Python.DummyDataBuilderEncoded">
     <configuration name="DummyDataBuilderEncoded" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Backend" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -211,7 +212,6 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Backend" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Recommendor/scripts/DummyDataBuilderEncoded.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -219,6 +219,7 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration name="check" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Backend" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -229,7 +230,6 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Backend" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Recommendor/scripts/check.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -237,6 +237,7 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration name="education_recommender (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Backend" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -247,7 +248,6 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Backend" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Recommendor/scripts/education_recommender.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -255,6 +255,7 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration name="important_districts_dataset" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Backend" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -265,7 +266,6 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Backend" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Recommendor/scripts/important_districts_dataset.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -273,6 +273,7 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration name="poverty_recommender (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Backend" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -283,32 +284,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Backend" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Recommendor/scripts/poverty_recommender.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.poverty_recommender (1)" />
-      <item index="1" class="java.lang.String" itemvalue="Python.education_recommender (1)" />
-      <item index="2" class="java.lang.String" itemvalue="Python.check" />
-      <item index="3" class="java.lang.String" itemvalue="Python.important_districts_dataset" />
-      <item index="4" class="java.lang.String" itemvalue="Python.DummyDataBuilderEncoded" />
+    <list>
+      <item itemvalue="Python.poverty_recommender (1)" />
+      <item itemvalue="Python.education_recommender (1)" />
+      <item itemvalue="Python.check" />
+      <item itemvalue="Python.important_districts_dataset" />
+      <item itemvalue="Python.DummyDataBuilderEncoded" />
     </list>
     <recent_temporary>
-      <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.DummyDataBuilderEncoded" />
-        <item index="1" class="java.lang.String" itemvalue="Python.important_districts_dataset" />
-        <item index="2" class="java.lang.String" itemvalue="Python.check" />
-        <item index="3" class="java.lang.String" itemvalue="Python.education_recommender (1)" />
-        <item index="4" class="java.lang.String" itemvalue="Python.poverty_recommender (1)" />
+      <list>
+        <item itemvalue="Python.DummyDataBuilderEncoded" />
+        <item itemvalue="Python.important_districts_dataset" />
+        <item itemvalue="Python.check" />
+        <item itemvalue="Python.education_recommender (1)" />
+        <item itemvalue="Python.poverty_recommender (1)" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -571,7 +568,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../Django2-Practise/Djangoed/djangp_practise/lib/python3.5/site-packages/rest_framework/views.py">
+    <entry file="file://$USER_HOME$/Django2-Practise/Djangoed/djangp_practise/lib/python3.5/site-packages/rest_framework/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-76">
           <caret line="111" column="8" lean-forward="false" selection-start-line="111" selection-start-column="8" selection-end-line="111" selection-end-column="8" />
