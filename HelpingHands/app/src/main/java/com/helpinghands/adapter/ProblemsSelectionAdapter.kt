@@ -10,6 +10,7 @@ import android.widget.ImageView
 import com.helpinghands.EventDetailsActivity
 import com.helpinghands.Model.Problem
 import com.helpinghands.R
+import com.helpinghands.activity.DistrictSelectionActivity
 import kotlinx.android.synthetic.main.problem_item.view.*
 
 
@@ -31,13 +32,13 @@ class ProblemsSelectionAdapterAdapter(private var context: Context,
             holder.bindProblems(problemsList[position])
 
             holder.thumbnail.setOnClickListener {
-                openEventDetailsPage()
+                openDistrictSelectionPage()
             }
         }
     }
 
-    private fun openEventDetailsPage() {
-        context.startActivity(Intent(context, EventDetailsActivity::class.java))
+    private fun openDistrictSelectionPage() {
+        context.startActivity(Intent(context, DistrictSelectionActivity::class.java))
     }
 
 

@@ -45,7 +45,8 @@
             android:name=".activity.OrgHomeActivity"
             android:theme="@style/AppTheme" />
         <activity android:name=".EventDetailsActivity" />
-        <activity android:name=".activity.VolunteerAddedActivity"></activity>
+        <activity android:name=".activity.VolunteerAddedActivity" />
+        <activity android:name=".activity.DistrictSelectionActivity"></activity>
     </application>
 
 </manifest>

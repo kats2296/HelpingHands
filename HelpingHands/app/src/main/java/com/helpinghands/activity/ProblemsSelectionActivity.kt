@@ -27,5 +27,24 @@ class ProblemsSelectionActivity : AppCompatActivity() {
 
         recyclerViewProblems.adapter = adapter
 
+
+        val predictedEvent  = intent.extras.getString("event", "education")
+        
+        when(predictedEvent){
+
+            "education"->{
+                predicted_event_image_view.setImageResource(R.drawable.ic_education)
+            }
+            "poverty"->{
+                predicted_event_image_view.setImageResource(R.drawable.ic_no_poverty)
+            }
+            "donations"->{
+                predicted_event_image_view.setImageResource(R.drawable.ic_no_poverty)
+            }
+            "health-care"->{
+                predicted_event_image_view.setImageResource(R.drawable.ic_medical_aids)
+            }
+        }
+
     }
 }
