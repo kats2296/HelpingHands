@@ -3,12 +3,16 @@ package com.helpinghands.retrofit;
 
 import com.helpinghands.retrofit.requests.CreateEventRequest;
 import com.helpinghands.retrofit.requests.CreateRequest;
+import com.helpinghands.retrofit.requests.GetDistrictsRequest;
+import com.helpinghands.retrofit.requests.GetSuggestedEventRequest;
 import com.helpinghands.retrofit.requests.OrgLoginRequest;
 import com.helpinghands.retrofit.requests.OrgSignupRequest;
 import com.helpinghands.retrofit.requests.VolSignupRequest;
 import com.helpinghands.retrofit.response.CreatEventResponse;
+import com.helpinghands.retrofit.response.DistrictsResponse;
 import com.helpinghands.retrofit.response.OrgLoginResponse;
 import com.helpinghands.retrofit.response.OrgSignupResponse;
+import com.helpinghands.retrofit.response.SuggestedEventResponse;
 import com.helpinghands.retrofit.response.VolLoginResponse;
 import com.helpinghands.retrofit.response.VolSignResponse;
 
@@ -137,6 +141,40 @@ public class ApiCall {
 
             @Override
             public void onFailure(Call<CreatEventResponse> call, Throwable t) {
+                iApiCallback.onFailure("" + t.getMessage());
+
+            }
+        });
+    }
+
+    public void get_districts(GetDistrictsRequest request, final IApiCallback iApiCallback) {
+
+        Call<DistrictsResponse> call = service.get_districts(request);
+        call.enqueue(new Callback<DistrictsResponse>() {
+            @Override
+            public void onResponse(Call<DistrictsResponse> call, Response<DistrictsResponse> response) {
+                iApiCallback.onSuccess("get district suggestion" , response);
+            }
+
+            @Override
+            public void onFailure(Call<DistrictsResponse> call, Throwable t) {
+                iApiCallback.onFailure("" + t.getMessage());
+
+            }
+        });
+    }
+
+    public void get_suggested_event(GetSuggestedEventRequest request, final IApiCallback iApiCallback) {
+
+        Call<SuggestedEventResponse> call = service.get_suggested_event(request);
+        call.enqueue(new Callback<SuggestedEventResponse>() {
+            @Override
+            public void onResponse(Call<SuggestedEventResponse> call, Response<SuggestedEventResponse> response) {
+                iApiCallback.onSuccess("get event suggestion" , response);
+            }
+
+            @Override
+            public void onFailure(Call<SuggestedEventResponse> call, Throwable t) {
                 iApiCallback.onFailure("" + t.getMessage());
 
             }

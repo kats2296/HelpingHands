@@ -13,7 +13,6 @@ def get_health_districts():
 
     districts = min_list['Name of the District'].values
     return districts
-    # print(districts)
     #
     # for d in districts:
     #     print(get_lat_lng(d))

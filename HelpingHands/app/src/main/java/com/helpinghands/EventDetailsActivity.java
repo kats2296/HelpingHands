@@ -49,6 +49,7 @@ public class EventDetailsActivity extends AppCompatActivity implements IApiCallb
     private ProgressDialog progressDialog;
     StoreUserData storeUserData;
     String category;
+    String district;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +62,10 @@ public class EventDetailsActivity extends AppCompatActivity implements IApiCallb
 
         Intent intent = getIntent();
         category = intent.getStringExtra("category");
+        district = intent.getStringExtra("district");
+
+        if(district != null)
+            et_address.setText(district);
 
         progressDialog=Helper.initProgressDialog(this);
         storeUserData = StoreUserData.getInstance(this);

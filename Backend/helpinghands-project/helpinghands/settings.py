@@ -85,7 +85,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'helping_hands_db',
         'USER': 'postgres',
-        'PASSWORD': 'barcelona1',
+        'PASSWORD': 'Kats2296',
         'HOST': 'localhost',
         'PORT': '5432',
     }

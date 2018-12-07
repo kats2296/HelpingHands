@@ -2,12 +2,16 @@ package com.helpinghands.retrofit;
 
 import com.helpinghands.retrofit.requests.CreateEventRequest;
 import com.helpinghands.retrofit.requests.CreateRequest;
+import com.helpinghands.retrofit.requests.GetDistrictsRequest;
+import com.helpinghands.retrofit.requests.GetSuggestedEventRequest;
 import com.helpinghands.retrofit.requests.OrgLoginRequest;
 import com.helpinghands.retrofit.requests.OrgSignupRequest;
 import com.helpinghands.retrofit.requests.VolSignupRequest;
 import com.helpinghands.retrofit.response.CreatEventResponse;
+import com.helpinghands.retrofit.response.DistrictsResponse;
 import com.helpinghands.retrofit.response.OrgLoginResponse;
 import com.helpinghands.retrofit.response.OrgSignupResponse;
+import com.helpinghands.retrofit.response.SuggestedEventResponse;
 import com.helpinghands.retrofit.response.VolLoginResponse;
 import com.helpinghands.retrofit.response.VolSignResponse;
 
@@ -35,5 +39,11 @@ public interface APIService {
 
     @POST("organisation/event/create/")
     Call<CreatEventResponse> create_event(@Body CreateEventRequest request);
+
+    @POST("organisation/districts/suggested/")
+    Call<DistrictsResponse> get_districts(@Body GetDistrictsRequest request);
+
+    @POST("organisation/events/suggested/")
+    Call<SuggestedEventResponse> get_suggested_event(@Body GetSuggestedEventRequest request);
 
 }

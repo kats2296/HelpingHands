@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.DistrictsSelectionActivity">
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/tv1"
+       android:text="You can organize an event in the suggested districts"
+       android:textColor="@color/colorBlack"
+       android:textSize="@dimen/sp20"
+       android:layout_marginTop="@dimen/dp40"
+       android:layout_marginBottom="@dimen/dp10"
+       android:layout_marginLeft="@dimen/dp10"
+       android:layout_marginRight="@dimen/dp10"
+       android:gravity="center"
+       />
+
+
+       <android.support.v7.widget.CardView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="@dimen/dp10"
+           android:layout_marginBottom="@dimen/dp10"
+           android:layout_marginLeft="@dimen/dp10"
+           android:layout_marginRight="@dimen/dp10"
+           android:id="@+id/cv_district1"
+           app:cardBackgroundColor="@color/colorAccent"
+           app:cardElevation="@dimen/dp10"
+           >
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="@dimen/dp50"
+              android:text="DISTRICT 1"
+              android:id="@+id/dist1"
+              android:textSize="@dimen/sp18"
+              android:textColor="@color/colorWhite"
+              android:gravity="center"
+              android:layout_marginLeft="@dimen/dp20"
+              />
+
+          <Button
+              android:layout_width="wrap_content"
+              style="@style/Base.Widget.AppCompat.Button.Borderless"
+              android:layout_height="wrap_content"
+              android:text="Check Weather"
+              android:id="@+id/bt_weather1"
+              android:textColor="@color/colorWhite"
+              android:layout_alignParentRight="true"
+              android:layout_marginRight="@dimen/dp10"
+              android:background="@color/colorAccent"
+              android:gravity="center"
+              android:textAllCaps="false"
+              />
+
+      </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginBottom="@dimen/dp10"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginRight="@dimen/dp10"
+        android:id="@+id/cv_district2"
+        app:cardBackgroundColor="@color/colorAccent"
+        app:cardElevation="@dimen/dp10"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp50"
+                android:text="DISTRICT 2"
+                android:id="@+id/dist2"
+                android:textSize="@dimen/sp18"
+                android:textColor="@color/colorWhite"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/dp20"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:text="Check Weather"
+                android:id="@+id/bt_weather2"
+                android:textColor="@color/colorWhite"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp10"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:textAllCaps="false"
+                />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginBottom="@dimen/dp10"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginRight="@dimen/dp10"
+        android:id="@+id/cv_district3"
+        app:cardBackgroundColor="@color/colorAccent"
+        app:cardElevation="@dimen/dp10"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp50"
+                android:text="DISTRICT 3"
+                android:id="@+id/dist3"
+                android:textSize="@dimen/sp18"
+                android:textColor="@color/colorWhite"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/dp20"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:text="Check Weather"
+                android:id="@+id/bt_weather3"
+                android:textColor="@color/colorWhite"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp10"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:textAllCaps="false"
+                />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv2"
+        android:text="Or choose any other location to organize the event"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/sp20"
+        android:layout_marginTop="@dimen/dp30"
+        android:layout_marginBottom="@dimen/dp10"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginRight="@dimen/dp10"
+        android:gravity="center"
+        />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginBottom="@dimen/dp10"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginRight="@dimen/dp10"
+        android:id="@+id/cv_district_any"
+        app:cardBackgroundColor="@color/colorAccent"
+        app:cardElevation="@dimen/dp10"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp50"
+                android:text="Any Other Location"
+                android:id="@+id/any_dist"
+                android:textSize="@dimen/sp20"
+                android:textColor="@color/colorWhite"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_centerHorizontal="true"
+                android:textAllCaps="false"
+                />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+    <!--<TextView-->
+        <!--android:id="@+id/textView10"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="32dp"-->
+        <!--android:text="Create Event in suggested districts"-->
+        <!--android:textAlignment="center"-->
+        <!--android:textAppearance="@style/TextAppearance.AppCompat.Medium"-->
+        <!--android:textColor="@android:color/black"-->
+        <!--android:textStyle="bold"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent" />-->
+    <!---->
+
+
+    <!--<Button-->
+        <!--android:id="@+id/button_district1"-->
+        <!--style="@style/Widget.AppCompat.Button.Borderless"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="32dp"-->
+        <!--android:layout_marginTop="32dp"-->
+        <!--android:layout_marginEnd="32dp"-->
+        <!--android:background="@color/colorAccent"-->
+        <!--android:text="District 1"-->
+        <!--android:textAlignment="center"-->
+        <!--android:textAllCaps="false"-->
+        <!--android:textColor="@android:color/white"-->
+        <!--android:textSize="18sp"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/textView10"-->
+        <!--/>-->
+
+    <!--<Button-->
+        <!--android:id="@+id/button_district2"-->
+        <!--style="@style/Widget.AppCompat.Button.Borderless"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:background="@color/colorAccent"-->
+        <!--android:text="District 2"-->
+        <!--android:textAlignment="center"-->
+        <!--android:textAllCaps="false"-->
+        <!--android:textColor="@color/colorWhite"-->
+        <!--android:textSize="18sp"-->
+        <!--app:layout_constraintEnd_toEndOf="@+id/button_district1"-->
+        <!--app:layout_constraintStart_toStartOf="@+id/button_district1"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/button_district1"-->
+        <!--/>-->
+
+    <!--<Button-->
+        <!--android:id="@+id/button_district3"-->
+        <!--style="@style/Widget.AppCompat.Button.Borderless"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:background="@color/colorAccent"-->
+        <!--android:text="District 3"-->
+        <!--android:textAllCaps="false"-->
+        <!--android:textColor="@android:color/white"-->
+        <!--android:textSize="18sp"-->
+        <!--app:layout_constraintEnd_toEndOf="@+id/button_district2"-->
+        <!--app:layout_constraintStart_toStartOf="@+id/button_district2"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/button_district2"-->
+        <!--/>-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/textView11"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="32dp"-->
+        <!--android:text="Or Select any other district"-->
+        <!--android:textAlignment="center"-->
+        <!--android:textColor="@android:color/black"-->
+        <!--android:textSize="18sp"-->
+        <!--android:textStyle="bold"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/button_district3" />-->
+
+    <!--<Button-->
+        <!--android:id="@+id/button_create"-->
+        <!--style="@style/Widget.AppCompat.Button.Borderless"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="32dp"-->
+        <!--android:layout_marginTop="32dp"-->
+        <!--android:layout_marginEnd="32dp"-->
+        <!--android:background="@color/colorAccent"-->
+        <!--android:text="Create Event "-->
+        <!--android:textAlignment="center"-->
+        <!--android:textAllCaps="false"-->
+        <!--android:textColor="@color/colorWhite"-->
+        <!--android:textSize="18sp"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/textView11"-->
+        <!--/>-->
+<!--</android.support.constraint.ConstraintLayout>-->
+</LinearLayout>

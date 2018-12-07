@@ -22,11 +22,13 @@
         <activity android:name=".activity.VolSignUpActivity" />
         <activity android:name=".activity.ChooseActivity" />
         <activity android:name=".viewpager.WelcomeActivity">
-            <!--<intent-filter>-->
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
 
-                <!--<action android:name="android.intent.action.MAIN" />-->
-            <!--</intent-filter>-->
+             <intent-filter>
+             <category android:name="android.intent.category.LAUNCHER" />
+
+
+             <action android:name="android.intent.action.MAIN" />
+             </intent-filter>
         </activity>
         <activity android:name=".activity.ProblemsSelectionActivity" />
         <activity
@@ -47,15 +49,15 @@
         <activity android:name=".EventDetailsActivity" />
         <activity android:name=".activity.VolunteerAddedActivity" />
         <activity android:name=".activity.DistrictSelectionActivity" />
-        <activity android:name=".weather_forecasting.WeatherForecastingActivity" >
+        <activity android:name=".weather_forecasting.WeatherForecastingActivity">
+            <!--<intent-filter>-->
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
 
-            <intent-filter>
-                <category android:name="android.intent.category.LAUNCHER" />
-
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-
+                <!--<action android:name="android.intent.action.MAIN" />-->
+            <!--</intent-filter>-->
         </activity>
+        <activity android:name=".activity.DistrictsSelectionActivity"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>
