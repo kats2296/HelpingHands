@@ -10,4 +10,6 @@ urlpatterns = [
     path('events/all/', views.OrgGetAllEvents.as_view(), name='get_all_events'),
     path('events/ongoing/', views.OrgOngoignEvents.as_view(), name='get_org_ongoing_event'),
     path('events/previous/', views.OrgPreviousEvents.as_view()),
+    path('districts/suggested/', views.DistrictSuggestion.as_view()),
+    path('events/suggested/', views.EventsSuggestion.as_view()),
 ]
