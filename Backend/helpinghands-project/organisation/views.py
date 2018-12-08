@@ -186,6 +186,7 @@ class DistrictSuggestion(views.APIView):
 
         if event == "poverty":
             df_poverty = pd.read_csv(os.path.join(PROJECT_ROOT, "poverty_dataset.csv"))
+            df_poverty['STATNAME'] = df_poverty['STATNAME'].str.upper()
             present_state_data = df_poverty.loc[df_poverty['STATNAME'] == current_location.upper()]
             min_list = present_state_data.nsmallest(k, 'P_URB_POP')
             districts = min_list['DISTNAME'].values
@@ -193,6 +194,7 @@ class DistrictSuggestion(views.APIView):
 
         elif event == "education":
             df_literates = pd.read_csv(os.path.join(PROJECT_ROOT, "literacy_dataset.csv"))
+            df_literates['INDIA/STATE/UT/DISTRICT'] = df_literates['INDIA/STATE/UT/DISTRICT'].str.upper()
             state_data = df_literates.loc[df_literates['INDIA/STATE/UT/DISTRICT'] == current_location.upper()]
             state_code = state_data['STATE CODE'].values
             present_state_literates_data = df_literates.loc[df_literates['STATE CODE'] == state_code[0]]
@@ -203,14 +205,16 @@ class DistrictSuggestion(views.APIView):
 
         elif event == "health_care":
             df_healthcare_centres = pd.read_csv(os.path.join(PROJECT_ROOT, "healthcare_centres_dataset.csv"))
+            df_healthcare_centres['States/Union Territory'] = df_healthcare_centres['States/Union Territory'].str.upper()
             present_state_data = df_healthcare_centres.loc[df_healthcare_centres['States/Union Territory']
-                                                           == current_location]
+                                                                == current_location.upper()]
             min_list = present_state_data.nsmallest(k, 'Total Number of HealthCare Units')
             districts = min_list['Name of the District'].values
             return Response({"districts": districts})
 
         elif event == "donation":
             df_poverty = pd.read_csv(os.path.join(PROJECT_ROOT, "poverty_dataset.csv"))
+            df_poverty['STATNAME'] = df_poverty['STATNAME'].str.upper()
             present_state_data = df_poverty.loc[df_poverty['STATNAME'] == current_location.upper()]
             min_list = present_state_data.nsmallest(k, 'P_URB_POP')
             districts = min_list['DISTNAME'].values
@@ -278,4 +282,3 @@ class EventsSuggestion(views.APIView):
                 index_dc = dc
 
         return nearest_dc, index_dc
-
