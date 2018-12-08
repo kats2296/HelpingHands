@@ -12,4 +12,5 @@ urlpatterns = [
     path('events/previous/', views.OrgPreviousEvents.as_view()),
     path('districts/suggested/', views.DistrictSuggestion.as_view()),
     path('events/suggested/', views.EventsSuggestion.as_view()),
+    path('districts/latlng/', views.GetLatLng.as_view()),
 ]

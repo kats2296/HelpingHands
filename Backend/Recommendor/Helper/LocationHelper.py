@@ -22,4 +22,4 @@ def get_lat_lng(district):
     params = {"address": district, "key": GOOGLE_API_KEY}
 
     response = requests.get(google_geocode_url, params=params)
-    return response.json()['results'][0]['geometry']['location']
+    print (response.json()['results'][0]['geometry']['location'])

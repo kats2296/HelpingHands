@@ -205,9 +205,10 @@ class DistrictSuggestion(views.APIView):
 
         elif event == "health_care":
             df_healthcare_centres = pd.read_csv(os.path.join(PROJECT_ROOT, "healthcare_centres_dataset.csv"))
-            df_healthcare_centres['States/Union Territory'] = df_healthcare_centres['States/Union Territory'].str.upper()
+            df_healthcare_centres['States/Union Territory'] = df_healthcare_centres[
+                'States/Union Territory'].str.upper()
             present_state_data = df_healthcare_centres.loc[df_healthcare_centres['States/Union Territory']
-                                                                == current_location.upper()]
+                                                           == current_location.upper()]
             min_list = present_state_data.nsmallest(k, 'Total Number of HealthCare Units')
             districts = min_list['Name of the District'].values
             return Response({"districts": districts})
@@ -282,3 +283,21 @@ class EventsSuggestion(views.APIView):
                 index_dc = dc
 
         return nearest_dc, index_dc
+
+
+class GetLatLng(views.APIView):
+    def post(self, request, **kwargs):
+        data = json.loads(request.body.decode('utf-8'))
+        district = data['district']
+
+        lat, lng = self.get_lat_lng(district)
+        return Response({'lat': lat, 'lng': lng})
+
+    @staticmethod
+    def get_lat_lng(district):
+        google_geocode_url = "https://maps.googleapis.com/maps/api/geocode/json"
+        params = {"address": district, "key": GOOGLE_API_KEY}
+
+        response = requests.get(google_geocode_url, params=params)
+        return response.json()['results'][0]['geometry']['location']['lat'], \
+               response.json()['results'][0]['geometry']['location']['lng']
