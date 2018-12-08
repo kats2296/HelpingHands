@@ -22,6 +22,8 @@ import com.helpinghands.retrofit.IApiCallback;
 import com.helpinghands.retrofit.requests.GetSuggestedEventRequest;
 import com.helpinghands.retrofit.response.SuggestedEventResponse;
 
+import java.util.Calendar;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -83,7 +85,13 @@ public class OrgHomeFragment extends Fragment implements IApiCallback {
     private void makeRequest() {
 
         GetSuggestedEventRequest request = new GetSuggestedEventRequest();
-        request.setMonth(2);
+
+        Calendar c = Calendar.getInstance();
+        int month = c.get(Calendar.MONTH);
+
+        Logger.show("@@@@@ " + month);
+
+        request.setMonth(month+1);
         request.setDistrict("KULGAM");
         progressDialog.show();
 
