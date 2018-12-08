@@ -2,6 +2,7 @@ package com.helpinghands.retrofit;
 
 import com.helpinghands.retrofit.requests.CreateEventRequest;
 import com.helpinghands.retrofit.requests.CreateRequest;
+import com.helpinghands.retrofit.requests.GetDistrictByLatLngRequest;
 import com.helpinghands.retrofit.requests.GetDistrictsRequest;
 import com.helpinghands.retrofit.requests.GetSuggestedEventRequest;
 import com.helpinghands.retrofit.requests.OrgLoginRequest;
@@ -9,6 +10,7 @@ import com.helpinghands.retrofit.requests.OrgSignupRequest;
 import com.helpinghands.retrofit.requests.VolSignupRequest;
 import com.helpinghands.retrofit.response.CreatEventResponse;
 import com.helpinghands.retrofit.response.DistrictsResponse;
+import com.helpinghands.retrofit.response.GetDistrictByLatLngResponse;
 import com.helpinghands.retrofit.response.LatLngResponse;
 import com.helpinghands.retrofit.response.OrgLoginResponse;
 import com.helpinghands.retrofit.response.OrgSignupResponse;
@@ -49,4 +51,7 @@ public interface APIService {
 
     @POST("organisation/districts/latlng/")
     Call<LatLngResponse> get_lat_lng(@Body GetSuggestedEventRequest request);
+
+    @POST("organisation/district/")
+    Call<GetDistrictByLatLngResponse> get_district_by_latlng(@Body GetDistrictByLatLngRequest request);
 }

@@ -3,6 +3,7 @@ package com.helpinghands.retrofit;
 
 import com.helpinghands.retrofit.requests.CreateEventRequest;
 import com.helpinghands.retrofit.requests.CreateRequest;
+import com.helpinghands.retrofit.requests.GetDistrictByLatLngRequest;
 import com.helpinghands.retrofit.requests.GetDistrictsRequest;
 import com.helpinghands.retrofit.requests.GetSuggestedEventRequest;
 import com.helpinghands.retrofit.requests.OrgLoginRequest;
@@ -10,6 +11,7 @@ import com.helpinghands.retrofit.requests.OrgSignupRequest;
 import com.helpinghands.retrofit.requests.VolSignupRequest;
 import com.helpinghands.retrofit.response.CreatEventResponse;
 import com.helpinghands.retrofit.response.DistrictsResponse;
+import com.helpinghands.retrofit.response.GetDistrictByLatLngResponse;
 import com.helpinghands.retrofit.response.LatLngResponse;
 import com.helpinghands.retrofit.response.OrgLoginResponse;
 import com.helpinghands.retrofit.response.OrgSignupResponse;
@@ -193,6 +195,23 @@ public class ApiCall {
 
             @Override
             public void onFailure(Call<LatLngResponse> call, Throwable t) {
+                iApiCallback.onFailure("" + t.getMessage());
+
+            }
+        });
+    }
+
+    public void get_district_by_lat_lng(GetDistrictByLatLngRequest request, final IApiCallback iApiCallback) {
+
+        Call<GetDistrictByLatLngResponse> call = service.get_district_by_latlng(request);
+        call.enqueue(new Callback<GetDistrictByLatLngResponse>() {
+            @Override
+            public void onResponse(Call<GetDistrictByLatLngResponse> call, Response<GetDistrictByLatLngResponse> response) {
+                iApiCallback.onSuccess("get district by latlng" , response);
+            }
+
+            @Override
+            public void onFailure(Call<GetDistrictByLatLngResponse> call, Throwable t) {
                 iApiCallback.onFailure("" + t.getMessage());
 
             }
