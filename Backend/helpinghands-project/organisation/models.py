@@ -26,6 +26,9 @@ class Event(models.Model):
     object_id = models.PositiveIntegerField(default=None)
     content_object = GenericForeignKey('content_type', 'object_id')
 
+    def __str__(self):
+        return self.name
+
 
 class Organisation(models.Model):
     name = models.CharField(max_length=255, default="", null=True, blank=True)
@@ -38,5 +41,8 @@ class Organisation(models.Model):
     is_verified = models.BooleanField(default=False)
     events = GenericRelation(Event)
     activation_key = models.CharField(max_length=255, default="", null=True, blank=True)
+
+    def __str__(self):
+        return self.name
 
 

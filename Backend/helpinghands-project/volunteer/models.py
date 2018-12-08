@@ -16,4 +16,5 @@ class Volunteer(models.Model):
     events = GenericRelation(Event)
     activation_key = models.CharField(max_length=255, default="", null=True, blank=True)
 
-
+    def __str__(self):
+        return self.email
