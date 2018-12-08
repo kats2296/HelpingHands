@@ -18,6 +18,7 @@ import numpy as np
 from sklearn.externals import joblib
 import os
 from helpinghands.settings import PROJECT_ROOT
+import math
 
 
 class OrgSignup(views.APIView):
@@ -175,13 +176,27 @@ class OrgPreviousEvents(views.APIView):
             return Response({"OrgLogin": "User with this email doesnt exist."}, status.HTTP_409_CONFLICT)
 
 
+def get_current_location():
+    ip_api_url = "http://ip-api.com/json"
+    response_ip_api = requests.get(ip_api_url)
+    latitude = response_ip_api.json()['lat']
+    longitude = response_ip_api.json()['lon']
+
+    params = {"latlng": str(latitude) + "," + str(longitude), "key": GOOGLE_API_KEY}
+    google_maps_url = "https://maps.googleapis.com/maps/api/geocode/json"
+    response = requests.get(google_maps_url, params=params)
+    location = response.json()['results'][0]['address_components'][1]['long_name']
+
+    return location
+
+
 class DistrictSuggestion(views.APIView):
     def post(self, request, **kwargs):
         data = json.loads(request.body.decode('utf-8'))
 
         event = data['event']
 
-        current_location = self.get_current_location()
+        current_location = get_current_location()
         k = 3
 
         if event == "poverty":
@@ -220,20 +235,6 @@ class DistrictSuggestion(views.APIView):
             min_list = present_state_data.nsmallest(k, 'P_URB_POP')
             districts = min_list['DISTNAME'].values
             return Response({"districts": districts})
-
-    @staticmethod
-    def get_current_location():
-        ip_api_url = "http://ip-api.com/json"
-        response_ip_api = requests.get(ip_api_url)
-        latitude = response_ip_api.json()['lat']
-        longitude = response_ip_api.json()['lon']
-
-        params = {"latlng": str(latitude) + "," + str(longitude), "key": GOOGLE_API_KEY}
-        google_maps_url = "https://maps.googleapis.com/maps/api/geocode/json"
-        response = requests.get(google_maps_url, params=params)
-        location = response.json()['results'][0]['address_components'][1]['long_name']
-
-        return location
 
 
 class EventsSuggestion(views.APIView):
@@ -285,19 +286,65 @@ class EventsSuggestion(views.APIView):
         return nearest_dc, index_dc
 
 
+def get_lat_lng(district):
+    google_geocode_url = "https://maps.googleapis.com/maps/api/geocode/json"
+    params = {"address": district, "key": GOOGLE_API_KEY}
+
+    response = requests.get(google_geocode_url, params=params)
+    return response.json()['results'][0]['geometry']['location']['lat'], \
+           response.json()['results'][0]['geometry']['location']['lng']
+
+
 class GetLatLng(views.APIView):
     def post(self, request, **kwargs):
         data = json.loads(request.body.decode('utf-8'))
         district = data['district']
 
-        lat, lng = self.get_lat_lng(district)
+        lat, lng = get_lat_lng(district)
         return Response({'lat': lat, 'lng': lng})
 
-    @staticmethod
-    def get_lat_lng(district):
-        google_geocode_url = "https://maps.googleapis.com/maps/api/geocode/json"
-        params = {"address": district, "key": GOOGLE_API_KEY}
 
-        response = requests.get(google_geocode_url, params=params)
-        return response.json()['results'][0]['geometry']['location']['lat'], \
-               response.json()['results'][0]['geometry']['location']['lng']
+class GetDistrict(views.APIView):
+    def post(self, request, **kwargs):
+        data = json.loads(request.body.decode('utf-8'))
+        org_lat = data['lat']
+        org_lng = data['lng']
+
+        df_states_districts = pd.read_csv(os.path.join(PROJECT_ROOT, 'poverty_dataset.csv'))
+        df_states_districts = df_states_districts.iloc[:, 3:5]
+        states_district_dict = self.get_states_district_dict(float(org_lat), float(org_lng),
+                                                             df_states_districts)
+
+        current_location_state = get_current_location()
+
+        districts = states_district_dict[current_location_state.upper()]
+        nearest_district = self.get_nearest_district(districts, org_lat, org_lng)
+
+        print(nearest_district)
+        return Response({'district': nearest_district})
+
+    def get_nearest_district(self, districts, org_lat, org_lng):
+
+        min_dist = 100000
+        nearest_district = ""
+
+        for district in districts:
+            district_lat, district_lng = get_lat_lng(district)
+            dist = self.get_eucledian_distance(float(org_lat), float(org_lng), float(district_lat), float(district_lng))
+
+            if dist < min_dist:
+                nearest_district = district
+
+        return nearest_district
+
+    @staticmethod
+    def get_eucledian_distance(org_lat, org_lng, district_lat, district_lng):
+        return math.sqrt(math.pow(org_lat - district_lat, 2) + math.pow(org_lng-district_lng, 2))
+
+    def get_states_district_dict(self, lat, lng, df_states_districts):
+        states = list(df_states_districts['STATNAME'].values)
+        states_district_dict = {}
+        for state in set(states):
+            row = df_states_districts.loc[df_states_districts['STATNAME'] == state.upper()]
+            states_district_dict[state] = row['DISTNAME'].values
+        return states_district_dict

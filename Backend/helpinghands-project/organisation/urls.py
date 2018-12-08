@@ -13,4 +13,5 @@ urlpatterns = [
     path('districts/suggested/', views.DistrictSuggestion.as_view()),
     path('events/suggested/', views.EventsSuggestion.as_view()),
     path('districts/latlng/', views.GetLatLng.as_view()),
+    path('district/', views.GetDistrict.as_view()),
 ]
