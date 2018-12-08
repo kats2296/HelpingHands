@@ -9,6 +9,7 @@ import com.helpinghands.retrofit.requests.OrgSignupRequest;
 import com.helpinghands.retrofit.requests.VolSignupRequest;
 import com.helpinghands.retrofit.response.CreatEventResponse;
 import com.helpinghands.retrofit.response.DistrictsResponse;
+import com.helpinghands.retrofit.response.LatLngResponse;
 import com.helpinghands.retrofit.response.OrgLoginResponse;
 import com.helpinghands.retrofit.response.OrgSignupResponse;
 import com.helpinghands.retrofit.response.SuggestedEventResponse;
@@ -46,4 +47,6 @@ public interface APIService {
     @POST("organisation/events/suggested/")
     Call<SuggestedEventResponse> get_suggested_event(@Body GetSuggestedEventRequest request);
 
+    @POST("organisation/districts/latlng/")
+    Call<LatLngResponse> get_lat_lng(@Body GetSuggestedEventRequest request);
 }

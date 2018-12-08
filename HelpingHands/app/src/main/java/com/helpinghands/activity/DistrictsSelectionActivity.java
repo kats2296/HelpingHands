@@ -15,7 +15,10 @@ import com.helpinghands.helper.Logger;
 import com.helpinghands.retrofit.ApiCall;
 import com.helpinghands.retrofit.IApiCallback;
 import com.helpinghands.retrofit.requests.GetDistrictsRequest;
+import com.helpinghands.retrofit.requests.GetSuggestedEventRequest;
 import com.helpinghands.retrofit.response.DistrictsResponse;
+import com.helpinghands.retrofit.response.LatLngResponse;
+import com.helpinghands.weather_forecasting.WeatherForecastingActivity;
 
 import java.util.List;
 
@@ -42,8 +45,16 @@ public class DistrictsSelectionActivity extends AppCompatActivity implements IAp
     @BindView(R.id.dist3)
     TextView dist3;
 
+    @BindView(R.id.bt_weather1)
+    Button bt_weather1;
+    @BindView(R.id.bt_weather2)
+    Button bt_weather2;
+    @BindView(R.id.bt_weather3)
+    Button bt_weather3;
+
     private ProgressDialog progressDialog;
     String event;
+    String lat,lng;
 
 
     @Override
@@ -93,6 +104,31 @@ public class DistrictsSelectionActivity extends AppCompatActivity implements IAp
         openEventDetailsPage("");
     }
 
+    @OnClick(R.id.bt_weather1)
+    void onWeather1Click() {
+        getLatLng(dist1.getText().toString());
+    }
+
+    @OnClick(R.id.bt_weather2)
+    void onWeather2Click() {
+        getLatLng(dist2.getText().toString());
+    }
+
+    @OnClick(R.id.bt_weather3)
+    void onWeather3Click() {
+        getLatLng(dist3.getText().toString());
+    }
+
+    private void getLatLng(String s) {
+
+        GetSuggestedEventRequest request = new GetSuggestedEventRequest();
+        request.setDistrict(s);
+
+        progressDialog.show();
+
+        ApiCall.getInstance().get_lat_lng(request, this);
+    }
+
     private void openEventDetailsPage(String district) {
 
         Intent intent  = new Intent(this, EventDetailsActivity.class);
@@ -104,21 +140,48 @@ public class DistrictsSelectionActivity extends AppCompatActivity implements IAp
     @Override
     public void onSuccess(Object type, Object data) {
         progressDialog.dismiss();
-        Response<DistrictsResponse> response = (Response<DistrictsResponse>) data;
 
-        if (response.isSuccessful()) {
+        if(type.equals("get district suggestion")) {
 
-            if (response.body() != null) {
+            Response<DistrictsResponse> response = (Response<DistrictsResponse>) data;
 
-                Logger.show(response.body().toString());
+            if (response.isSuccessful()) {
 
-                List<String> districts = response.body().getDistricts();
-                dist1.setText(districts.get(0));
-                dist2.setText(districts.get(1));
-                dist3.setText(districts.get(2));
+                if (response.body() != null) {
+
+                    Logger.show(response.body().toString());
+
+                    List<String> districts = response.body().getDistricts();
+                    dist1.setText(districts.get(0));
+                    dist2.setText(districts.get(1));
+                    dist3.setText(districts.get(2));
                 }
 
             }
+        }
+
+        if(type.equals("get lat lng for districts")) {
+
+            Response<LatLngResponse> response = (Response<LatLngResponse>) data;
+
+
+            if (response.isSuccessful()) {
+
+                if (response.body() != null) {
+
+                    lat = response.body().getLat();
+                    lng = response.body().getLng();
+                    String latlng = lat + "," + lng;
+
+                    Intent intent = new Intent(DistrictsSelectionActivity.this, WeatherForecastingActivity.class);
+                    intent.putExtra("latlng", latlng);
+                    startActivity(intent);
+
+                }
+
+            }
+
+        }
     }
 
     @Override

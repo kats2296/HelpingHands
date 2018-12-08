@@ -1,5 +1,7 @@
 package com.helpinghands.weather_forecasting;
 
+import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -10,6 +12,7 @@ import android.widget.Toast;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.helpinghands.R;
+import com.helpinghands.helper.Helper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,10 +30,14 @@ public class WeatherForecastingActivity extends AppCompatActivity {
 
     private List<Days> daysList;
 
+    String latlng;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather_forecasting);
+
+        receiveIntent();
 
         recyclerView = (RecyclerView)findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
@@ -41,9 +48,14 @@ public class WeatherForecastingActivity extends AppCompatActivity {
         getData();
     }
 
+    private void receiveIntent() {
+
+        Intent intent = getIntent();
+        latlng = intent.getStringExtra("latlng");
+    }
+
     private void getData()
     {
-
         Gson gson = new GsonBuilder()
                 .setLenient()
                 .create();
@@ -54,7 +66,7 @@ public class WeatherForecastingActivity extends AppCompatActivity {
 
         Api api = retrofit.create(Api.class);
 
-        Call<Data> call = api.getData();
+        Call<Data> call = api.getData(latlng);
 
         call.enqueue(new Callback<Data>()
         {

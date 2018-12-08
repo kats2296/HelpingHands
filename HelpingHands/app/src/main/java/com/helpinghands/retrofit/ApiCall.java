@@ -10,6 +10,7 @@ import com.helpinghands.retrofit.requests.OrgSignupRequest;
 import com.helpinghands.retrofit.requests.VolSignupRequest;
 import com.helpinghands.retrofit.response.CreatEventResponse;
 import com.helpinghands.retrofit.response.DistrictsResponse;
+import com.helpinghands.retrofit.response.LatLngResponse;
 import com.helpinghands.retrofit.response.OrgLoginResponse;
 import com.helpinghands.retrofit.response.OrgSignupResponse;
 import com.helpinghands.retrofit.response.SuggestedEventResponse;
@@ -175,6 +176,23 @@ public class ApiCall {
 
             @Override
             public void onFailure(Call<SuggestedEventResponse> call, Throwable t) {
+                iApiCallback.onFailure("" + t.getMessage());
+
+            }
+        });
+    }
+
+    public void get_lat_lng(GetSuggestedEventRequest request, final IApiCallback iApiCallback) {
+
+        Call<LatLngResponse> call = service.get_lat_lng(request);
+        call.enqueue(new Callback<LatLngResponse>() {
+            @Override
+            public void onResponse(Call<LatLngResponse> call, Response<LatLngResponse> response) {
+                iApiCallback.onSuccess("get lat lng for districts" , response);
+            }
+
+            @Override
+            public void onFailure(Call<LatLngResponse> call, Throwable t) {
                 iApiCallback.onFailure("" + t.getMessage());
 
             }
