@@ -10,7 +10,7 @@ djangorestframework==3.8.2
 geoip2==2.9.0
 idna==2.7
 itypes==1.1.0
-Jinja2==2.10
+Jinja2==2.11.3
 Markdown==3.0.1
 MarkupSafe==1.0
 maxminddb==1.4.1
